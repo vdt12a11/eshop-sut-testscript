@@ -1,0 +1,132 @@
+{
+  "runId": "2026-10-13T09-34-51-961Z-10564",
+  "node": "v24.11.1",
+  "evidence": "D:\\vscode\\Software testing\\eshop-sut\\evidence\\tung\\2026-10-13T09-34-51-961Z-10564",
+  "sourceHashes": {
+    "initializer": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+    "server": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "seeder": "3794cee9e585d2c745b04eda1d2185179d040648656e4149ac71a02cbb0e5100",
+    "packageLock": "6c22fb108694d86a80843b39c2f77243d03e36c3b151e5ffe95fb63e7b9dbcd1",
+    "originalDatabaseBefore": "c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6",
+    "originalDatabaseAfter": "c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6"
+  },
+  "originalDatabaseUnchanged": true,
+  "rawJest": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1
+  },
+  "cases": [
+    {
+      "id": "TC_STRUCT_02",
+      "suite": "structural",
+      "title": "Các cột thiết yếu trong users",
+      "expected": "Có id, email, role và locked_until",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "requiredColumns": [
+          "id",
+          "email",
+          "role",
+          "locked_until"
+        ],
+        "actual": [
+          "id",
+          "name",
+          "email",
+          "password",
+          "role",
+          "login_attempts",
+          "locked_until",
+          "reset_token",
+          "shipping_address",
+          "phone"
+        ],
+        "columns": [
+          {
+            "cid": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 1
+          },
+          {
+            "cid": 1,
+            "name": "name",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 2,
+            "name": "email",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 3,
+            "name": "password",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 4,
+            "name": "role",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": "'user'",
+            "pk": 0
+          },
+          {
+            "cid": 5,
+            "name": "login_attempts",
+            "type": "INTEGER",
+            "notnull": 0,
+            "dflt_value": "0",
+            "pk": 0
+          },
+          {
+            "cid": 6,
+            "name": "locked_until",
+            "type": "DATETIME",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 7,
+            "name": "reset_token",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 8,
+            "name": "shipping_address",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 9,
+            "name": "phone",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          }
+        ]
+      },
+      "failure": []
+    }
+  ]
+}

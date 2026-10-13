@@ -1,0 +1,66 @@
+(node:10124) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+PASS database/structural/TC_STRUCT_02.test.js (7.021 s)
+  √ [TC_STRUCT_02] users có các cột thiết yếu id, email, role và locked_until (6631 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        7.261 s
+Ran all test suites within paths "D:\vscode\Software testing\eshop-sut\testing\database\structural\TC_STRUCT_02.test.js".
+Test results written to: ..\evidence\tung\2026-10-13T09-34-51-961Z-10564\jest-results.json
