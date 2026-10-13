@@ -1,0 +1,4 @@
+node_modules/
+.tmp/
+database.sqlite
+database.sqlite-*

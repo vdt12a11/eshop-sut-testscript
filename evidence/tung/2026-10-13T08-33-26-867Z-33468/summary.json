@@ -1,0 +1,53 @@
+{
+  "runId": "2026-10-13T08-33-26-867Z-33468",
+  "node": "v24.11.1",
+  "evidence": "D:\\vscode\\Software testing\\eshop-sut\\evidence\\tung\\2026-10-13T08-33-26-867Z-33468",
+  "sourceHashes": {
+    "initializer": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+    "server": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "seeder": "3794cee9e585d2c745b04eda1d2185179d040648656e4149ac71a02cbb0e5100",
+    "packageLock": "6c22fb108694d86a80843b39c2f77243d03e36c3b151e5ffe95fb63e7b9dbcd1",
+    "originalDatabaseBefore": "c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6",
+    "originalDatabaseAfter": "c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6"
+  },
+  "originalDatabaseUnchanged": true,
+  "rawJest": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1
+  },
+  "cases": [
+    {
+      "id": "TC_STRUCT_01",
+      "suite": "structural",
+      "title": "Danh sách bảng, gồm flyway_schema_history",
+      "expected": "Đúng 7 bảng nghiệp vụ/metadata; bỏ qua bảng nội bộ sqlite_*",
+      "note": "Theo catalog sau khi Flyway được thiết lập. Thiếu flyway_schema_history là thiếu tiền điều kiện, không phải lỗi schema nghiệp vụ đã xác nhận.",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "expected": [
+          "categories",
+          "coupon_usage",
+          "coupons",
+          "flyway_schema_history",
+          "orders",
+          "products",
+          "users"
+        ],
+        "actual": [
+          "categories",
+          "coupon_usage",
+          "coupons",
+          "flyway_schema_history",
+          "orders",
+          "products",
+          "users"
+        ],
+        "missing": [],
+        "extra": []
+      },
+      "failure": []
+    }
+  ]
+}

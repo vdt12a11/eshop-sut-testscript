@@ -1,0 +1,4 @@
+# Reference configuration. The Jest helper supplies absolute paths via env.
+[flyway]
+locations = ["filesystem:flyway/sql"]
+cleanDisabled = true

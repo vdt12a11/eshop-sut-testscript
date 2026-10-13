@@ -1,0 +1,28 @@
+{
+  "name": "eshop-seminar-seed-check",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check:fixtures": "node scripts/check-fixtures.cjs",
+    "test": "node scripts/run-tung.cjs",
+    "test:tung": "node scripts/run-tung.cjs",
+    "test:structural": "node scripts/run-tung.cjs --suite structural",
+    "test:functional": "node scripts/run-tung.cjs --suite functional"
+  },
+  "engines": {
+    "node": ">=24.11.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "10.6.0",
+    "sqlite3": "6.0.1"
+  },
+  "devDependencies": {
+    "body-parser": "2.2.2",
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "jest": "30.5.2",
+    "jsonwebtoken": "9.0.3",
+    "supertest": "7.3.1"
+  }
+}
