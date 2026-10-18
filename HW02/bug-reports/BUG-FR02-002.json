@@ -1,0 +1,18 @@
+{
+  "id": "BUG-FR02-002",
+  "fr": "FR-02",
+  "title": "Khóa đăng nhập khoảng 180 giây thay vì 30 giây",
+  "cases": [
+    "FR-02-TC04",
+    "FR-02-TC14"
+  ],
+  "run_id": "2026-10-18T05-49-37-116Z-FR-02",
+  "screenshots": [
+    "BUG-FR02-002-TC04.png",
+    "BUG-FR02-002-TC14.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/2",
+  "source_commit": "85af3ba875c88283615e22cb108f13e2fccaf0e9",
+  "issue_number": 2,
+  "evidence_commit": "6f3fe9bf18bdbafb124d0b087235dc46dd2528ba"
+}

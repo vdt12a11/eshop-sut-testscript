@@ -24,3 +24,7 @@ Bằng chứng trong evidence/tung là các lần chạy trên máy Tùng trư�
 
 Chạy npm --prefix testing test để kiểm tra cả hai case đã duyệt. Các case khác chưa được xuất bản trên nhánh này.
 
+
+## HW02 — Báo cáo lỗi
+
+[14 bug HW02 và GitHub Issues của nhóm](HW02/README.md).

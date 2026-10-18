@@ -1,0 +1,29 @@
+{
+  "id": "BUG-FR20-004",
+  "fr": "FR-20",
+  "title": "Xóa sản phẩm khỏi giỏ Mobile ngay lập tức, không có xác nhận",
+  "cases": [
+    "FR-20-TC06",
+    "FR-20-TC07",
+    "FR-20-TC08"
+  ],
+  "run_id": "2026-10-18T11-50-17-624Z-FR-20",
+  "run_ids": [
+    "2026-10-18T11-28-19-844Z-FR-20",
+    "2026-10-18T11-50-17-624Z-FR-20"
+  ],
+  "screenshots": [
+    "BUG-FR20-004-TC06-before-delete.png",
+    "BUG-FR20-004-TC06-confirmation.png",
+    "BUG-FR20-004-TC06.png",
+    "BUG-FR20-004-TC07-before-delete.png",
+    "BUG-FR20-004-TC07-confirmation.png",
+    "BUG-FR20-004-TC07.png",
+    "BUG-FR20-004-TC08-before-delete.png",
+    "BUG-FR20-004-TC08-confirmation.png",
+    "BUG-FR20-004-TC08.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/13",
+  "issue_number": 13,
+  "evidence_commit": "76e74196cb95b26abd527d02d9d48fceb2b1194e"
+}

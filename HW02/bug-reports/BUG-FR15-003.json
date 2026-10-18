@@ -1,0 +1,15 @@
+{
+  "id": "BUG-FR15-003",
+  "fr": "FR-15",
+  "title": "Chấp nhận và lưu sản phẩm có giá bằng 0",
+  "cases": [
+    "FR-15-TC10"
+  ],
+  "run_id": "2026-10-18T06-27-29-324Z-FR-15",
+  "screenshots": [
+    "BUG-FR15-003-TC10.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/9",
+  "issue_number": 9,
+  "evidence_commit": "55830418e8cde0a0680a3eb276560358e3548441"
+}

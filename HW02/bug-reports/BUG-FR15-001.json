@@ -1,0 +1,16 @@
+{
+  "id": "BUG-FR15-001",
+  "fr": "FR-15",
+  "title": "Danh sách sản phẩm cập nhật sai ngay sau khi sửa: đổi tên cả sản phẩm khác và giữ giá cũ",
+  "cases": [
+    "FR-15-TC03"
+  ],
+  "run_id": "2026-10-18T06-27-29-324Z-FR-15",
+  "screenshots": [
+    "BUG-FR15-001-TC03-immediate.png",
+    "BUG-FR15-001-TC03.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/7",
+  "issue_number": 7,
+  "evidence_commit": "55830418e8cde0a0680a3eb276560358e3548441"
+}

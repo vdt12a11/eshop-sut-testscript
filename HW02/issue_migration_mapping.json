@@ -1,0 +1,311 @@
+[
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/1",
+    "source_number": 1,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/1",
+    "target_number": 1,
+    "title": "BUG-FR02-001 — Bộ đếm đăng nhập sai tăng 2 thay vì 1, làm tài khoản khóa sớm",
+    "body_sha256": "abc92d78ad8e6c6b63bbe720b3f8e99f1d8d87418c7faa7824a9b50beaf77b3e",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/6f3fe9bf18bdbafb124d0b087235dc46dd2528ba/bug-reports/screenshots/BUG-FR02-001-TC02.png",
+        "bytes": 33996,
+        "sha256": "7e1ad18322eb43efc74046fc2d4cef8e6a33250207f9bd823bc33325f0dd22b0"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/6f3fe9bf18bdbafb124d0b087235dc46dd2528ba/bug-reports/screenshots/BUG-FR02-001-TC03.png",
+        "bytes": 34299,
+        "sha256": "a98829006fdee841f14d236dc41d01955f4c616fdbe615005d63cd7f5cfb4383"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/2",
+    "source_number": 2,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/2",
+    "target_number": 2,
+    "title": "BUG-FR02-002 — Khóa đăng nhập khoảng 180 giây thay vì 30 giây",
+    "body_sha256": "fdc3bcf7955b6e0d977d3f757ee65e8b7d9144d741cc6b1e3950e6b5fe115b48",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/6f3fe9bf18bdbafb124d0b087235dc46dd2528ba/bug-reports/screenshots/BUG-FR02-002-TC04.png",
+        "bytes": 36903,
+        "sha256": "721845fabfab4d026ea7a1a2a6c2f63f59e33afb9f93613e88b4daf9b8407807"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/6f3fe9bf18bdbafb124d0b087235dc46dd2528ba/bug-reports/screenshots/BUG-FR02-002-TC14.png",
+        "bytes": 29930,
+        "sha256": "579e16cadc1000a9338724b86b33ccef2386b229f24e82746451abda22af17ed"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/3",
+    "source_number": 3,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/3",
+    "target_number": 3,
+    "title": "BUG-FR02-003 — Trường email dùng type=text nên HTML5 không chặn email sai định dạng",
+    "body_sha256": "68214e3c5ca5f87b9618a023794cb561922e1d727ab4c39286482d37ae77ff61",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/6f3fe9bf18bdbafb124d0b087235dc46dd2528ba/bug-reports/screenshots/BUG-FR02-003-TC07.png",
+        "bytes": 31365,
+        "sha256": "7e43221444adc1dd8b80b4ecc354a0517849b249b3fd853e31f0b3c56ef6cec1"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/4",
+    "source_number": 4,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/4",
+    "target_number": 4,
+    "title": "BUG-FR09-001 — Mã phần trăm tính sai số tiền giảm và tổng thanh toán",
+    "body_sha256": "be392bb85b5ff2283dbb64f0f9608e168a940ecc39ff9c6f53ef0ee8e5f7d12a",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR09-001-TC01.png",
+        "bytes": 58653,
+        "sha256": "cc70bfc28dbde7ae9b2a196d6617403ff63cac125394a9f63932b00e3eacd9bd"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/5",
+    "source_number": 5,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/5",
+    "target_number": 5,
+    "title": "BUG-FR09-002 — Cho phép áp dụng mã giảm giá khi chưa đăng nhập và không có JWT",
+    "body_sha256": "31dc108695e9dbe02a259cb90d899f7c48e75907bbed4e314e4d5fbed06e4765",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR09-002-TC09.png",
+        "bytes": 58454,
+        "sha256": "0da520ad22e0b9d5636dc15d3102d751a394eb4a29cb8a6d217f73760b78fdca"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/6",
+    "source_number": 6,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/6",
+    "target_number": 6,
+    "title": "BUG-FR09-003 — Từ chối mã khi tổng đơn đúng bằng ngưỡng tối thiểu",
+    "body_sha256": "ff331a2bbe2bdbd0bc04463c8967649bc2e561344a3618c6619d0003e7cdc3ef",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR09-003-TC14.png",
+        "bytes": 58464,
+        "sha256": "4494a3eef56b5d27403ff87834e440042d18f4c3e5a996fc7a71b9b5e7b2e105"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR09-003-TC17.png",
+        "bytes": 58714,
+        "sha256": "b2b2266aa00a85495b8d75f3d37cec4556273f8b0b8e117a08ae8eee8fee4beb"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/7",
+    "source_number": 7,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/7",
+    "target_number": 7,
+    "title": "BUG-FR15-001 — Danh sách sản phẩm cập nhật sai ngay sau khi sửa: đổi tên cả sản phẩm khác và giữ giá cũ",
+    "body_sha256": "7d33a7e9d6a7cb5e673f44519507cdcffef25e35e98a8b4585a2201caa4b2760",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR15-001-TC03-immediate.png",
+        "bytes": 40900,
+        "sha256": "97c5ff350695542f319a87b1df77f7675cbd9db4dcf6066bd643b57594203b14"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR15-001-TC03.png",
+        "bytes": 60780,
+        "sha256": "9dd6555e1d55c99d661fc065c0183285caffa2a21105657dc225ea43a4cddf62"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/8",
+    "source_number": 8,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/8",
+    "target_number": 8,
+    "title": "BUG-FR15-002 — Chấp nhận và lưu tên sản phẩm dài 256 ký tự",
+    "body_sha256": "d558860fc0b068a5c013214e5493809942ca759ee8f9242d1e28d3e05cbfa732",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR15-002-TC07.png",
+        "bytes": 46717,
+        "sha256": "14569ccea603a026fb2eedb722cd70539e3d68e4a514c823c9808b2ea0e3191e"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/9",
+    "source_number": 9,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/9",
+    "target_number": 9,
+    "title": "BUG-FR15-003 — Chấp nhận và lưu sản phẩm có giá bằng 0",
+    "body_sha256": "27b772e82211158c02437e8a8c0188672e72a81d0c7941a97c11898f3a23c80c",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/55830418e8cde0a0680a3eb276560358e3548441/bug-reports/screenshots/BUG-FR15-003-TC10.png",
+        "bytes": 52284,
+        "sha256": "6891178ecb86b67f594200d19ad8cc598552e0411324646fee659bff87017e59"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/10",
+    "source_number": 10,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/10",
+    "target_number": 10,
+    "title": "BUG-FR20-001 — Giỏ hàng Mobile trống thiếu hình minh họa",
+    "body_sha256": "b878a53572e1c56c958ea21d8fce0baaf285d778902fc59e04b19e725c97ce40",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-001-TC01.png",
+        "bytes": 46013,
+        "sha256": "fb2b7b225491c4fb76205dbeba1a9a12e6c7ad70ef9d23319b0006442eed6bd1"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-001-TC08.png",
+        "bytes": 46088,
+        "sha256": "8e4b8e78cf2118af5ca025ef40d0faf5184daf94fa8933087f09788aa32f0f36"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/11",
+    "source_number": 11,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/11",
+    "target_number": 11,
+    "title": "BUG-FR20-002 — Giỏ hàng Mobile thiếu nút tăng giảm số lượng +/-",
+    "body_sha256": "36167e791e867e2c7bd8b2f58f8b1560eb598c41fbd3d1c0bac22ac91877003d",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-002-TC02.png",
+        "bytes": 78991,
+        "sha256": "088df874d566b7c3ed50e059484f24952ae68e8eae6a398df401455253f421a5"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-002-TC05.png",
+        "bytes": 78459,
+        "sha256": "1a78ccdb2c9c1d9282ed3fa9d6d45619e75ef72db473188da1206b9d104a79ef"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/12",
+    "source_number": 12,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/12",
+    "target_number": 12,
+    "title": "BUG-FR20-003 — Giỏ hàng Mobile dùng nhãn Tổng tạm tính thay vì Tổng cộng",
+    "body_sha256": "66619be5c4001f61ab3fe875e5696c5382efb7627110b5f34129aeb322a6cf4b",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-003-TC02.png",
+        "bytes": 78991,
+        "sha256": "088df874d566b7c3ed50e059484f24952ae68e8eae6a398df401455253f421a5"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-003-TC03.png",
+        "bytes": 77256,
+        "sha256": "1d23451e5e2d20c37737fe1b6f2c05bb54bfb8ae509d51aee3526b41294d6fac"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-003-TC07.png",
+        "bytes": 63610,
+        "sha256": "d41356bb7a51a054ce51ccbae3bec89372881bec4ce33964eef604c7c224ec16"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/13",
+    "source_number": 13,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/13",
+    "target_number": 13,
+    "title": "BUG-FR20-004 — Xóa sản phẩm khỏi giỏ Mobile ngay lập tức, không có xác nhận",
+    "body_sha256": "6ddcab84d7c77b2ede1758c9a19b42ed9015910b4efb273dc53d209425529a89",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC06-before-delete.png",
+        "bytes": 78503,
+        "sha256": "394dd6530b279518d32cbb463dd42412d8fff708210435faf46a790fa70b1c03"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC06-confirmation.png",
+        "bytes": 63544,
+        "sha256": "9253a9810553cfe1229fbabc16043e69a6e2f88fdd824a9cb8ecb04797f1963a"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC06.png",
+        "bytes": 63544,
+        "sha256": "9253a9810553cfe1229fbabc16043e69a6e2f88fdd824a9cb8ecb04797f1963a"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC07-before-delete.png",
+        "bytes": 78945,
+        "sha256": "7f4a52c3864c5ce7a25392cb2aac40bbc70cc0d7992e51322c56c5cc7ac50212"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC07-confirmation.png",
+        "bytes": 63610,
+        "sha256": "d41356bb7a51a054ce51ccbae3bec89372881bec4ce33964eef604c7c224ec16"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC07.png",
+        "bytes": 63610,
+        "sha256": "d41356bb7a51a054ce51ccbae3bec89372881bec4ce33964eef604c7c224ec16"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC08-before-delete.png",
+        "bytes": 62652,
+        "sha256": "961587e6e8f8d0ab4e6b3baa6669aea8f2f31b2fa2ca5f98a4c79e52abc73f93"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC08-confirmation.png",
+        "bytes": 46088,
+        "sha256": "8e4b8e78cf2118af5ca025ef40d0faf5184daf94fa8933087f09788aa32f0f36"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-004-TC08.png",
+        "bytes": 46088,
+        "sha256": "8e4b8e78cf2118af5ca025ef40d0faf5184daf94fa8933087f09788aa32f0f36"
+      }
+    ]
+  },
+  {
+    "source_url": "https://github.com/NguyenSonTung16/HW02/issues/14",
+    "source_number": 14,
+    "target_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/14",
+    "target_number": 14,
+    "title": "BUG-FR20-005 — Nhập tay số lượng 3 trong giỏ Mobile cho kết quả sai",
+    "body_sha256": "5390109d48b02861dbb34adcb2569cd4fed6b7d06f656d658806eff60b4bb782",
+    "exact_title_body_match": true,
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-005-TC14-before-input.png",
+        "bytes": 78881,
+        "sha256": "a67be367118db0cc35b7e1abe2ca19169bd4c2b3bc740c426dd9eef0b7a4c42d"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/NguyenSonTung16/HW02/76e74196cb95b26abd527d02d9d48fceb2b1194e/bug-reports/screenshots/BUG-FR20-005-TC14.png",
+        "bytes": 78406,
+        "sha256": "5db74cf88f76221c435cc71bb77ec3c5f19416f2777b3ff1889c5adbb9b1788a"
+      }
+    ]
+  }
+]

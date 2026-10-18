@@ -1,0 +1,21 @@
+{
+  "id": "BUG-FR20-001",
+  "fr": "FR-20",
+  "title": "Giỏ hàng Mobile trống thiếu hình minh họa",
+  "cases": [
+    "FR-20-TC01",
+    "FR-20-TC08"
+  ],
+  "run_id": "2026-10-18T11-50-17-624Z-FR-20",
+  "run_ids": [
+    "2026-10-18T11-28-19-844Z-FR-20",
+    "2026-10-18T11-50-17-624Z-FR-20"
+  ],
+  "screenshots": [
+    "BUG-FR20-001-TC01.png",
+    "BUG-FR20-001-TC08.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/10",
+  "issue_number": 10,
+  "evidence_commit": "76e74196cb95b26abd527d02d9d48fceb2b1194e"
+}
