@@ -1,0 +1,35 @@
+b1aa06a | 2026-10-18T22:59:10+07:00 | Publish synchronized AI02 audit Word Markdown PDF with full recorded interactions
+efb232e | 2026-10-18T22:57:50+07:00 | Document submission files and honestly disclose missing early step commits
+052a8e7 | 2026-10-18T22:57:48+07:00 | Publish reproducible HW02 execution files videos and reusable skills
+532e835 | 2026-10-18T22:57:41+07:00 | Synchronize all fourteen bugs with group Issues and screenshot evidence
+11967e9 | 2026-10-18T22:57:40+07:00 | Synchronize reviewed HW02 reports and publish required PDF versions
+e69977e | 2026-10-18T18:57:59+07:00 | Audit native FR20 execution evidence and export workflow commit log
+df98b5a | 2026-10-18T18:57:02+07:00 | Link five FR20 native bugs to GitHub Issues with verified screenshots
+76e7419 | 2026-10-18T18:54:22+07:00 | Execute FR20 Android cart tests and record six native demos with five confirmed bugs
+aff4723 | 2026-10-18T18:27:08+07:00 | Prepare native Android Jest execution and recorded demos for FR20 mobile cart
+3e41a8e | 2026-10-18T18:05:09+07:00 | Record AI critique publication audit and update commit log
+3c93bac | 2026-10-18T18:05:08+07:00 | Add AI critique based on student review and link it from README
+5ce3f16 | 2026-10-18T18:03:48+07:00 | Audit student corrections to FR20 design and update commit log
+b92e6fc | 2026-10-18T18:03:47+07:00 | Address student review of FR20 manual quantity navigation and invalid input oracles
+7f731b3 | 2026-10-18T17:29:31+07:00 | Audit FR20 mobile cart design and export workflow commit log
+43ed1ac | 2026-10-18T17:29:19+07:00 | List thirteen unexecuted FR20 mobile cart cases in README
+63eedd8 | 2026-10-18T17:28:48+07:00 | Add FR20 quantity boundary cases and clarify design summary
+c6860a8 | 2026-10-18T17:25:43+07:00 | Select FR20 EC representatives and reduce to twelve domain cases
+de4e055 | 2026-10-18T17:25:41+07:00 | Partition FR20 mobile cart inputs states and outputs into ECs
+b7360f5 | 2026-10-18T17:25:39+07:00 | Define FR20 mobile cart scope and input output; sync reviewed report prose
+4b25843 | 2026-10-18T14:54:22+07:00 | Audit execution branch integration into main
+b162ed9 | 2026-10-18T13:32:48+07:00 | Audit approved FR09 FR15 demos and export testing commit log
+f9508b2 | 2026-10-18T13:31:36+07:00 | Link six new confirmed bugs to GitHub Issues with screenshot evidence
+5583041 | 2026-10-18T13:30:20+07:00 | Complete FR15 UI demo and document six confirmed FR09 FR15 bugs
+bde0f3e | 2026-10-18T13:20:56+07:00 | Execute six FR09 coupon UI cases and record demo video
+9bb3c7f | 2026-10-18T13:19:03+07:00 | Prepare approved FR09 and FR15 UI demo cases with reviewed pacing
+440cad3 | 2026-10-18T13:13:33+07:00 | Audit video pacing feedback and preserve test workflow log
+f2c503d | 2026-10-18T13:13:10+07:00 | Record FR02 demo with final 4s goals 1.5s input pauses and 2s submit pause
+42e1fb0 | 2026-10-18T12:58:16+07:00 | Slow FR02 demo with Vietnamese steps and readable result pauses
+e903a1d | 2026-10-18T12:56:03+07:00 | Record AI audit and test workflow commit log
+a1c6bc5 | 2026-10-18T12:54:59+07:00 | Link FR02 bugs to GitHub Issues and finalize execution summary
+6f3fe9b | 2026-10-18T12:53:01+07:00 | Run representative FR02 tests and capture first video and three bugs
+cc705d6 | 2026-10-18T12:49:36+07:00 | Prepare FR02 FR09 FR15 test catalog and Jest scripts
+6162248 | 2026-10-18T11:16:10+07:00 | Keep only published AI audit reports
+ad84161 | 2026-10-18T11:10:38+07:00 | Add current HW02 report and AI audit
+4a29e6f | 2026-10-16T04:48:17Z | Initial commit
