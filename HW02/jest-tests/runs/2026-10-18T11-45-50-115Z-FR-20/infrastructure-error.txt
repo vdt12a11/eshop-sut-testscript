@@ -1,0 +1,5 @@
+Error: adb.exe: error: cannot bind listener: cannot bind to 127.0.0.1:8200: Only one usage of each socket address (protocol/network address/port) is normally permitted. (10048)
+
+    at adb (D:\vscode\Software testing\HW02\jest-tests\scripts\run-mobile.cjs:9:150)
+    at D:\vscode\Software testing\HW02\jest-tests\scripts\run-mobile.cjs:52:2
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

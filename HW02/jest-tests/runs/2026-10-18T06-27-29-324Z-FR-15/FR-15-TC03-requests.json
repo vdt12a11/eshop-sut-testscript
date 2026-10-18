@@ -1,0 +1,177 @@
+[
+  {
+    "time": 1792304881380,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881381,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881397,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881397,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881453,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881454,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881465,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881471,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881477,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881481,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881486,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881488,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881494,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304881495,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304894217,
+    "url": "http://localhost:3000/api/products/1001",
+    "method": "PUT",
+    "bearer": true,
+    "body": "{\"id\":1001,\"name\":\"SP_THU_FR15_DA_SUA\",\"price\":\"150000\",\"description\":\"\",\"imageUrl\":\"data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"50\\\" height=\\\"50\\\"/>\",\"category_id\":\"2\"}"
+  },
+  {
+    "time": 1792304898571,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898572,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898586,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898588,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898593,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898597,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898599,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898601,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898605,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304898607,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  }
+]

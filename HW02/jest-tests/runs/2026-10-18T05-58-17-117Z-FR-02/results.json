@@ -1,0 +1,52 @@
+{
+  "run_id": "2026-10-18T05-58-17-117Z-FR-02",
+  "cases": [
+    {
+      "id": "FR-02-TC01",
+      "status": "Pass",
+      "tested_at": "2026-10-18 12:59:14 UTC+07:00",
+      "started_at": "2026-10-18T05:58:41.027Z",
+      "actual": "PASS Login HTTP: 200\nPASS JWT returned: \"string\"\nPASS Client stores returned JWT: true\nPASS Client sends same JWT in Authorization: true\nPASS JWT accepted by backend: 200\nPASS JWT identifies correct account: \"test@eshop.com\"",
+      "checks": [
+        {
+          "label": "Login HTTP",
+          "actual": 200,
+          "expected": 200,
+          "pass": true
+        },
+        {
+          "label": "JWT returned",
+          "actual": "string",
+          "expected": "string",
+          "pass": true
+        },
+        {
+          "label": "Client stores returned JWT",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Client sends same JWT in Authorization",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "JWT accepted by backend",
+          "actual": 200,
+          "expected": 200,
+          "pass": true
+        },
+        {
+          "label": "JWT identifies correct account",
+          "actual": "test@eshop.com",
+          "expected": "test@eshop.com",
+          "pass": true
+        }
+      ],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T05-58-17-117Z-FR-02/FR-02-TC01.png"
+    }
+  ]
+}

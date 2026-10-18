@@ -1,0 +1,114 @@
+[
+  {
+    "time": 1792304598112,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598113,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598134,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598134,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598142,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598143,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598204,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598204,
+    "url": "http://localhost:3000/api/admin/users",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598217,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598218,
+    "url": "http://localhost:3000/api/admin/orders",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598228,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598232,
+    "url": "http://localhost:3000/api/products",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598235,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598239,
+    "url": "http://localhost:3000/api/categories",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598244,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304598248,
+    "url": "http://localhost:3000/api/coupons",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  }
+]

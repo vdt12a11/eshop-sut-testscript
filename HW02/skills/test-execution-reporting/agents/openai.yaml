@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Execution & Reporting"
+  short_description: "Execute tests, collect evidence and report results"
+  default_prompt: "Use $test-execution-reporting for the selected feature using the provided specification and course materials."

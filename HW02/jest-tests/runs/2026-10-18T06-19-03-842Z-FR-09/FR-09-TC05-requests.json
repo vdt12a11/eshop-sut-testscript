@@ -1,0 +1,51 @@
+[
+  {
+    "time": 1792304375772,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304375773,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304375863,
+    "url": "http://localhost:3000/api/products/10011",
+    "method": "GET",
+    "bearer": false,
+    "body": null
+  },
+  {
+    "time": 1792304375865,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304375865,
+    "url": "http://localhost:3000/api/products/10011",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304375865,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304384108,
+    "url": "http://localhost:3000/api/apply-coupon",
+    "method": "POST",
+    "bearer": true,
+    "body": "{\"code\":\"SAVE10\",\"total_amount\":400000,\"user_id\":5}"
+  }
+]

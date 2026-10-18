@@ -1,0 +1,27 @@
+Starting project at D:\vscode\Software testing\HW02\runtime\mobile-app
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+Android .\index.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+| (node:26264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+Android .\index.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:18976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:7324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:13080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:21188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:22244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:22120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android .\index.js ▓░░░░░░░░░░░░░░░ 11.1% ( 52/200)
+| (node:17740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Android .\index.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 68.2% (399/483)
+Android .\index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.7% (629/655)
+Android Bundled 19256ms index.js (686 modules)

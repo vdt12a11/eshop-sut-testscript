@@ -1,0 +1,22 @@
+[
+  {
+    "at": "2026-10-18T11:24:12.560Z",
+    "title": "FR-20-TC01 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:24:25.358Z",
+    "title": "FR-20-TC01 | Xem giỏ trống",
+    "detail": "MỤC TIÊU: Hiển thị hình minh họa và thông báo giỏ hàng trống rõ ràng; không hiển thị dòng sản phẩm giả."
+  },
+  {
+    "at": "2026-10-18T11:24:25.358Z",
+    "title": "FR-20-TC01 | Thực hiện",
+    "detail": "Xem giỏ trống\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:24:25.429Z",
+    "title": "FR-20-TC01 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Có thông báo giỏ trống: true\nFAIL Có hình minh họa trong giỏ trống: false (expected true)"
+  }
+]

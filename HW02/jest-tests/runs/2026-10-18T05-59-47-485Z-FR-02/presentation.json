@@ -1,0 +1,62 @@
+{
+  "duration_seconds": 328.2,
+  "video": "videos/FR-02-demo-slow.webm",
+  "run_id": "2026-10-18T05-59-47-485Z-FR-02",
+  "case_count": 6,
+  "pass_count": 1,
+  "fail_count": 5,
+  "caption_language": "Vietnamese",
+  "recording": "Real re-recording with slower actions; no playback-speed editing",
+  "holds": [
+    [
+      "intro",
+      8.52
+    ],
+    [
+      "result",
+      16.08
+    ],
+    [
+      "intro",
+      8.52
+    ],
+    [
+      "result",
+      14.39
+    ],
+    [
+      "intro",
+      8.52
+    ],
+    [
+      "result",
+      14.28
+    ],
+    [
+      "intro",
+      8.53
+    ],
+    [
+      "result",
+      14.3
+    ],
+    [
+      "intro",
+      8.53
+    ],
+    [
+      "result",
+      14.3
+    ],
+    [
+      "intro",
+      8.53
+    ],
+    [
+      "result",
+      14.06
+    ]
+  ],
+  "original_db_unchanged": true,
+  "sha256": "26ba20a1d14a72ad7dd4cf19e4dc86d96709e7e312fbfb89a23da3cbd96463d6"
+}

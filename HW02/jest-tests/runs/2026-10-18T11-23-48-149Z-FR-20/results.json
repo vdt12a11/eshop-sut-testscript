@@ -1,0 +1,52 @@
+{
+  "run_id": "2026-10-18T11-23-48-149Z-FR-20",
+  "platform": "Android native / Expo Go",
+  "cases": [
+    {
+      "id": "FR-20-TC01",
+      "status": "Fail",
+      "tested_at": "2026-10-18 18:24:26 UTC+07:00",
+      "actual": "PASS Có thông báo giỏ trống: true\nFAIL Có hình minh họa trong giỏ trống: false (expected true)",
+      "checks": [
+        {
+          "label": "Có thông báo giỏ trống",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Có hình minh họa trong giỏ trống",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "before": {
+          "lines": [
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (0)",
+            "Giỏ (0)",
+            "Giỏ Hàng",
+            "Giỏ hàng của bạn đang trống",
+            "Tiếp tục mua sắm",
+            "Tiếp tục mua sắm",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {},
+          "quantities": [],
+          "products": [],
+          "totals": [],
+          "amounts": [],
+          "plus_count": 0,
+          "minus_count": 0
+        },
+        "image_nodes": []
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-23-48-149Z-FR-20/FR-20-TC01.png"
+    }
+  ]
+}

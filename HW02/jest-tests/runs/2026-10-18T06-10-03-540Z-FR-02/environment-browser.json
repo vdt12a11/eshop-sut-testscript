@@ -1,0 +1,24 @@
+{
+  "run_id": "2026-10-18T06-10-03-540Z-FR-02",
+  "started_at": "2026-10-18T06:10:03.542Z",
+  "timezone": "Asia/Saigon",
+  "fr": "FR-02",
+  "demo": true,
+  "node": "v24.19.0",
+  "os": "win32",
+  "source_root": "D:\\vscode\\Software testing\\eshop-sut",
+  "source_commit": "85af3ba875c88283615e22cb108f13e2fccaf0e9",
+  "source_hashes": {
+    "backend/server.js": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "backend/database.js": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+    "frontend-web/src/pages/Login.jsx": "1809a1ec12da8e26217c84848c0f48d9008979cf985626dac6f68f2238e513dd",
+    "frontend-web/src/context/AuthContext.jsx": "562a306cbeaae152a5ebaf2f9feaf75a0da9f78618b798668ce1491ef0b4e968",
+    "frontend-admin/src/App.jsx": "f43a7ed720eb2608563ab5329edc2858f4aab913ecfb57784b30a467803c5b5f"
+  },
+  "original_db_before": "2251ba251c2b0722f0e524775c6db5fc1b7cfb046d561ba26905b1edcc52ba02",
+  "backend": "http://localhost:3000",
+  "web": "http://localhost:5173",
+  "isolated_db": "D:\\vscode\\Software testing\\HW02\\runtime\\jest-sut\\2026-10-18T06-10-03-540Z-FR-02\\database.sqlite",
+  "browser": "153.0.8010.12",
+  "playwright": "1.62.1"
+}

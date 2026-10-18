@@ -1,0 +1,39 @@
+{
+  "fr": "FR-09",
+  "run_id": "2026-10-18T06-19-03-842Z-FR-09",
+  "duration_seconds": 83.8,
+  "video": "videos/FR-09-demo.webm",
+  "goal_holds": [
+    4.03,
+    4.04,
+    4.02,
+    4.03,
+    4.04,
+    4.02
+  ],
+  "result_holds": [
+    4.03,
+    3.95,
+    4.04,
+    3.94,
+    3.94,
+    3.55
+  ],
+  "input_stages": [
+    2.01,
+    2.01,
+    1.99,
+    2.01,
+    1.98,
+    2.02
+  ],
+  "pass_count": 2,
+  "fail_count": 4,
+  "original_db_unchanged": true,
+  "pacing": {
+    "goal": 4,
+    "after_each_input": 1.5,
+    "before_submit": 2,
+    "result": 3.5
+  }
+}

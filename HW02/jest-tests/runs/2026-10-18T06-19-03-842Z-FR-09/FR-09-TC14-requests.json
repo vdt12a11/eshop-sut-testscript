@@ -1,0 +1,37 @@
+[
+  {
+    "time": 1792304400753,
+    "url": "http://localhost:3000/api/products/10029",
+    "method": "GET",
+    "bearer": false,
+    "body": null
+  },
+  {
+    "time": 1792304400755,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304400755,
+    "url": "http://localhost:3000/api/products/10029",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304400755,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304408991,
+    "url": "http://localhost:3000/api/apply-coupon",
+    "method": "POST",
+    "bearer": true,
+    "body": "{\"code\":\"VIP100\",\"total_amount\":300000,\"user_id\":7}"
+  }
+]

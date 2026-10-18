@@ -1,0 +1,162 @@
+[
+  {
+    "at": "2026-10-18T06:24:28.739Z",
+    "title": "FR-15 — Quản lý sản phẩm CRUD",
+    "detail": "Các TC tiêu biểu được thực hiện trên giao diện thật.\nChú thích kiểm thử do runner hiển thị; không phải UI gốc EShop."
+  },
+  {
+    "at": "2026-10-18T06:24:30.748Z",
+    "title": "FR-15-TC01 | Thêm sản phẩm hợp lệ",
+    "detail": "MỤC TIÊU: Tạo một sản phẩm mới; tải lại danh sách để xác nhận tên SP_THU_FR15, giá 100.000 đ và danh mục DM_A được lưu đúng.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:24:34.764Z",
+    "title": "FR-15-TC01 | Nhập tên sản phẩm",
+    "detail": "Điền tên sản phẩm. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:24:37.203Z",
+    "title": "FR-15-TC01 | Nhập giá tiền",
+    "detail": "Điền giá tiền. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:24:39.241Z",
+    "title": "FR-15-TC01 | Chọn danh mục",
+    "detail": "Chọn danh mục Điện thoại có sẵn. Dừng 1,5 giây sau khi chọn."
+  },
+  {
+    "at": "2026-10-18T06:24:40.781Z",
+    "title": "FR-15-TC01 | Trước khi gửi",
+    "detail": "Lưu sản phẩm với dữ liệu đã nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:24:43.719Z",
+    "title": "FR-15-TC01 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Thêm đúng một sản phẩm: 3\nĐẠT — Tên lưu đúng: \"SP_THU_FR15\"\nĐẠT — Giá và danh mục lưu đúng: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:24:47.584Z",
+    "title": "FR-15-TC02 | Xem sản phẩm tồn tại",
+    "detail": "MỤC TIÊU: Hiển thị đúng sản phẩm đã chọn: tên SP_MUC_TIEU, giá 100.000 đ, danh mục DM_A; đối chiếu với dữ liệu đã lưu.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:24:51.607Z",
+    "title": "FR-15-TC02 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — UI hiển thị sản phẩm đích: 1\nĐẠT — Tên sản phẩm đọc được: \"SP_MUC_TIEU\"\nĐẠT — Giá sản phẩm đọc được: 100000\nĐẠT — Danh mục sản phẩm đọc được: 1"
+  },
+  {
+    "at": "2026-10-18T06:24:55.414Z",
+    "title": "FR-15-TC03 | Sửa chỉ sản phẩm đích, kiểm ngay sau lưu và reload",
+    "detail": "MỤC TIÊU: Ngay sau khi lưu thành công và sau khi tải lại, chỉ SP_MUC_TIEU đổi đúng tên SP_THU_FR15_DA_SUA, giá 150.000 đ và danh mục DM_B; dữ liệu của mọi sản phẩm khác giữ nguyên so với bản chụp trước khi sửa.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:24:59.470Z",
+    "title": "FR-15-TC03 | Nhập tên sản phẩm",
+    "detail": "Điền tên sản phẩm. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:02.452Z",
+    "title": "FR-15-TC03 | Nhập giá tiền",
+    "detail": "Điền giá tiền. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:04.500Z",
+    "title": "FR-15-TC03 | Chọn danh mục",
+    "detail": "Chọn danh mục Laptop có sẵn. Dừng 1,5 giây sau khi chọn."
+  },
+  {
+    "at": "2026-10-18T06:25:06.034Z",
+    "title": "FR-15-TC03 | Trước khi gửi",
+    "detail": "Lưu sản phẩm với dữ liệu đã nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:25:08.824Z",
+    "title": "FR-15-TC03 | Quan sát ngay sau lưu",
+    "detail": "Chỉ SP_MUC_TIEU được đổi tên; SP_DOI_CHUNG phải giữ nguyên.\nTên hiển thị thực tế: SP_THU_FR15_DA_SUA | SP_THU_FR15_DA_SUA"
+  },
+  {
+    "at": "2026-10-18T06:25:12.540Z",
+    "title": "FR-15-TC03 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nLỖI — Đối chứng giữ tên ngay sau lưu: 0 | Mong đợi: 1\nLỖI — Chỉ sản phẩm đích có tên mới ngay sau lưu: 2 | Mong đợi: 1\nĐẠT — Đối chứng giữ tên sau tải lại: 1\nĐẠT — Tên sản phẩm đích đã lưu: \"SP_THU_FR15_DA_SUA\"\nĐẠT — Giá và danh mục sản phẩm đích đúng: có / đúng\nĐẠT — CSDL sản phẩm đối chứng không đổi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:25:16.418Z",
+    "title": "FR-15-TC04 | Xóa sản phẩm đích",
+    "detail": "MỤC TIÊU: Sản phẩm đích được xóa; tải lại danh sách quản lý và xác nhận không còn sản phẩm đó. Không mặc định phải xóa cứng trong CSDL.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:25:20.439Z",
+    "title": "FR-15-TC04 | Trước khi gửi",
+    "detail": "Xóa SP_MUC_TIEU; sản phẩm đối chứng phải giữ nguyên.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:25:22.534Z",
+    "title": "FR-15-TC04 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Sản phẩm đích đã bị xóa: không / sai\nĐẠT — Sản phẩm khác không đổi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:25:26.388Z",
+    "title": "FR-15-TC07 | Thêm với tên 256 ký tự",
+    "detail": "MỤC TIÊU: Không lưu dữ liệu tên không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:25:30.396Z",
+    "title": "FR-15-TC07 | Nhập tên sản phẩm",
+    "detail": "Điền tên sản phẩm (256 ký tự). Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:31.952Z",
+    "title": "FR-15-TC07 | Nhập giá tiền",
+    "detail": "Điền giá tiền. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:33.994Z",
+    "title": "FR-15-TC07 | Chọn danh mục",
+    "detail": "Chọn danh mục Điện thoại có sẵn. Dừng 1,5 giây sau khi chọn."
+  },
+  {
+    "at": "2026-10-18T06:25:35.529Z",
+    "title": "FR-15-TC07 | Trước khi gửi",
+    "detail": "Lưu sản phẩm với dữ liệu đã nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:25:38.311Z",
+    "title": "FR-15-TC07 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nLỖI — Dữ liệu không hợp lệ bị từ chối: không / sai | Mong đợi: có / đúng\nLỖI — Không tăng số sản phẩm: 3 | Mong đợi: 2\nLỖI — CSDL giữ nguyên khi dữ liệu không hợp lệ: không / sai | Mong đợi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:25:42.148Z",
+    "title": "FR-15-TC10 | Thêm với giá 0",
+    "detail": "MỤC TIÊU: Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.\nAdmin đã đăng nhập; sản phẩm đích và sản phẩm đối chứng được chuẩn bị riêng; hai danh mục có sẵn."
+  },
+  {
+    "at": "2026-10-18T06:25:46.160Z",
+    "title": "FR-15-TC10 | Nhập tên sản phẩm",
+    "detail": "Điền tên sản phẩm. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:48.593Z",
+    "title": "FR-15-TC10 | Nhập giá tiền",
+    "detail": "Điền giá tiền. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:25:50.235Z",
+    "title": "FR-15-TC10 | Chọn danh mục",
+    "detail": "Chọn danh mục Điện thoại có sẵn. Dừng 1,5 giây sau khi chọn."
+  },
+  {
+    "at": "2026-10-18T06:25:51.767Z",
+    "title": "FR-15-TC10 | Trước khi gửi",
+    "detail": "Lưu sản phẩm với dữ liệu đã nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:25:54.547Z",
+    "title": "FR-15-TC10 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nLỖI — Dữ liệu không hợp lệ bị từ chối: không / sai | Mong đợi: có / đúng\nLỖI — Không tăng số sản phẩm: 3 | Mong đợi: 2\nLỖI — CSDL giữ nguyên khi dữ liệu không hợp lệ: không / sai | Mong đợi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:25:58.106Z",
+    "title": "FR-15 — Tổng kết video",
+    "detail": "6 TC minh họa | Pass: 3 | Fail: 3\nCác kết quả được lưu vào README và hồ sơ chạy test.\nĐã hoàn tất các TC minh họa của chức năng này."
+  }
+]

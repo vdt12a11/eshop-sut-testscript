@@ -1,0 +1,44 @@
+{
+  "fr": "FR-20",
+  "run_id": "2026-10-18T11-50-17-624Z-FR-20",
+  "video": "videos/FR-20-demo.webm",
+  "platform": "Android 16 / API 36, Expo Go 54.0.8; native ADB screen mirrored in recorded viewer",
+  "duration_seconds": 134.52,
+  "goal_holds": [
+    4.01,
+    4.0,
+    4.01,
+    4.0,
+    4.01,
+    4.0
+  ],
+  "result_holds": [
+    4.06,
+    4.04,
+    3.97,
+    3.96,
+    3.99,
+    4.36
+  ],
+  "input_stages": [
+    4.06,
+    3.38
+  ],
+  "before_action_holds": [
+    3.79,
+    3.02,
+    2.43,
+    2.64
+  ],
+  "pacing": {
+    "goal": 4,
+    "after_each_input": 1.5,
+    "before_submit": 2,
+    "result": 3.5
+  },
+  "pass_count": 1,
+  "fail_count": 5,
+  "not_concluded": 0,
+  "original_db_unchanged": true,
+  "source_unchanged": true
+}

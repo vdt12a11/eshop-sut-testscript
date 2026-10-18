@@ -1,0 +1,17 @@
+{
+  "run_id": "2026-10-18T11-14-18-294Z-FR-20",
+  "platform": "Android native / Expo Go",
+  "cases": [
+    {
+      "id": "FR-20-TC01",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 18:16:23 UTC+07:00",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T11-14-18-294Z-FR-20/FR-20-TC01.png",
+      "reason": "Timed out waiting for native UI: Giỏ Hàng",
+      "classification": "Infrastructure blocked"
+    }
+  ]
+}
