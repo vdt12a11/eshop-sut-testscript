@@ -20,4 +20,5 @@ module.exports = [
   {"id":"TC_FUNC_01","suite":"functional","title":"Không đổi trạng thái delivered","expected":"Admin chuyển sang canceled hoặc shipping: HTTP 4xx, DB giữ delivered"},
   {"id":"TC_FUNC_02","suite":"functional","title":"Không đổi canceled về pending/confirmed","expected":"HTTP 4xx, DB giữ canceled","note":"Catalog chỉ nêu pending/confirmed; không suy rộng kết quả sang mọi trạng thái khác."},
   {"id":"TC_FUNC_03","suite":"functional","title":"User không huỷ đơn shipping","expected":"HTTP 403, DB giữ shipping"},
+  {"id":"TC_FUNC_04","suite":"functional","title":"Admin huỷ đơn shipping","expected":"HTTP 2xx, DB đổi canceled"},
 ];
