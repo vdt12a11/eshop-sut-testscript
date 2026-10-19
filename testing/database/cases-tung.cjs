@@ -16,4 +16,5 @@ module.exports = [
   {"id":"TC_STRUCT_04","suite":"structural","title":"UNIQUE của coupons.code","expected":"INSERT code trùng bị từ chối; còn đúng 1 dòng"},
   {"id":"TC_STRUCT_05","suite":"structural","title":"DEFAULT của coupon","expected":"Bỏ cột type/min_order_amount khi INSERT: percent/0"},
   {"id":"TC_STRUCT_06","suite":"structural","title":"Khả năng ghi của kết nối","expected":"CREATE và DROP được bảng trên DB test"},
+  {"id":"TC_STRUCT_07","suite":"structural","title":"DEFAULT trạng thái đơn hàng","expected":"INSERT bỏ cột status: đơn hàng được lưu với status pending","note":"Thay case cấu hình foreign_keys theo yêu cầu Tùng ngày 14/10/2026; không còn kiểm tra bật FK."},
 ];
