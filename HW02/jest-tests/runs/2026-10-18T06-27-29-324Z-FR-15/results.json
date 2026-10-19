@@ -1,0 +1,442 @@
+{
+  "run_id": "2026-10-18T06-27-29-324Z-FR-15",
+  "cases": [
+    {
+      "id": "FR-15-TC01",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:27:53 UTC+07:00",
+      "started_at": "2026-10-18T06:27:40.778Z",
+      "actual": "PASS Thêm đúng một sản phẩm: 3\nPASS Tên lưu đúng: \"SP_THU_FR15\"\nPASS Giá và danh mục lưu đúng: true",
+      "checks": [
+        {
+          "label": "Thêm đúng một sản phẩm",
+          "actual": 3,
+          "expected": 3,
+          "pass": true
+        },
+        {
+          "label": "Tên lưu đúng",
+          "actual": "SP_THU_FR15",
+          "expected": "SP_THU_FR15",
+          "pass": true
+        },
+        {
+          "label": "Giá và danh mục lưu đúng",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "before": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "after": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          },
+          {
+            "id": 1003,
+            "name": "SP_THU_FR15",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "",
+            "category_id": 1
+          }
+        ],
+        "payload": {
+          "name": "SP_THU_FR15",
+          "price": 100000,
+          "category_id": 1
+        },
+        "immediate_names": [
+          "SP_MUC_TIEU",
+          "SP_DOI_CHUNG",
+          "SP_THU_FR15"
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC01.png"
+    },
+    {
+      "id": "FR-15-TC02",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:28:01 UTC+07:00",
+      "started_at": "2026-10-18T06:27:57.669Z",
+      "actual": "PASS UI hiển thị sản phẩm đích: 1\nPASS Tên sản phẩm đọc được: \"SP_MUC_TIEU\"\nPASS Giá sản phẩm đọc được: 100000\nPASS Danh mục sản phẩm đọc được: 1",
+      "checks": [
+        {
+          "label": "UI hiển thị sản phẩm đích",
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        },
+        {
+          "label": "Tên sản phẩm đọc được",
+          "actual": "SP_MUC_TIEU",
+          "expected": "SP_MUC_TIEU",
+          "pass": true
+        },
+        {
+          "label": "Giá sản phẩm đọc được",
+          "actual": 100000,
+          "expected": 100000,
+          "pass": true
+        },
+        {
+          "label": "Danh mục sản phẩm đọc được",
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        }
+      ],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC02.png"
+    },
+    {
+      "id": "FR-15-TC03",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:28:22 UTC+07:00",
+      "started_at": "2026-10-18T06:28:05.570Z",
+      "actual": "FAIL Đối chứng giữ tên ngay sau lưu: 0 (expected 1)\nFAIL Chỉ sản phẩm đích có tên mới ngay sau lưu: 2 (expected 1)\nPASS Đối chứng giữ tên sau tải lại: 1\nPASS Tên sản phẩm đích đã lưu: \"SP_THU_FR15_DA_SUA\"\nPASS Giá và danh mục sản phẩm đích đúng: true\nPASS CSDL sản phẩm đối chứng không đổi: true",
+      "checks": [
+        {
+          "label": "Đối chứng giữ tên ngay sau lưu",
+          "actual": 0,
+          "expected": 1,
+          "pass": false
+        },
+        {
+          "label": "Chỉ sản phẩm đích có tên mới ngay sau lưu",
+          "actual": 2,
+          "expected": 1,
+          "pass": false
+        },
+        {
+          "label": "Đối chứng giữ tên sau tải lại",
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        },
+        {
+          "label": "Tên sản phẩm đích đã lưu",
+          "actual": "SP_THU_FR15_DA_SUA",
+          "expected": "SP_THU_FR15_DA_SUA",
+          "pass": true
+        },
+        {
+          "label": "Giá và danh mục sản phẩm đích đúng",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "CSDL sản phẩm đối chứng không đổi",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "before": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "after": [
+          {
+            "id": 1001,
+            "name": "SP_THU_FR15_DA_SUA",
+            "price": 150000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "payload": {
+          "name": "SP_THU_FR15_DA_SUA",
+          "price": 150000,
+          "category_id": 2
+        },
+        "immediate_names": [
+          "SP_THU_FR15_DA_SUA",
+          "SP_THU_FR15_DA_SUA"
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC03.png"
+    },
+    {
+      "id": "FR-15-TC04",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:28:32 UTC+07:00",
+      "started_at": "2026-10-18T06:28:26.519Z",
+      "actual": "PASS Sản phẩm đích đã bị xóa: false\nPASS Sản phẩm khác không đổi: true",
+      "checks": [
+        {
+          "label": "Sản phẩm đích đã bị xóa",
+          "actual": false,
+          "expected": false,
+          "pass": true
+        },
+        {
+          "label": "Sản phẩm khác không đổi",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "after": [
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC04.png"
+    },
+    {
+      "id": "FR-15-TC07",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:28:47 UTC+07:00",
+      "started_at": "2026-10-18T06:28:36.460Z",
+      "actual": "FAIL Dữ liệu không hợp lệ bị từ chối: false (expected true)\nFAIL Không tăng số sản phẩm: 3 (expected 2)\nFAIL CSDL giữ nguyên khi dữ liệu không hợp lệ: false (expected true)",
+      "checks": [
+        {
+          "label": "Dữ liệu không hợp lệ bị từ chối",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        },
+        {
+          "label": "Không tăng số sản phẩm",
+          "actual": 3,
+          "expected": 2,
+          "pass": false
+        },
+        {
+          "label": "CSDL giữ nguyên khi dữ liệu không hợp lệ",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "before": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "after": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          },
+          {
+            "id": 1004,
+            "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "",
+            "category_id": 1
+          }
+        ],
+        "payload": {
+          "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "price": 100000,
+          "category_id": 1
+        },
+        "immediate_names": [
+          "SP_MUC_TIEU",
+          "SP_DOI_CHUNG",
+          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC07.png"
+    },
+    {
+      "id": "FR-15-TC10",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:29:04 UTC+07:00",
+      "started_at": "2026-10-18T06:28:52.224Z",
+      "actual": "FAIL Dữ liệu không hợp lệ bị từ chối: false (expected true)\nFAIL Không tăng số sản phẩm: 3 (expected 2)\nFAIL CSDL giữ nguyên khi dữ liệu không hợp lệ: false (expected true)",
+      "checks": [
+        {
+          "label": "Dữ liệu không hợp lệ bị từ chối",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        },
+        {
+          "label": "Không tăng số sản phẩm",
+          "actual": 3,
+          "expected": 2,
+          "pass": false
+        },
+        {
+          "label": "CSDL giữ nguyên khi dữ liệu không hợp lệ",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "before": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          }
+        ],
+        "after": [
+          {
+            "id": 1001,
+            "name": "SP_MUC_TIEU",
+            "price": 100000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 1
+          },
+          {
+            "id": 1002,
+            "name": "SP_DOI_CHUNG",
+            "price": 200000,
+            "description": "",
+            "imageUrl": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\"/>",
+            "category_id": 2
+          },
+          {
+            "id": 1005,
+            "name": "SP_THU_FR15",
+            "price": 0,
+            "description": "",
+            "imageUrl": "",
+            "category_id": 1
+          }
+        ],
+        "payload": {
+          "name": "SP_THU_FR15",
+          "price": 0,
+          "category_id": 1
+        },
+        "immediate_names": [
+          "SP_MUC_TIEU",
+          "SP_DOI_CHUNG",
+          "SP_THU_FR15"
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-27-29-324Z-FR-15/FR-15-TC10.png"
+    }
+  ],
+  "video": "videos/FR-15-demo.webm"
+}

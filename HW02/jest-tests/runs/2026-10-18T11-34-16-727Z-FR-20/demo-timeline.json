@@ -1,0 +1,147 @@
+[
+  {
+    "at": "2026-10-18T11:34:42.618Z",
+    "title": "FR-20-TC04 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:34:59.721Z",
+    "title": "FR-20-TC04 | Thêm lại cùng sản phẩm",
+    "detail": "MỤC TIÊU: SP_A chỉ có một dòng, số lượng 5, thành tiền 500.000 đ; SP_B giữ số lượng 1, thành tiền 50.000 đ; Tổng cộng = 550.000 đ. Có phản hồi trực quan khi thêm."
+  },
+  {
+    "at": "2026-10-18T11:34:59.721Z",
+    "title": "FR-20-TC04 | Thực hiện",
+    "detail": "Thêm lại cùng sản phẩm\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:35:01.576Z",
+    "title": "FR-20-TC04 | Nhập số lượng thêm",
+    "detail": "Nhập: 3\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:35:04.213Z",
+    "title": "FR-20-TC04 | Trước thao tác",
+    "detail": "Thêm SP_A với số lượng vừa nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:35:06.316Z",
+    "title": "FR-20-TC04 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS SP_A số lượng: \"5\"\nPASS SP_A thành tiền: 500000\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nPASS Mỗi sản phẩm có đúng một dòng: 1\nPASS Tổng tiền đúng: 550000\nFAIL Nhãn tổng tiền là Tổng cộng: false (expected true)"
+  },
+  {
+    "at": "2026-10-18T11:35:08.108Z",
+    "title": "FR-20-TC10 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:35:20.533Z",
+    "title": "FR-20-TC10 | Số lượng thêm bằng 0",
+    "detail": "MỤC TIÊU: Không đưa số lượng không hợp lệ 0 vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12)."
+  },
+  {
+    "at": "2026-10-18T11:35:20.533Z",
+    "title": "FR-20-TC10 | Thực hiện",
+    "detail": "Số lượng thêm bằng 0\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:35:22.349Z",
+    "title": "FR-20-TC10 | Nhập số lượng thêm",
+    "detail": "Nhập: 0\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:35:24.700Z",
+    "title": "FR-20-TC10 | Trước thao tác",
+    "detail": "Thêm SP_A với số lượng vừa nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:35:26.813Z",
+    "title": "FR-20-TC10 — Not Run",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nCHỜ XÁC NHẬN: UI không giữ nguyên giá trị thử \"0\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó."
+  },
+  {
+    "at": "2026-10-18T11:35:27.541Z",
+    "title": "FR-20-TC11 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:35:38.903Z",
+    "title": "FR-20-TC11 | Số lượng thêm không nguyên",
+    "detail": "MỤC TIÊU: Không đưa số lượng không hợp lệ 1.5 vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12)."
+  },
+  {
+    "at": "2026-10-18T11:35:38.903Z",
+    "title": "FR-20-TC11 | Thực hiện",
+    "detail": "Số lượng thêm không nguyên\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:35:40.368Z",
+    "title": "FR-20-TC11 | Nhập số lượng thêm",
+    "detail": "Nhập: 1.5\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:35:42.887Z",
+    "title": "FR-20-TC11 | Trước thao tác",
+    "detail": "Thêm SP_A với số lượng vừa nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:35:44.946Z",
+    "title": "FR-20-TC11 — Not Run",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nCHỜ XÁC NHẬN: UI không giữ nguyên giá trị thử \"1.5\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó."
+  },
+  {
+    "at": "2026-10-18T11:35:45.656Z",
+    "title": "FR-20-TC12 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:35:57.622Z",
+    "title": "FR-20-TC12 | Số lượng thêm không phải số",
+    "detail": "MỤC TIÊU: Không đưa số lượng không hợp lệ \"abc\" vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12)."
+  },
+  {
+    "at": "2026-10-18T11:35:57.622Z",
+    "title": "FR-20-TC12 | Thực hiện",
+    "detail": "Số lượng thêm không phải số\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:35:59.296Z",
+    "title": "FR-20-TC12 | Nhập số lượng thêm",
+    "detail": "Nhập: abc\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:36:01.864Z",
+    "title": "FR-20-TC12 | Trước thao tác",
+    "detail": "Thêm SP_A với số lượng vừa nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:36:04.025Z",
+    "title": "FR-20-TC12 — Not Run",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nCHỜ XÁC NHẬN: UI không giữ nguyên giá trị thử \"abc\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó."
+  },
+  {
+    "at": "2026-10-18T11:36:04.784Z",
+    "title": "FR-20-TC14 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:36:19.881Z",
+    "title": "FR-20-TC14 | Nhập tay số lượng trong giỏ",
+    "detail": "MỤC TIÊU: SP_A có đúng số lượng 3, thành tiền 300.000 đ; SP_B vẫn số lượng 1, thành tiền 50.000 đ; Tổng cộng = 350.000 đ. Không tạo thêm dòng SP_A."
+  },
+  {
+    "at": "2026-10-18T11:36:19.881Z",
+    "title": "FR-20-TC14 | Thực hiện",
+    "detail": "Nhập tay số lượng trong giỏ\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:36:20.208Z",
+    "title": "FR-20-TC14 | Nhập số lượng SP_A trong giỏ",
+    "detail": "Nhập: 3\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:36:22.868Z",
+    "title": "FR-20-TC14 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nFAIL SP_A số lượng: \"4\" (expected \"3\")\nFAIL SP_A thành tiền: 400000 (expected 300000)\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nFAIL Tổng tiền đúng sau nhập tay: 450000 (expected 350000)\nPASS Không tạo thêm dòng SP_A: 1"
+  }
+]

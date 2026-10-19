@@ -1,0 +1,26 @@
+{
+  "id": "BUG-FR20-003",
+  "fr": "FR-20",
+  "title": "Giỏ hàng Mobile dùng nhãn Tổng tạm tính thay vì Tổng cộng",
+  "cases": [
+    "FR-20-TC02",
+    "FR-20-TC03",
+    "FR-20-TC07",
+    "FR-20-TC13",
+    "FR-20-TC04"
+  ],
+  "run_id": "2026-10-18T11-28-19-844Z-FR-20",
+  "run_ids": [
+    "2026-10-18T11-28-19-844Z-FR-20",
+    "2026-10-18T11-34-16-727Z-FR-20",
+    "2026-10-18T11-50-17-624Z-FR-20"
+  ],
+  "screenshots": [
+    "BUG-FR20-003-TC02.png",
+    "BUG-FR20-003-TC03.png",
+    "BUG-FR20-003-TC07.png"
+  ],
+  "issue_url": "https://github.com/vdt12a11/eshop-sut-testscript/issues/12",
+  "issue_number": 12,
+  "evidence_commit": "76e74196cb95b26abd527d02d9d48fceb2b1194e"
+}

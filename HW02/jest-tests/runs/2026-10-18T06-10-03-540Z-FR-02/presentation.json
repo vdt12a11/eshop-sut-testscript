@@ -1,0 +1,86 @@
+{
+  "duration_seconds": 136.32,
+  "video": "videos/FR-02-demo-paced.webm",
+  "run_id": "2026-10-18T06-10-03-540Z-FR-02",
+  "case_count": 6,
+  "pass_count": 1,
+  "fail_count": 5,
+  "caption_language": "Vietnamese",
+  "recording": "Real re-recording with slower actions; no playback-speed editing",
+  "holds": [
+    [
+      "intro",
+      4.0
+    ],
+    [
+      "result",
+      3.85
+    ],
+    [
+      "intro",
+      4.01
+    ],
+    [
+      "result",
+      3.78
+    ],
+    [
+      "intro",
+      4.03
+    ],
+    [
+      "result",
+      3.76
+    ],
+    [
+      "intro",
+      4.02
+    ],
+    [
+      "result",
+      3.87
+    ],
+    [
+      "intro",
+      4.02
+    ],
+    [
+      "result",
+      3.88
+    ],
+    [
+      "intro",
+      4.03
+    ],
+    [
+      "result",
+      3.56
+    ]
+  ],
+  "original_db_unchanged": true,
+  "sha256": "7506d10296e53b04e770276b4fe8484e238f20b08016a404a7e7c416b848147e",
+  "requested_pacing": {
+    "goal_ms": 4000,
+    "after_each_input_ms": 1500,
+    "before_submit_ms": 2000,
+    "result_ms": 3500
+  },
+  "observed_field_stage_seconds": [
+    2.6,
+    2.23,
+    2.59,
+    2.38,
+    2.57,
+    2.38,
+    2.65,
+    2.41,
+    1.78,
+    2.24,
+    2.66,
+    2.41,
+    2.55,
+    2.36,
+    2.59,
+    2.19
+  ]
+}

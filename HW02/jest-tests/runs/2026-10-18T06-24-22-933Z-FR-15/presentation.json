@@ -1,0 +1,45 @@
+{
+  "fr": "FR-15",
+  "run_id": "2026-10-18T06-24-22-933Z-FR-15",
+  "duration_seconds": 96.96000000000001,
+  "video": "videos/FR-15-demo.webm",
+  "goal_holds": [
+    4.02,
+    4.02,
+    4.06,
+    4.02,
+    4.01,
+    4.01
+  ],
+  "result_holds": [
+    3.87,
+    3.81,
+    3.88,
+    3.85,
+    3.84,
+    3.56
+  ],
+  "input_stages": [
+    2.44,
+    2.04,
+    1.54,
+    2.98,
+    2.05,
+    1.53,
+    1.56,
+    2.04,
+    1.53,
+    2.43,
+    1.64,
+    1.53
+  ],
+  "pass_count": 3,
+  "fail_count": 3,
+  "original_db_unchanged": true,
+  "pacing": {
+    "goal": 4,
+    "after_each_input": 1.5,
+    "before_submit": 2,
+    "result": 3.5
+  }
+}

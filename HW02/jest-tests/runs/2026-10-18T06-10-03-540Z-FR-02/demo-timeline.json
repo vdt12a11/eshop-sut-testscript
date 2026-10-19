@@ -1,0 +1,322 @@
+[
+  {
+    "at": "2026-10-18T06:10:07.465Z",
+    "title": "FR-02 — Đăng nhập và khóa tài khoản",
+    "detail": "6 TC minh họa: TC01, TC02, TC03, TC04, TC07, TC14.\nChú thích kiểm thử do runner hiển thị; không phải UI gốc EShop."
+  },
+  {
+    "at": "2026-10-18T06:10:09.487Z",
+    "title": "FR-02-TC01 | Đăng nhập thành công, JWT và client token",
+    "detail": "MỤC TIÊU: Đăng nhập thành công; JWT xác thực được; client lưu đúng token và gửi Authorization: Bearer <token> đúng token trên request cần xác thực.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=0."
+  },
+  {
+    "at": "2026-10-18T06:10:13.492Z",
+    "title": "FR-02-TC01 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:10:16.089Z",
+    "title": "FR-02-TC01 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:10:18.322Z",
+    "title": "FR-02-TC01 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:10:21.618Z",
+    "title": "FR-02-TC01 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — HTTP đăng nhập: 200\nĐẠT — Có JWT trả về: chuỗi JWT\nĐẠT — Client lưu đúng JWT trả về: có / đúng\nĐẠT — Client gửi đúng JWT trong Authorization: có / đúng\nĐẠT — Backend chấp nhận JWT (HTTP): 200\nĐẠT — JWT xác định đúng tài khoản: \"test@eshop.com\""
+  },
+  {
+    "at": "2026-10-18T06:10:25.470Z",
+    "title": "FR-02-TC02 | Sai mật khẩu từ n=0",
+    "detail": "MỤC TIÊU: Từ chối; không cấp phiên hợp lệ; n=1; chưa khóa; lỗi xác thực phù hợp, không lộ chi tiết.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=0."
+  },
+  {
+    "at": "2026-10-18T06:10:29.484Z",
+    "title": "FR-02-TC02 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:10:32.078Z",
+    "title": "FR-02-TC02 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:10:34.462Z",
+    "title": "FR-02-TC02 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:10:36.881Z",
+    "title": "FR-02-TC02 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Từ chối đăng nhập, không cấp JWT: có / đúng\nLỖI — Bộ đếm sau lần đăng nhập sai: 2 | Mong đợi: 1\nĐẠT — Tài khoản bị khóa: không / sai\nĐẠT — Có thông báo lỗi phù hợp trên giao diện: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:10:40.658Z",
+    "title": "FR-02-TC03 | Sai mật khẩu từ n=1",
+    "detail": "MỤC TIÊU: Từ chối; không cấp phiên hợp lệ; n=2; chưa khóa.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=1."
+  },
+  {
+    "at": "2026-10-18T06:10:44.689Z",
+    "title": "FR-02-TC03 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:10:47.260Z",
+    "title": "FR-02-TC03 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:10:49.641Z",
+    "title": "FR-02-TC03 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:10:52.059Z",
+    "title": "FR-02-TC03 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Từ chối đăng nhập, không cấp JWT: có / đúng\nLỖI — Bộ đếm sau lần đăng nhập sai: 3 | Mong đợi: 2\nLỖI — Tài khoản bị khóa: có / đúng | Mong đợi: không / sai\nĐẠT — Có thông báo lỗi phù hợp trên giao diện: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:10:55.823Z",
+    "title": "FR-02-TC04 | Sai mật khẩu từ n=2, kích hoạt khóa",
+    "detail": "MỤC TIÊU: Từ chối; n=3; kích hoạt khóa 30 giây; không cấp phiên hợp lệ.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=2."
+  },
+  {
+    "at": "2026-10-18T06:10:59.839Z",
+    "title": "FR-02-TC04 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:11:02.486Z",
+    "title": "FR-02-TC04 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:11:04.893Z",
+    "title": "FR-02-TC04 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:11:07.330Z",
+    "title": "FR-02-TC04 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Từ chối đăng nhập, không cấp JWT: có / đúng\nLỖI — Bộ đếm sau lần đăng nhập sai: 4 | Mong đợi: 3\nĐẠT — Tài khoản bị khóa: có / đúng\nLỖI — Thời hạn khóa đúng 30 giây: không / sai | Mong đợi: có / đúng\nĐẠT — Có thông báo lỗi phù hợp trên giao diện: có / đúng\nThời hạn khóa đo được: khoảng 180 giây; yêu cầu: 30 giây."
+  },
+  {
+    "at": "2026-10-18T06:11:11.197Z",
+    "title": "FR-02-TC07 | Email sai định dạng bị HTML5 chặn",
+    "detail": "MỤC TIÊU: HTML5 chặn email sai định dạng; không gửi request đăng nhập.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=0."
+  },
+  {
+    "at": "2026-10-18T06:11:15.221Z",
+    "title": "FR-02-TC07 | Bước 1: nhập email",
+    "detail": "Nhập email: abc\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:11:17.005Z",
+    "title": "FR-02-TC07 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:11:19.249Z",
+    "title": "FR-02-TC07 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:11:21.711Z",
+    "title": "FR-02-TC07 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nLỖI — Kiểu của trường email: \"text\" | Mong đợi: \"email\"\nLỖI — HTML5 xem email nhập vào là hợp lệ: có / đúng | Mong đợi: không / sai\nLỖI — Không gửi request đăng nhập: không / sai | Mong đợi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:11:25.595Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "MỤC TIÊU: Khóa đã hết hiệu lực; đăng nhập thành công và trả JWT. Không kết luận bộ đếm được reset.\nTiền điều kiện riêng: tài khoản tồn tại, chưa khóa; n=0."
+  },
+  {
+    "at": "2026-10-18T06:11:29.620Z",
+    "title": "FR-02-TC14 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:11:32.283Z",
+    "title": "FR-02-TC14 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:11:34.692Z",
+    "title": "FR-02-TC14 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:11:37.118Z",
+    "title": "FR-02-TC14 | Chuẩn bị khóa mới",
+    "detail": "Đã gửi sai 1 lần. Bộ đếm thực tế: 2.\nTrạng thái thực tế: chưa khóa."
+  },
+  {
+    "at": "2026-10-18T06:11:38.125Z",
+    "title": "FR-02-TC14 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:11:40.679Z",
+    "title": "FR-02-TC14 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:11:43.042Z",
+    "title": "FR-02-TC14 | Bước 3: gửi đăng nhập",
+    "detail": "Kiểm tra email và mật khẩu vừa nhập.\nTiếp theo: bấm Sign In rồi đối chiếu kết quả với yêu cầu."
+  },
+  {
+    "at": "2026-10-18T06:11:45.463Z",
+    "title": "FR-02-TC14 | Chuẩn bị khóa mới",
+    "detail": "Đã gửi sai 2 lần. Bộ đếm thực tế: 4.\nTrạng thái thực tế: đã khóa."
+  },
+  {
+    "at": "2026-10-18T06:11:46.471Z",
+    "title": "FR-02-TC14 | Bước 1: nhập email",
+    "detail": "Nhập email: test@eshop.com\nQuan sát dữ liệu đang được gõ vào form."
+  },
+  {
+    "at": "2026-10-18T06:11:49.057Z",
+    "title": "FR-02-TC14 | Bước 2: nhập mật khẩu",
+    "detail": "Nhập mật khẩu của tài khoản demo.\nSau khi điền xong sẽ dừng để kiểm tra dữ liệu trước khi gửi."
+  },
+  {
+    "at": "2026-10-18T06:11:51.245Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 25 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:52.263Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 24 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:53.276Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 23 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:54.283Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 22 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:55.290Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 21 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:56.297Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 20 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:57.307Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 19 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:58.318Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 18 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:11:59.327Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 17 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:00.336Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 16 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:01.349Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 15 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:02.356Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 14 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:03.370Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 13 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:04.382Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 12 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:05.384Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 11 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:06.392Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 10 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:07.397Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 9 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:08.401Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 8 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:09.409Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 7 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:10.414Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 6 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:11.425Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 5 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:12.431Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 4 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:13.439Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Khóa mới đã được kích hoạt bằng đăng nhập sai.\nChờ đồng hồ thật: còn 3 giây; không tua nhanh hoặc sửa đồng hồ backend."
+  },
+  {
+    "at": "2026-10-18T06:12:14.117Z",
+    "title": "FR-02-TC14 | Bước 3: trước khi gửi",
+    "detail": "Đã nhập xong dữ liệu. Dừng 2 giây trước khi gửi đăng nhập."
+  },
+  {
+    "at": "2026-10-18T06:12:16.112Z",
+    "title": "FR-02-TC14 | Ngay sau hết hạn t=31 giây",
+    "detail": "Gửi yêu cầu tại thời điểm đã chọn; đọc trạng thái thực tế."
+  },
+  {
+    "at": "2026-10-18T06:12:16.508Z",
+    "title": "FR-02-TC14 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nLỖI — Đăng nhập đúng sau khi hết khóa (HTTP): 403 | Mong đợi: 200\nLỖI — Có JWT sau khi hết khóa: không có | Mong đợi: chuỗi JWT"
+  },
+  {
+    "at": "2026-10-18T06:12:20.072Z",
+    "title": "FR-02 — Tổng kết video đầu tiên",
+    "detail": "6 TC minh họa | Pass: 1 | Fail: 5\nCác kết quả được lưu vào README và hồ sơ chạy test.\nDừng tại đây và chờ sinh viên duyệt trước video FR-09/FR-15."
+  }
+]

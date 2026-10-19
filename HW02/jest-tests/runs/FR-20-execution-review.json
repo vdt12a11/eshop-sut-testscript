@@ -1,0 +1,25 @@
+{
+  "approved_run_ids": [
+    "2026-10-18T11-28-19-844Z-FR-20",
+    "2026-10-18T11-34-16-727Z-FR-20",
+    "2026-10-18T11-50-17-624Z-FR-20"
+  ],
+  "excluded_case_results": {
+    "2026-10-18T11-28-19-844Z-FR-20": [
+      "FR-20-TC04",
+      "FR-20-TC14"
+    ]
+  },
+  "oracle_notes": {
+    "FR-20-TC10": "Chưa kết luận: bộ đọc UI chưa xác minh được giá trị ô nhập khi bàn phím mở ở lượt này; quan sát sau thao tác cho thấy SP_A có số lượng 1 và SP_B giữ nguyên. Cần xác minh dữ liệu thử và chốt quy tắc chuẩn hóa trước khi kết luận toàn bộ TC.",
+    "FR-20-TC11": "Chưa kết luận: bộ đọc UI chưa xác minh được giá trị ô nhập khi bàn phím mở ở lượt này; quan sát sau thao tác cho thấy SP_A có số lượng 1 và SP_B giữ nguyên. Cần xác minh dữ liệu thử và chốt quy tắc chuẩn hóa trước khi kết luận toàn bộ TC.",
+    "FR-20-TC12": "Chưa kết luận: bộ đọc UI chưa xác minh được giá trị ô nhập khi bàn phím mở ở lượt này; quan sát sau thao tác cho thấy SP_A có số lượng 1 và SP_B giữ nguyên. Cần xác minh dữ liệu thử và chốt quy tắc chuẩn hóa trước khi kết luận toàn bộ TC."
+  },
+  "reviewer": "Codex — rà soát hạ tầng/dữ liệu thực thi, không thay human review của sinh viên",
+  "limitations": [
+    "Lượt đầu TC04 thiếu chờ ổn định UI sau đóng bàn phím; đã chạy lại TC04.",
+    "Lượt đầu TC14 chưa có guard kiểm đủ fixture SP_B; bỏ kết quả đó, dùng lần chạy lại có guard và ảnh đối chứng.",
+    "Ở các lượt TC10–TC12, entered_input không đọc được khi IME mở; không suy ra UI đã chặn dữ liệu chỉ từ undefined. Giữ raw logs nguyên vẹn và ghi giới hạn trong tổng kết.",
+    "Những lượt chỉ có infrastructure-error hoặc thử nghiệm video chưa duyệt chất lượng không được dùng cho tổng kết hoặc publish."
+  ]
+}

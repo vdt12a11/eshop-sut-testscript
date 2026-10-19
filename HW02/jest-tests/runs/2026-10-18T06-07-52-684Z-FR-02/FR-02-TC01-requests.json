@@ -1,0 +1,29 @@
+[
+  {
+    "time": 1792303686813,
+    "url": "http://localhost:3000/api/login",
+    "method": "POST",
+    "bearer": false
+  },
+  {
+    "time": 1792303686847,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792303686860,
+    "url": "http://localhost:3000/api/products?search=",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792303686860,
+    "url": "http://localhost:3000/api/products?search=",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  }
+]

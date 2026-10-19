@@ -1,0 +1,3 @@
+Error: Server unavailable: http://localhost:5174
+    at wait (D:\vscode\Software testing\HW02\jest-tests\scripts\run.cjs:21:148)
+    at async D:\vscode\Software testing\HW02\jest-tests\scripts\run.cjs:27:214

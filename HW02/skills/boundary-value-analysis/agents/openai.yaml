@@ -1,0 +1,4 @@
+interface:
+  display_name: "Boundary Value Analysis"
+  short_description: "Design boundary tests with justified values"
+  default_prompt: "Use $boundary-value-analysis for the selected feature using the provided specification and course materials."

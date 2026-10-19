@@ -1,0 +1,49 @@
+{
+  "run_id": "2026-10-18T11-34-16-727Z-FR-20",
+  "started_at": "2026-10-18T11:34:16.728Z",
+  "timezone": "Asia/Saigon",
+  "fr": "FR-20",
+  "demo": false,
+  "node": "v24.19.0",
+  "os": "win32",
+  "source_root": "D:\\vscode\\Software testing\\eshop-sut",
+  "source_commit": "85af3ba875c88283615e22cb108f13e2fccaf0e9",
+  "source_hashes": {
+    "frontend-mobile/App.js": "f32d1e6288602407d82b34ec2e1b39efb652ec82d1c4173dd6a4bf477795de1b",
+    "frontend-mobile/index.js": "eeb521c7e92449108273176e095741230773d345d528455c1f70cf7f2e9c7ee1",
+    "frontend-mobile/app.json": "02ea75559cb0b38dc12665de47236c88b7d3614771fa0602a8d8c70edcd3797f",
+    "frontend-mobile/package.json": "4dd021b710ae0cffe614eed6947bd041802127b83c33799ef7f20957c2c9ea54",
+    "frontend-mobile/package-lock.json": "00a7e18e1ea354ebb71769f8905e8a88a754b1fd9c673cd753e36cd55c9d7878",
+    "backend/server.js": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "backend/database.js": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717"
+  },
+  "original_db_before": "2251ba251c2b0722f0e524775c6db5fc1b7cfb046d561ba26905b1edcc52ba02",
+  "backend": "http://localhost:3000",
+  "mobile_project": "D:\\vscode\\Software testing\\HW02\\runtime\\mobile-app",
+  "isolated_db": "D:\\vscode\\Software testing\\HW02\\runtime\\jest-sut\\2026-10-18T11-34-16-727Z-FR-20\\database.sqlite",
+  "android_serial": "127.0.0.1:5557",
+  "transport": "Native React Native in Expo Go; ADB input/UIAutomator; Playwright records live ADB screen viewer",
+  "fixture_network": "Android HTTP proxy maps original hard-coded API host 192.168.10.13:3000 to isolated localhost:3000; source App.js unchanged",
+  "android": {
+    "release": "16",
+    "api": "36",
+    "model": "sdk_gphone64_x86_64",
+    "expo": "54.0.8",
+    "uiautomator2": "10.7.0"
+  },
+  "previous_android_proxy": ":0",
+  "original_db_after": "2251ba251c2b0722f0e524775c6db5fc1b7cfb046d561ba26905b1edcc52ba02",
+  "original_db_unchanged": true,
+  "source_hashes_after": {
+    "frontend-mobile/App.js": "f32d1e6288602407d82b34ec2e1b39efb652ec82d1c4173dd6a4bf477795de1b",
+    "frontend-mobile/index.js": "eeb521c7e92449108273176e095741230773d345d528455c1f70cf7f2e9c7ee1",
+    "frontend-mobile/app.json": "02ea75559cb0b38dc12665de47236c88b7d3614771fa0602a8d8c70edcd3797f",
+    "frontend-mobile/package.json": "4dd021b710ae0cffe614eed6947bd041802127b83c33799ef7f20957c2c9ea54",
+    "frontend-mobile/package-lock.json": "00a7e18e1ea354ebb71769f8905e8a88a754b1fd9c673cd753e36cd55c9d7878",
+    "backend/server.js": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "backend/database.js": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717"
+  },
+  "source_unchanged": true,
+  "finished_at": "2026-10-18T11:36:23.907Z",
+  "jest_exit_code": 1
+}

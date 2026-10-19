@@ -1,0 +1,72 @@
+[
+  {
+    "at": "2026-10-18T06:22:52.605Z",
+    "title": "FR-15 — Quản lý sản phẩm CRUD",
+    "detail": "Các TC tiêu biểu được thực hiện trên giao diện thật.\nChú thích kiểm thử do runner hiển thị; không phải UI gốc EShop."
+  },
+  {
+    "at": "2026-10-18T06:22:54.612Z",
+    "title": "FR-15-TC01 | Thêm sản phẩm hợp lệ",
+    "detail": "MỤC TIÊU: Tạo một sản phẩm mới; tải lại danh sách để xác nhận tên SP_THU_FR15, giá 100.000 đ và danh mục DM_A được lưu đúng.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:22:58.623Z",
+    "title": "FR-15-TC01 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:02.563Z",
+    "title": "FR-15-TC02 | Xem sản phẩm tồn tại",
+    "detail": "MỤC TIÊU: Hiển thị đúng sản phẩm đã chọn: tên SP_MUC_TIEU, giá 100.000 đ, danh mục DM_A; đối chiếu với dữ liệu đã lưu.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:23:06.577Z",
+    "title": "FR-15-TC02 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:10.392Z",
+    "title": "FR-15-TC03 | Sửa chỉ sản phẩm đích, kiểm ngay sau lưu và reload",
+    "detail": "MỤC TIÊU: Ngay sau khi lưu thành công và sau khi tải lại, chỉ SP_MUC_TIEU đổi đúng tên SP_THU_FR15_DA_SUA, giá 150.000 đ và danh mục DM_B; dữ liệu của mọi sản phẩm khác giữ nguyên so với bản chụp trước khi sửa.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:23:14.409Z",
+    "title": "FR-15-TC03 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:18.299Z",
+    "title": "FR-15-TC04 | Xóa sản phẩm đích",
+    "detail": "MỤC TIÊU: Sản phẩm đích được xóa; tải lại danh sách quản lý và xác nhận không còn sản phẩm đó. Không mặc định phải xóa cứng trong CSDL.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:23:22.315Z",
+    "title": "FR-15-TC04 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:26.138Z",
+    "title": "FR-15-TC07 | Thêm với tên 256 ký tự",
+    "detail": "MỤC TIÊU: Không lưu dữ liệu tên không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:23:30.156Z",
+    "title": "FR-15-TC07 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:33.972Z",
+    "title": "FR-15-TC10 | Thêm với giá 0",
+    "detail": "MỤC TIÊU: Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.\nDữ liệu và trạng thái được chuẩn bị độc lập cho từng TC."
+  },
+  {
+    "at": "2026-10-18T06:23:37.991Z",
+    "title": "FR-15-TC10 — Not Run",
+    "detail": "Lỗi hạ tầng: locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+  },
+  {
+    "at": "2026-10-18T06:23:41.579Z",
+    "title": "FR-15 — Tổng kết video",
+    "detail": "6 TC minh họa | Pass: 0 | Fail: 0\nCác kết quả được lưu vào README và hồ sơ chạy test.\nĐã hoàn tất các TC minh họa của chức năng này."
+  }
+]

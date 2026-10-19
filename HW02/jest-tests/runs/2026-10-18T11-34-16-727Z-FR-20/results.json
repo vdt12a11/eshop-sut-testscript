@@ -1,0 +1,721 @@
+{
+  "run_id": "2026-10-18T11-34-16-727Z-FR-20",
+  "platform": "Android native / Expo Go",
+  "cases": [
+    {
+      "id": "FR-20-TC04",
+      "status": "Fail",
+      "tested_at": "2026-10-18 18:35:07 UTC+07:00",
+      "actual": "PASS SP_A số lượng: \"5\"\nPASS SP_A thành tiền: 500000\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nPASS Mỗi sản phẩm có đúng một dòng: 1\nPASS Tổng tiền đúng: 550000\nFAIL Nhãn tổng tiền là Tổng cộng: false (expected true)",
+      "checks": [
+        {
+          "label": "SP_A số lượng",
+          "actual": "5",
+          "expected": "5",
+          "pass": true
+        },
+        {
+          "label": "SP_A thành tiền",
+          "actual": 500000,
+          "expected": 500000,
+          "pass": true
+        },
+        {
+          "label": "SP_B số lượng",
+          "actual": "1",
+          "expected": "1",
+          "pass": true
+        },
+        {
+          "label": "SP_B thành tiền",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        },
+        {
+          "label": "Mỗi sản phẩm có đúng một dòng",
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        },
+        {
+          "label": "Tổng tiền đúng",
+          "actual": 550000,
+          "expected": 550000,
+          "pass": true
+        },
+        {
+          "label": "Nhãn tổng tiền là Tổng cộng",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "before": {
+          "lines": [
+            "6:34",
+            "Wifi signal full.",
+            "T-Mobile, no signal.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "2",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 200,000 ₫",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 250,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "2",
+              "amount": 200000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "2",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 250,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 200,000 ₫",
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        },
+        "attempted_input": "3",
+        "after": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, no signal.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "5",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 500,000 ₫",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 550,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "5",
+              "amount": 500000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "5",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 550,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 500,000 ₫",
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-34-16-727Z-FR-20/FR-20-TC04.png"
+    },
+    {
+      "id": "FR-20-TC10",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 18:35:27 UTC+07:00",
+      "actual": "PASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000",
+      "checks": [
+        {
+          "label": "Không lưu chính số lượng không hợp lệ",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "SP_B số lượng",
+          "actual": "1",
+          "expected": "1",
+          "pass": true
+        },
+        {
+          "label": "SP_B thành tiền",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, signal full.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (1)",
+            "Giỏ (1)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 50,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1"
+          ],
+          "products": [
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 50,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        },
+        "attempted_input": "0",
+        "after": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, signal full.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 100,000 ₫",
+            "Tổng tạm tính: 150,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "1",
+              "amount": 100000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 150,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫",
+            "Thành tiền: 100,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-34-16-727Z-FR-20/FR-20-TC10.png",
+      "reason": "UI không giữ nguyên giá trị thử \"0\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó.",
+      "classification": "Oracle/coverage pending"
+    },
+    {
+      "id": "FR-20-TC11",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 18:35:45 UTC+07:00",
+      "actual": "PASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000",
+      "checks": [
+        {
+          "label": "Không lưu chính số lượng không hợp lệ",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "SP_B số lượng",
+          "actual": "1",
+          "expected": "1",
+          "pass": true
+        },
+        {
+          "label": "SP_B thành tiền",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, signal full.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (1)",
+            "Giỏ (1)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 50,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1"
+          ],
+          "products": [
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 50,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        },
+        "attempted_input": "1.5",
+        "after": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, signal full.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 100,000 ₫",
+            "Tổng tạm tính: 150,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "1",
+              "amount": 100000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 150,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫",
+            "Thành tiền: 100,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-34-16-727Z-FR-20/FR-20-TC11.png",
+      "reason": "UI không giữ nguyên giá trị thử \"1.5\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó.",
+      "classification": "Oracle/coverage pending"
+    },
+    {
+      "id": "FR-20-TC12",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 18:36:04 UTC+07:00",
+      "actual": "PASS Không lưu chính số lượng không hợp lệ: true\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000",
+      "checks": [
+        {
+          "label": "Không lưu chính số lượng không hợp lệ",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "SP_B số lượng",
+          "actual": "1",
+          "expected": "1",
+          "pass": true
+        },
+        {
+          "label": "SP_B thành tiền",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": {
+          "lines": [
+            "6:35",
+            "Wifi signal full.",
+            "T-Mobile, signal full.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (1)",
+            "Giỏ (1)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 50,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1"
+          ],
+          "products": [
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 50,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        },
+        "attempted_input": "abc",
+        "after": {
+          "lines": [
+            "6:36",
+            "Wifi signal full.",
+            "T-Mobile, three bars.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 100,000 ₫",
+            "Tổng tạm tính: 150,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "1",
+              "amount": 100000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "1",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 150,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 50,000 ₫",
+            "Thành tiền: 100,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-34-16-727Z-FR-20/FR-20-TC12.png",
+      "reason": "UI không giữ nguyên giá trị thử \"abc\" (quan sát undefined); chưa kiểm chứng xử lý chính dữ liệu đó.",
+      "classification": "Oracle/coverage pending"
+    },
+    {
+      "id": "FR-20-TC14",
+      "status": "Fail",
+      "tested_at": "2026-10-18 18:36:23 UTC+07:00",
+      "actual": "FAIL SP_A số lượng: \"4\" (expected \"3\")\nFAIL SP_A thành tiền: 400000 (expected 300000)\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nFAIL Tổng tiền đúng sau nhập tay: 450000 (expected 350000)\nPASS Không tạo thêm dòng SP_A: 1",
+      "checks": [
+        {
+          "label": "SP_A số lượng",
+          "actual": "4",
+          "expected": "3",
+          "pass": false
+        },
+        {
+          "label": "SP_A thành tiền",
+          "actual": 400000,
+          "expected": 300000,
+          "pass": false
+        },
+        {
+          "label": "SP_B số lượng",
+          "actual": "1",
+          "expected": "1",
+          "pass": true
+        },
+        {
+          "label": "SP_B thành tiền",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        },
+        {
+          "label": "Tổng tiền đúng sau nhập tay",
+          "actual": 450000,
+          "expected": 350000,
+          "pass": false
+        },
+        {
+          "label": "Không tạo thêm dòng SP_A",
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "attempted_input": "3",
+        "entered_input": "4",
+        "after": {
+          "lines": [
+            "6:36",
+            "Wifi signal full.",
+            "T-Mobile, three bars.",
+            "Battery 100 percent.",
+            "EShop Mobile",
+            "EShop Mobile",
+            "Đăng nhập",
+            "Đăng nhập",
+            "Giỏ (2)",
+            "Giỏ (2)",
+            "Giỏ Hàng",
+            "SP_A",
+            "Giá: 100,000 ₫",
+            "Số lượng:",
+            "4",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 400,000 ₫",
+            "SP_B",
+            "Giá: 50,000 ₫",
+            "Số lượng:",
+            "1",
+            "Xóa",
+            "Xóa",
+            "Thành tiền: 50,000 ₫",
+            "Tổng tạm tính: 450,000 ₫",
+            "← Mua tiếp",
+            "← Mua tiếp",
+            "Tiến hành thanh toán",
+            "Tiến hành thanh toán",
+            "© 2026 EShop SUT. Dành cho mục đích kiểm thử."
+          ],
+          "rows": {
+            "SP_A": {
+              "quantity": "4",
+              "amount": 400000
+            },
+            "SP_B": {
+              "quantity": "1",
+              "amount": 50000
+            }
+          },
+          "quantities": [
+            "4",
+            "1"
+          ],
+          "products": [
+            "SP_A",
+            "SP_B"
+          ],
+          "totals": [
+            "Tổng tạm tính: 450,000 ₫"
+          ],
+          "amounts": [
+            "Thành tiền: 400,000 ₫",
+            "Thành tiền: 50,000 ₫"
+          ],
+          "plus_count": 0,
+          "minus_count": 0
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T11-34-16-727Z-FR-20/FR-20-TC14.png"
+    }
+  ]
+}

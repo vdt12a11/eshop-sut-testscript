@@ -1,0 +1,157 @@
+[
+  {
+    "at": "2026-10-18T11:50:42.691Z",
+    "title": "FR-20-TC01 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:50:51.487Z",
+    "title": "FR-20-TC01 | Xem giỏ trống",
+    "detail": "MỤC TIÊU: Hiển thị hình minh họa và thông báo giỏ hàng trống rõ ràng; không hiển thị dòng sản phẩm giả."
+  },
+  {
+    "at": "2026-10-18T11:50:55.494Z",
+    "title": "FR-20-TC01 | Thực hiện",
+    "detail": "Xem giỏ trống\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:50:55.577Z",
+    "title": "FR-20-TC01 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Có thông báo giỏ trống: true\nFAIL Có hình minh họa trong giỏ trống: false (expected true)"
+  },
+  {
+    "at": "2026-10-18T11:50:59.638Z",
+    "title": "FR-20-TC03 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:51:09.320Z",
+    "title": "FR-20-TC03 | Thêm sản phẩm chưa có, số lượng 1",
+    "detail": "MỤC TIÊU: Có thêm đúng một dòng SP_A số lượng 1, thành tiền 100.000 đ; SP_B vẫn số lượng 2, thành tiền 100.000 đ; Tổng cộng = 200.000 đ. Có phản hồi trực quan khi thêm."
+  },
+  {
+    "at": "2026-10-18T11:51:13.324Z",
+    "title": "FR-20-TC03 | Thực hiện",
+    "detail": "Thêm sản phẩm chưa có, số lượng 1\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:51:14.531Z",
+    "title": "FR-20-TC03 | Nhập số lượng thêm",
+    "detail": "Nhập: 1\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:51:18.591Z",
+    "title": "FR-20-TC03 | Trước thao tác",
+    "detail": "Thêm SP_A với số lượng vừa nhập.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:51:22.377Z",
+    "title": "FR-20-TC03 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS SP_A số lượng: \"1\"\nPASS SP_A thành tiền: 100000\nPASS SP_B số lượng: \"2\"\nPASS SP_B thành tiền: 100000\nPASS Mỗi sản phẩm có đúng một dòng: 1\nPASS Tổng tiền đúng: 200000\nFAIL Nhãn tổng tiền là Tổng cộng: false (expected true)"
+  },
+  {
+    "at": "2026-10-18T11:51:26.420Z",
+    "title": "FR-20-TC05 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:51:36.708Z",
+    "title": "FR-20-TC05 | Điều chỉnh bằng nút tăng và giảm",
+    "detail": "MỤC TIÊU: Sau +: A số lượng 3, thành tiền 300.000 đ, Tổng cộng = 350.000 đ. Sau -: A số lượng 2, thành tiền 200.000 đ, Tổng cộng = 250.000 đ. B luôn giữ số lượng 1 và thành tiền 50.000 đ."
+  },
+  {
+    "at": "2026-10-18T11:51:40.722Z",
+    "title": "FR-20-TC05 | Thực hiện",
+    "detail": "Điều chỉnh bằng nút tăng và giảm\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:51:40.907Z",
+    "title": "FR-20-TC05 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nFAIL Có nút + để thực hiện TC05: false (expected true)\nFAIL Có nút - để thực hiện TC05: false (expected true)"
+  },
+  {
+    "at": "2026-10-18T11:51:44.875Z",
+    "title": "FR-20-TC06 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:51:55.051Z",
+    "title": "FR-20-TC06 | Hủy xác nhận xóa",
+    "detail": "MỤC TIÊU: Có hộp thoại xác nhận; trước khi chọn và sau khi Hủy, A vẫn số lượng 2, B vẫn số lượng 1; Tổng cộng = 250.000 đ."
+  },
+  {
+    "at": "2026-10-18T11:51:59.056Z",
+    "title": "FR-20-TC06 | Thực hiện",
+    "detail": "Hủy xác nhận xóa\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:51:59.583Z",
+    "title": "FR-20-TC06 | Trước thao tác",
+    "detail": "Bấm Xóa SP_A; phải có xác nhận trước khi giỏ thay đổi.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:52:02.608Z",
+    "title": "FR-20-TC06 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nFAIL Hiện hộp thoại xác nhận xóa: false (expected true)\nFAIL Hủy xóa giữ SP_A: undefined (expected {\"quantity\":\"2\",\"amount\":200000})\nFAIL Giữ tổng tiền khi chưa đồng ý xóa: 50000 (expected 250000)\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000"
+  },
+  {
+    "at": "2026-10-18T11:52:06.568Z",
+    "title": "FR-20-TC09 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:52:16.038Z",
+    "title": "FR-20-TC09 | Tiếp tục mua sắm",
+    "detail": "MỤC TIÊU: Chuyển về trang chủ, hiển thị danh sách sản phẩm. Khi quay lại giỏ, vẫn đúng hai sản phẩm: A số lượng 2, thành tiền 200.000 đ; B số lượng 1, thành tiền 50.000 đ; Tổng cộng = 250.000 đ."
+  },
+  {
+    "at": "2026-10-18T11:52:20.049Z",
+    "title": "FR-20-TC09 | Thực hiện",
+    "detail": "Tiếp tục mua sắm\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:52:20.324Z",
+    "title": "FR-20-TC09 | Trước thao tác",
+    "detail": "Tiếp tục mua sắm, không đổi sản phẩm rồi mở lại giỏ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:52:22.756Z",
+    "title": "FR-20-TC09 | Trước thao tác",
+    "detail": "Mở lại Giỏ hàng trong cùng phiên.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T11:52:25.396Z",
+    "title": "FR-20-TC09 — Pass",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nPASS Điều hướng về trang chủ: true\nPASS Sản phẩm và số lượng giữ nguyên: {\"SP_A\":{\"quantity\":\"2\",\"amount\":200000},\"SP_B\":{\"quantity\":\"1\",\"amount\":50000}}\nPASS Tổng tiền giữ nguyên: 250000"
+  },
+  {
+    "at": "2026-10-18T11:52:29.388Z",
+    "title": "FR-20-TC14 | Chuẩn bị",
+    "detail": "Thiết lập giỏ riêng bằng thao tác trên ứng dụng."
+  },
+  {
+    "at": "2026-10-18T11:52:38.932Z",
+    "title": "FR-20-TC14 | Nhập tay số lượng trong giỏ",
+    "detail": "MỤC TIÊU: SP_A có đúng số lượng 3, thành tiền 300.000 đ; SP_B vẫn số lượng 1, thành tiền 50.000 đ; Tổng cộng = 350.000 đ. Không tạo thêm dòng SP_A."
+  },
+  {
+    "at": "2026-10-18T11:52:42.934Z",
+    "title": "FR-20-TC14 | Thực hiện",
+    "detail": "Nhập tay số lượng trong giỏ\nQuan sát thao tác trên màn hình Android."
+  },
+  {
+    "at": "2026-10-18T11:52:43.415Z",
+    "title": "FR-20-TC14 | Nhập số lượng SP_A trong giỏ",
+    "detail": "Nhập: 3\nDừng 1,5 giây sau khi nhập."
+  },
+  {
+    "at": "2026-10-18T11:52:46.796Z",
+    "title": "FR-20-TC14 — Fail",
+    "detail": "ĐỐI CHIẾU KẾT QUẢ\nFAIL SP_A số lượng: \"4\" (expected \"3\")\nFAIL SP_A thành tiền: 400000 (expected 300000)\nPASS SP_B số lượng: \"1\"\nPASS SP_B thành tiền: 50000\nFAIL Tổng tiền đúng sau nhập tay: 450000 (expected 350000)\nPASS Không tạo thêm dòng SP_A: 1"
+  },
+  {
+    "at": "2026-10-18T11:52:51.155Z",
+    "title": "FR-20 — Tổng kết",
+    "detail": "6 TC minh họa\n1 Pass · 5 Fail · 0 chưa kết luận\nUI thực thi trên Android, không thay bằng frontend Web."
+  }
+]

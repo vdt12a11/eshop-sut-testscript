@@ -1,0 +1,72 @@
+{
+  "run_id": "2026-10-18T06-22-47-132Z-FR-15",
+  "cases": [
+    {
+      "id": "FR-15-TC01",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:02 UTC+07:00",
+      "started_at": "2026-10-18T06:22:58.623Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC01.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "id": "FR-15-TC02",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:10 UTC+07:00",
+      "started_at": "2026-10-18T06:23:06.577Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC02.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "id": "FR-15-TC03",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:17 UTC+07:00",
+      "started_at": "2026-10-18T06:23:14.409Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC03.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "id": "FR-15-TC04",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:25 UTC+07:00",
+      "started_at": "2026-10-18T06:23:22.315Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC04.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "id": "FR-15-TC07",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:33 UTC+07:00",
+      "started_at": "2026-10-18T06:23:30.156Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC07.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "id": "FR-15-TC10",
+      "status": "Not Run",
+      "tested_at": "2026-10-18 13:23:41 UTC+07:00",
+      "started_at": "2026-10-18T06:23:37.990Z",
+      "actual": "",
+      "checks": [],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-22-47-132Z-FR-15/FR-15-TC10.png",
+      "reason": "locator.waitFor: Error: strict mode violation: getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) resolved to 2 elements:\n    1) <td class=\"p-3\">…</td> aka getByRole('cell', { name: 'SP_MUC_TIEU' }).first()\n    2) <td class=\"p-3\">SP_MUC_TIEU</td> aka getByText('SP_MUC_TIEU')\n\nCall log:\n\u001b[2m  - waiting for getByRole('cell', { name: 'SP_MUC_TIEU', exact: true }) to be visible\u001b[22m\n"
+    }
+  ],
+  "video": "videos/FR-15-demo.webm"
+}

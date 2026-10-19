@@ -30,3 +30,7 @@ Bằng chứng trong evidence/tung là các lần chạy trên máy Tùng trư�
 
 Runner in kết quả mong đợi, kết quả thực tế, trạng thái PASS/FAIL, số suite/test, snapshot và thời gian chạy. Mỗi lần chạy tạo bằng chứng riêng trong `evidence/tung/`.
 
+
+## HW02 — Báo cáo lỗi
+
+[14 bug HW02 và GitHub Issues của nhóm](HW02/README.md).

@@ -1,0 +1,37 @@
+[
+  {
+    "time": 1792304388255,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304388255,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304388362,
+    "url": "http://localhost:3000/api/products/10019",
+    "method": "GET",
+    "bearer": false,
+    "body": null
+  },
+  {
+    "time": 1792304388363,
+    "url": "http://localhost:3000/api/products/10019",
+    "method": "GET",
+    "bearer": false,
+    "body": null
+  },
+  {
+    "time": 1792304396614,
+    "url": "http://localhost:3000/api/apply-coupon",
+    "method": "POST",
+    "bearer": false,
+    "body": "{\"code\":\"SAVE10\",\"total_amount\":400000,\"user_id\":null}"
+  }
+]

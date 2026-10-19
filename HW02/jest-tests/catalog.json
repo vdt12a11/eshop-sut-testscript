@@ -1,0 +1,1004 @@
+[
+  {
+    "id": "FR-02-TC01",
+    "fr": "FR-02",
+    "tc": "TC01",
+    "name": "Đăng nhập thành công, JWT và client token",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC4: Mật khẩu đúng của tài khoản tồn tại; EC7: n=0 trước request; EC10: Tài khoản chưa khóa; EC13: Đăng nhập thành công khi thông tin đúng, chưa khóa; EC19: Có JWT xác thực được khi đăng nhập thành công; EC25: Client lưu đúng token sau đăng nhập thành công; EC26: Request cần xác thực gửi Authorization: Bearer <token> đúng token",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tài khoản chưa khóa; chưa có lần sai; client chưa có phiên.",
+    "expected": "Đăng nhập thành công; JWT xác thực được; client lưu đúng token và gửi Authorization: Bearer <token> đúng token trên request cần xác thực.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC02",
+    "fr": "FR-02",
+    "tc": "TC02",
+    "name": "Sai mật khẩu từ n=0",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC5: Mật khẩu sai của tài khoản tồn tại; EC7: n=0 trước request; EC10: Tài khoản chưa khóa; EC14: Từ chối khi sai thông tin xác thực; EC17: Thông báo lỗi xác thực phù hợp, không lộ chi tiết; EC20: Không cấp phiên/JWT xác thực được khi bị từ chối; EC21: n_after = n_before + 1 khi đăng nhập sai, tài khoản tồn tại chưa khóa; EC22: Chưa khóa sau lần sai thứ 1 hoặc 2",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"WrongPass9!\"\nTrạng thái ban đầu: Tài khoản chưa khóa; chưa có lần sai.",
+    "expected": "Từ chối; không cấp phiên hợp lệ; n=1; chưa khóa; lỗi xác thực phù hợp, không lộ chi tiết.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC03",
+    "fr": "FR-02",
+    "tc": "TC03",
+    "name": "Sai mật khẩu từ n=1",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC5: Mật khẩu sai của tài khoản tồn tại; EC8: n=1 trước request sai; EC10: Tài khoản chưa khóa; EC14: Từ chối khi sai thông tin xác thực; EC20: Không cấp phiên/JWT xác thực được khi bị từ chối; EC21: n_after = n_before + 1 khi đăng nhập sai, tài khoản tồn tại chưa khóa; EC22: Chưa khóa sau lần sai thứ 1 hoặc 2",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"WrongPass9!\"\nTrạng thái ban đầu: Tài khoản chưa khóa; đã sai 1 lần liên tiếp.",
+    "expected": "Từ chối; không cấp phiên hợp lệ; n=2; chưa khóa.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC04",
+    "fr": "FR-02",
+    "tc": "TC04",
+    "name": "Sai mật khẩu từ n=2, kích hoạt khóa",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC5: Mật khẩu sai của tài khoản tồn tại; EC9: n=2 trước request sai; EC10: Tài khoản chưa khóa; EC14: Từ chối khi sai thông tin xác thực; EC20: Không cấp phiên/JWT xác thực được khi bị từ chối; EC21: n_after = n_before + 1 khi đăng nhập sai, tài khoản tồn tại chưa khóa; EC23: Kích hoạt khóa 30 giây ở lần sai thứ 3",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"WrongPass9!\"\nTrạng thái ban đầu: Tài khoản chưa khóa; đã sai 2 lần liên tiếp.",
+    "expected": "Từ chối; n=3; kích hoạt khóa 30 giây; không cấp phiên hợp lệ.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC05",
+    "fr": "FR-02",
+    "tc": "TC05",
+    "name": "Đăng nhập đúng khi đang khóa",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC4: Mật khẩu đúng của tài khoản tồn tại; EC11: Tài khoản đang trong thời hạn khóa; EC16: Từ chối khi tài khoản đang khóa; EC18: Thông báo khóa phù hợp, không lộ chi tiết; EC20: Không cấp phiên/JWT xác thực được khi bị từ chối",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tài khoản đang khóa; thử đăng nhập sau khoảng 10 giây từ lúc khóa.",
+    "expected": "Vẫn từ chối; không cấp phiên hợp lệ; thông báo khóa phù hợp, không lộ chi tiết.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC06",
+    "fr": "FR-02",
+    "tc": "TC06",
+    "name": "Email không tồn tại",
+    "condition": "EC2: Email hợp định dạng, tài khoản không tồn tại; EC6: Mật khẩu chuỗi bất kỳ khi email không tồn tại; EC14: Từ chối khi sai thông tin xác thực; EC17: Thông báo lỗi xác thực phù hợp, không lộ chi tiết; EC20: Không cấp phiên/JWT xác thực được khi bị từ chối",
+    "input": "Email: \"hw02-absent@example.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Email đã được xác nhận không tồn tại; client chưa có phiên.",
+    "expected": "Từ chối; không cấp phiên hợp lệ; lỗi xác thực phù hợp, không lộ chi tiết. Không kết luận bộ đếm của tài khoản không tồn tại.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC07",
+    "fr": "FR-02",
+    "tc": "TC07",
+    "name": "Email sai định dạng bị HTML5 chặn",
+    "condition": "EC3: Email không rỗng, sai định dạng HTML5; EC15: UI chặn submit email sai định dạng",
+    "input": "Email: \"abc\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Mở form đăng nhập; submit qua UI.",
+    "expected": "HTML5 chặn email sai định dạng; không gửi request đăng nhập.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC08",
+    "fr": "FR-02",
+    "tc": "TC08",
+    "name": "Đăng nhập sau khi hết khóa",
+    "condition": "EC1: Email hợp định dạng, tài khoản tồn tại; EC4: Mật khẩu đúng của tài khoản tồn tại; EC12: Tài khoản đã hết thời hạn khóa; EC13: Đăng nhập thành công khi thông tin đúng, chưa khóa; EC19: Có JWT xác thực được khi đăng nhập thành công; EC24: Hết khóa sau thời hạn; đăng nhập đúng thành công",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; không gửi yêu cầu xen giữa; thử đăng nhập sau khoảng 35 giây từ lúc khóa.",
+    "expected": "Hết khóa; đăng nhập thành công và trả JWT. Không kết luận bộ đếm được reset; chưa kiểm đúng biên 30 giây.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-02-TC09",
+    "fr": "FR-02",
+    "tc": "TC09",
+    "name": "Lần gửi sai thứ 4 trong thời hạn khóa",
+    "condition": "Lần gửi sai thứ 4: ngay sau lần kích hoạt khóa, trong thời hạn khóa.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"WrongPass9!\"\nTrạng thái ban đầu: Tạo 3 lần sai liên tiếp để khóa tài khoản; gửi lần thứ 4 trước khi hết 30 giây.",
+    "expected": "Tiếp tục bị từ chối; không cấp phiên hợp lệ. Không kết luận bộ đếm tăng thành 4 hoặc khóa được gia hạn vì đặc tả chưa quy định.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC10",
+    "fr": "FR-02",
+    "tc": "TC10",
+    "name": "Thời điểm bắt đầu khóa t=0",
+    "condition": "t = 0 giây: tại mốc bắt đầu khóa.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; giữ đồng hồ tại thời điểm khóa vừa kích hoạt; thử đăng nhập đúng.",
+    "expected": "Tài khoản đang khóa; từ chối đăng nhập; không cấp phiên hợp lệ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC11",
+    "fr": "FR-02",
+    "tc": "TC11",
+    "name": "Trong thời hạn khóa t=1 giây",
+    "condition": "t = 1 giây: ngay sau mốc bắt đầu khóa theo bước chọn 1 giây.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; thử đăng nhập đúng tại t = 1 giây.",
+    "expected": "Tài khoản còn khóa; từ chối đăng nhập; không cấp phiên hợp lệ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC12",
+    "fr": "FR-02",
+    "tc": "TC12",
+    "name": "Ngay trước hết hạn t=29 giây",
+    "condition": "t = 29 giây: ngay trước thời hạn 30 giây theo bước chọn 1 giây.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; thử đăng nhập đúng tại t = 29 giây.",
+    "expected": "Tài khoản còn khóa; từ chối đăng nhập; không cấp phiên hợp lệ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC13",
+    "fr": "FR-02",
+    "tc": "TC13",
+    "name": "Đúng mốc t=30 giây — chờ xác nhận oracle",
+    "condition": "t = 30 giây: tại đúng thời hạn khóa.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; dùng đồng hồ kiểm soát được để thử đăng nhập đúng tại t = 30 giây.",
+    "expected": "Cần xác nhận quy ước xử lý đúng mốc hết hạn (t ≥ 30 hay t > 30) và độ chính xác thời gian trước khi chốt expected; chưa kết luận Pass/Fail.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-02-TC14",
+    "fr": "FR-02",
+    "tc": "TC14",
+    "name": "Ngay sau hết hạn t=31 giây",
+    "condition": "t = 31 giây: ngay sau thời hạn 30 giây theo bước chọn 1 giây.",
+    "input": "Email: \"test@eshop.com\"\nMật khẩu: \"Test1234!\"\nTrạng thái ban đầu: Tạo khóa mới; không có yêu cầu xen giữa; thử đăng nhập đúng tại t = 31 giây.",
+    "expected": "Khóa đã hết hiệu lực; đăng nhập thành công và trả JWT. Không kết luận bộ đếm được reset.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC01",
+    "fr": "FR-09",
+    "tc": "TC01",
+    "name": "SAVE10 giảm 10%",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC15: Mã loại percent; EC17: Với percent: discount_amount = total × discount_value / 100; EC19: final_amount = total − discount_amount",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; thời điểm kiểm tra trước expired_at 1 ngày.",
+    "expected": "Áp dụng mã; giảm 40.000 đ; tổng sau giảm 360.000 đ.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC02",
+    "fr": "FR-09",
+    "tc": "TC02",
+    "name": "BIGBUY giảm cố định",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC16: Mã loại fixed; EC18: Với fixed: discount_amount = discount_value; EC19: final_amount = total − discount_amount",
+    "input": "Mã giảm giá: \"BIGBUY\"\nTổng đơn trước giảm: 600.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; thời điểm kiểm tra trước expired_at 1 ngày.",
+    "expected": "Áp dụng mã; giảm 50.000 đ; tổng sau giảm 550.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC03",
+    "fr": "FR-09",
+    "tc": "TC03",
+    "name": "VIP100 khi đã dùng 1/2 lượt",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC16: Mã loại fixed; EC18: Với fixed: discount_amount = discount_value; EC19: final_amount = total − discount_amount",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 1/2 lượt; thời điểm kiểm tra trước expired_at 1 ngày.",
+    "expected": "Áp dụng mã; giảm 100.000 đ; tổng sau giảm 300.000 đ.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC04",
+    "fr": "FR-09",
+    "tc": "TC04",
+    "name": "Mã không tồn tại",
+    "condition": "EC2: Mã không tồn tại; EC9: Có JWT hợp lệ; EC20: Không áp dụng mã không tồn tại",
+    "input": "Mã giảm giá: \"NO_SUCH_COUPON\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Xác nhận mã không tồn tại; JWT hợp lệ; chưa có mã khác được áp dụng.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC05",
+    "fr": "FR-09",
+    "tc": "TC05",
+    "name": "Mã không hoạt động",
+    "condition": "EC3: Mã tồn tại nhưng không hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC21: Không áp dụng mã không hoạt động",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Bản ghi SAVE10 được chuẩn bị is_active = 0; JWT hợp lệ; đã dùng 0 lượt; còn hạn; các điều kiện khác thỏa.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC06",
+    "fr": "FR-09",
+    "tc": "TC06",
+    "name": "Đúng hạn expired_at",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC5: Thời điểm hiện tại bằng expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC22: Không áp dụng mã đã đến hoặc qua hạn sử dụng",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; thời điểm kiểm tra đúng expired_at.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC07",
+    "fr": "FR-09",
+    "tc": "TC07",
+    "name": "Sau expired_at",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC6: Thời điểm hiện tại sau expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC22: Không áp dụng mã đã đến hoặc qua hạn sử dụng",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; thời điểm kiểm tra sau expired_at 1 giây.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC08",
+    "fr": "FR-09",
+    "tc": "TC08",
+    "name": "Tổng đơn dưới ngưỡng",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC8: Tổng đơn < min_order_amount; EC9: Có JWT hợp lệ; EC12: Số lượt đã dùng < max_uses_per_user; EC23: Không áp dụng mã khi tổng đơn dưới ngưỡng",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 200.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; thời điểm kiểm tra trước expired_at 1 ngày.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC09",
+    "fr": "FR-09",
+    "tc": "TC09",
+    "name": "Không có JWT",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC10: Không có JWT; EC24: Không áp dụng mã khi thiếu JWT hoặc JWT không hợp lệ",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động. còn hạn; gửi yêu cầu không có JWT. Không coi lịch sử lượt của một người dùng chưa xác thực là dữ liệu đầu vào độc lập.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC10",
+    "fr": "FR-09",
+    "tc": "TC10",
+    "name": "JWT không hợp lệ",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC11: JWT không hợp lệ, chẳng hạn đã hết hạn; EC24: Không áp dụng mã khi thiếu JWT hoặc JWT không hợp lệ",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động. còn hạn; gửi yêu cầu với JWT đã hết hạn. Các dữ liệu giỏ hàng và mã còn lại hợp lệ.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-09-TC11",
+    "fr": "FR-09",
+    "tc": "TC11",
+    "name": "Đã dùng hết lượt",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC13: Số lượt đã dùng = max_uses_per_user; EC25: Không áp dụng mã khi đã dùng hết hoặc vượt giới hạn lượt",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; người dùng đã dùng 1 lượt. giới hạn 1 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC12",
+    "fr": "FR-09",
+    "tc": "TC12",
+    "name": "Số lượt vượt giới hạn",
+    "condition": "EC1: Mã tồn tại và đang hoạt động; EC4: Thời điểm hiện tại trước expired_at; EC7: Tổng đơn ≥ min_order_amount; EC9: Có JWT hợp lệ; EC14: Số lượt đã dùng > max_uses_per_user; EC25: Không áp dụng mã khi đã dùng hết hoặc vượt giới hạn lượt",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; chuẩn bị lịch sử đã dùng 2 lượt. giới hạn hiện tại 1 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC13",
+    "fr": "FR-09",
+    "tc": "TC13",
+    "name": "VIP100 tổng 299.999 đ",
+    "condition": "VIP100: tổng đơn 299.999 đ, ngay dưới ngưỡng 300.000 đ.",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 299.999 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 1/2 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC14",
+    "fr": "FR-09",
+    "tc": "TC14",
+    "name": "VIP100 tổng 300.000 đ",
+    "condition": "VIP100: tổng đơn 300.000 đ, tại ngưỡng được chấp nhận.",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 300.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 1/2 lượt.",
+    "expected": "Áp dụng mã; giảm 100.000 đ; tổng sau giảm 200.000 đ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC15",
+    "fr": "FR-09",
+    "tc": "TC15",
+    "name": "VIP100 tổng 300.001 đ",
+    "condition": "VIP100: tổng đơn 300.001 đ, ngay trên ngưỡng.",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 300.001 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 1/2 lượt.",
+    "expected": "Áp dụng mã; giảm 100.000 đ; tổng sau giảm 200.001 đ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC16",
+    "fr": "FR-09",
+    "tc": "TC16",
+    "name": "BIGBUY tổng 499.999 đ",
+    "condition": "BIGBUY: tổng đơn 499.999 đ, ngay dưới ngưỡng 500.000 đ.",
+    "input": "Mã giảm giá: \"BIGBUY\"\nTổng đơn trước giảm: 499.999 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 0/1 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC17",
+    "fr": "FR-09",
+    "tc": "TC17",
+    "name": "BIGBUY tổng 500.000 đ",
+    "condition": "BIGBUY: tổng đơn 500.000 đ, tại ngưỡng được chấp nhận.",
+    "input": "Mã giảm giá: \"BIGBUY\"\nTổng đơn trước giảm: 500.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 0/1 lượt.",
+    "expected": "Áp dụng mã; giảm 50.000 đ; tổng sau giảm 450.000 đ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC18",
+    "fr": "FR-09",
+    "tc": "TC18",
+    "name": "BIGBUY tổng 500.001 đ",
+    "condition": "BIGBUY: tổng đơn 500.001 đ, ngay trên ngưỡng.",
+    "input": "Mã giảm giá: \"BIGBUY\"\nTổng đơn trước giảm: 500.001 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 0/1 lượt.",
+    "expected": "Áp dụng mã; giảm 50.000 đ; tổng sau giảm 450.001 đ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC19",
+    "fr": "FR-09",
+    "tc": "TC19",
+    "name": "VIP100 đã dùng đúng 2 lượt",
+    "condition": "VIP100: đã dùng 2 lượt, tại giới hạn nên bị từ chối.",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; đã dùng 2 lượt. giới hạn 2 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC20",
+    "fr": "FR-09",
+    "tc": "TC20",
+    "name": "VIP100 đã dùng 3 lượt",
+    "condition": "VIP100: đã dùng 3 lượt, vượt giới hạn 2 lượt.",
+    "input": "Mã giảm giá: \"VIP100\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; còn hạn; chuẩn bị lịch sử đã dùng 3 lượt. giới hạn hiện tại 2 lượt.",
+    "expected": "Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-09-TC21",
+    "fr": "FR-09",
+    "tc": "TC21",
+    "name": "Ngay trước expired_at 1 giây",
+    "condition": "Thời điểm hiện tại bằng expired_at − 1 giây, ngay trước hạn.",
+    "input": "Mã giảm giá: \"SAVE10\"\nTổng đơn trước giảm: 400.000 đ\nTrạng thái ban đầu: Mã hoạt động; JWT hợp lệ; đã dùng 0 lượt; kiểm tra tại expired_at − 1 giây.",
+    "expected": "Áp dụng mã; giảm 40.000 đ; tổng sau giảm 360.000 đ.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC01",
+    "fr": "FR-15",
+    "tc": "TC01",
+    "name": "Thêm sản phẩm hợp lệ",
+    "condition": "EC1: Thêm sản phẩm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC27: Sản phẩm mới được lưu đúng dữ liệu hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Tạo một sản phẩm mới; tải lại danh sách để xác nhận tên SP_THU_FR15, giá 100.000 đ và danh mục DM_A được lưu đúng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC02",
+    "fr": "FR-15",
+    "tc": "TC02",
+    "name": "Xem sản phẩm tồn tại",
+    "condition": "EC2: Xem sản phẩm; EC28: Dữ liệu hiển thị khớp sản phẩm đã lưu",
+    "input": "Thao tác: Xem\nSản phẩm: ID của SP_MUC_TIEU\nTrạng thái ban đầu: Admin đã đăng nhập; SP_MUC_TIEU đã lưu tên SP_MUC_TIEU, giá 100.000 đ, danh mục DM_A.",
+    "expected": "Hiển thị đúng sản phẩm đã chọn: tên SP_MUC_TIEU, giá 100.000 đ, danh mục DM_A; đối chiếu với dữ liệu đã lưu.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC03",
+    "fr": "FR-15",
+    "tc": "TC03",
+    "name": "Sửa chỉ sản phẩm đích, kiểm ngay sau lưu và reload",
+    "condition": "EC3: Sửa sản phẩm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC29: Chỉ sản phẩm đích được cập nhật theo dữ liệu hợp lệ; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15_DA_SUA\"\nGiá: 150.000 đ (số)\nDanh mục: DM_B (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.\nKiểm tra: sau khi hệ thống xác nhận lưu thành công, quan sát giao diện trước khi tải lại; sau đó tải lại và đối chiếu lần nữa.",
+    "expected": "Ngay sau khi lưu thành công và sau khi tải lại, chỉ SP_MUC_TIEU đổi đúng tên SP_THU_FR15_DA_SUA, giá 150.000 đ và danh mục DM_B; dữ liệu của mọi sản phẩm khác giữ nguyên so với bản chụp trước khi sửa.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC04",
+    "fr": "FR-15",
+    "tc": "TC04",
+    "name": "Xóa sản phẩm đích",
+    "condition": "EC4: Xóa sản phẩm; EC31: Sản phẩm đích được xóa khỏi danh sách quản lý",
+    "input": "Thao tác: Xóa\nSản phẩm: ID của SP_MUC_TIEU\nTrạng thái ban đầu: Admin đã đăng nhập; sản phẩm đích tồn tại, không liên quan đơn hàng/giỏ hàng thử đang sử dụng; xác nhận xóa.",
+    "expected": "Sản phẩm đích được xóa; tải lại danh sách quản lý và xác nhận không còn sản phẩm đó. Không mặc định phải xóa cứng trong CSDL.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC05",
+    "fr": "FR-15",
+    "tc": "TC05",
+    "name": "Thêm với tên rỗng",
+    "condition": "EC1: Thêm sản phẩm; EC6: Tên là chuỗi rỗng trong thao tác Thêm; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC32: Không lưu dữ liệu tên vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"\"\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu tên không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC06",
+    "fr": "FR-15",
+    "tc": "TC06",
+    "name": "Sửa với tên rỗng",
+    "condition": "EC3: Sửa sản phẩm; EC7: Tên là chuỗi rỗng trong thao tác Sửa; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC32: Không lưu dữ liệu tên vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"\"\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu tên không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC07",
+    "fr": "FR-15",
+    "tc": "TC07",
+    "name": "Thêm với tên 256 ký tự",
+    "condition": "EC1: Thêm sản phẩm; EC8: Tên dài hơn 255 ký tự trong thao tác Thêm; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC32: Không lưu dữ liệu tên vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"A\" lặp đúng 256 lần (256 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu tên không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC08",
+    "fr": "FR-15",
+    "tc": "TC08",
+    "name": "Sửa với tên 256 ký tự",
+    "condition": "EC3: Sửa sản phẩm; EC9: Tên dài hơn 255 ký tự trong thao tác Sửa; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC32: Không lưu dữ liệu tên vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"A\" lặp đúng 256 lần (256 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu tên không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC09",
+    "fr": "FR-15",
+    "tc": "TC09",
+    "name": "Thêm thiếu trường tên",
+    "condition": "EC1: Thêm sản phẩm; EC10: Yêu cầu thêm không có trường tên; EC11: Giá là số dương (> 0); EC21: Chọn danh mục đang có trong danh sách; EC32: Không lưu dữ liệu tên vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: bỏ trường name khỏi payload\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu tên không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC10",
+    "fr": "FR-15",
+    "tc": "TC10",
+    "name": "Thêm với giá 0",
+    "condition": "EC1: Thêm sản phẩm; EC12: Giá bằng 0 trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 0 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC11",
+    "fr": "FR-15",
+    "tc": "TC11",
+    "name": "Sửa với giá 0",
+    "condition": "EC3: Sửa sản phẩm; EC13: Giá bằng 0 trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 0 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC12",
+    "fr": "FR-15",
+    "tc": "TC12",
+    "name": "Thêm với giá âm",
+    "condition": "EC1: Thêm sản phẩm; EC14: Giá là số âm trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: -1 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC13",
+    "fr": "FR-15",
+    "tc": "TC13",
+    "name": "Sửa với giá âm",
+    "condition": "EC3: Sửa sản phẩm; EC15: Giá là số âm trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: -1 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC14",
+    "fr": "FR-15",
+    "tc": "TC14",
+    "name": "Thêm với giá chuỗi rỗng",
+    "condition": "EC1: Thêm sản phẩm; EC16: Giá để trống (chuỗi rỗng) trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: \"\" (chuỗi)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC15",
+    "fr": "FR-15",
+    "tc": "TC15",
+    "name": "Sửa với giá chuỗi rỗng",
+    "condition": "EC3: Sửa sản phẩm; EC17: Giá để trống (chuỗi rỗng) trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: \"\" (chuỗi)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC16",
+    "fr": "FR-15",
+    "tc": "TC16",
+    "name": "Thêm thiếu trường giá",
+    "condition": "EC1: Thêm sản phẩm; EC18: Yêu cầu thêm không có trường giá; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: bỏ trường price khỏi payload\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC17",
+    "fr": "FR-15",
+    "tc": "TC17",
+    "name": "Thêm với giá abc",
+    "condition": "EC1: Thêm sản phẩm; EC19: Giá không phải số trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: \"abc\" (chuỗi)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC18",
+    "fr": "FR-15",
+    "tc": "TC18",
+    "name": "Sửa với giá abc",
+    "condition": "EC3: Sửa sản phẩm; EC20: Giá không phải số trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC21: Chọn danh mục đang có trong danh sách; EC33: Không lưu dữ liệu giá vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: \"abc\" (chuỗi)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu giá không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC19",
+    "fr": "FR-15",
+    "tc": "TC19",
+    "name": "Thêm chưa chọn danh mục",
+    "condition": "EC1: Thêm sản phẩm; EC22: Chưa chọn danh mục trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC34: Không lưu dữ liệu danh mục vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: Chưa chọn (giá trị rỗng)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu danh mục không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC20",
+    "fr": "FR-15",
+    "tc": "TC20",
+    "name": "Sửa chưa chọn danh mục",
+    "condition": "EC3: Sửa sản phẩm; EC23: Chưa chọn danh mục trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC34: Không lưu dữ liệu danh mục vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: Chưa chọn (giá trị rỗng)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu danh mục không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC21",
+    "fr": "FR-15",
+    "tc": "TC21",
+    "name": "Thêm thiếu trường danh mục",
+    "condition": "EC1: Thêm sản phẩm; EC24: Yêu cầu thêm không có trường danh mục; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC34: Không lưu dữ liệu danh mục vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: bỏ trường chọn danh mục khỏi payload theo schema API\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu danh mục không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC22",
+    "fr": "FR-15",
+    "tc": "TC22",
+    "name": "Thêm với danh mục không tồn tại",
+    "condition": "EC1: Thêm sản phẩm; EC25: ID danh mục không tồn tại trong danh sách trong thao tác Thêm; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC34: Không lưu dữ liệu danh mục vi phạm ràng buộc; EC35: Không tạo sản phẩm mới từ dữ liệu không hợp lệ",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: ID 999999 (xác nhận không tồn tại trước khi chạy)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Không lưu dữ liệu danh mục không hợp lệ; không tạo bản ghi sản phẩm mới; số sản phẩm không tăng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC23",
+    "fr": "FR-15",
+    "tc": "TC23",
+    "name": "Sửa với danh mục không tồn tại",
+    "condition": "EC3: Sửa sản phẩm; EC26: ID danh mục không tồn tại trong danh sách trong thao tác Sửa; EC5: Tên không rỗng, dài từ 1 đến 255 ký tự; EC11: Giá là số dương (> 0); EC34: Không lưu dữ liệu danh mục vi phạm ràng buộc; EC36: Không ghi dữ liệu không hợp lệ vào sản phẩm đích; EC30: Các sản phẩm khác giữ nguyên sau thao tác sửa",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 100.000 đ (số)\nDanh mục: ID 999999 (xác nhận không tồn tại trước khi chạy)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Không lưu dữ liệu danh mục không hợp lệ; tải lại để xác nhận sản phẩm đích giữ dữ liệu hợp lệ ban đầu và các sản phẩm khác không đổi.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-15-TC24",
+    "fr": "FR-15",
+    "tc": "TC24",
+    "name": "Thêm tên 1 ký tự",
+    "condition": "Thêm: độ dài tên = 1, tại biên dưới 1.",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"A\" lặp đúng 1 lần (1 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Lưu sản phẩm mới với tên đúng 1 ký tự; các trường còn lại khớp đầu vào.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC25",
+    "fr": "FR-15",
+    "tc": "TC25",
+    "name": "Thêm tên 2 ký tự",
+    "condition": "Thêm: độ dài tên = 2, ngay trên biên dưới.",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"A\" lặp đúng 2 lần (2 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Lưu sản phẩm mới với tên đúng 2 ký tự; các trường còn lại khớp đầu vào.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC26",
+    "fr": "FR-15",
+    "tc": "TC26",
+    "name": "Thêm tên 254 ký tự",
+    "condition": "Thêm: độ dài tên = 254, ngay dưới biên trên.",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"A\" lặp đúng 254 lần (254 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Lưu sản phẩm mới với tên đúng 254 ký tự; các trường còn lại khớp đầu vào.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC27",
+    "fr": "FR-15",
+    "tc": "TC27",
+    "name": "Thêm tên 255 ký tự",
+    "condition": "Thêm: độ dài tên = 255, tại biên trên 255.",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"A\" lặp đúng 255 lần (255 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Lưu sản phẩm mới với tên đúng 255 ký tự; các trường còn lại khớp đầu vào.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC28",
+    "fr": "FR-15",
+    "tc": "TC28",
+    "name": "Sửa tên 1 ký tự",
+    "condition": "Sửa: độ dài tên = 1, tại biên dưới 1.",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"A\" lặp đúng 1 lần (1 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Lưu sản phẩm đích với tên đúng 1 ký tự; các sản phẩm khác giữ nguyên sau khi tải lại và đối chiếu.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC29",
+    "fr": "FR-15",
+    "tc": "TC29",
+    "name": "Sửa tên 2 ký tự",
+    "condition": "Sửa: độ dài tên = 2, ngay trên biên dưới.",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"A\" lặp đúng 2 lần (2 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Lưu sản phẩm đích với tên đúng 2 ký tự; các sản phẩm khác giữ nguyên sau khi tải lại và đối chiếu.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC30",
+    "fr": "FR-15",
+    "tc": "TC30",
+    "name": "Sửa tên 254 ký tự",
+    "condition": "Sửa: độ dài tên = 254, ngay dưới biên trên.",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"A\" lặp đúng 254 lần (254 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Lưu sản phẩm đích với tên đúng 254 ký tự; các sản phẩm khác giữ nguyên sau khi tải lại và đối chiếu.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC31",
+    "fr": "FR-15",
+    "tc": "TC31",
+    "name": "Sửa tên 255 ký tự",
+    "condition": "Sửa: độ dài tên = 255, tại biên trên 255.",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"A\" lặp đúng 255 lần (255 ký tự ASCII)\nGiá: 100.000 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Lưu sản phẩm đích với tên đúng 255 ký tự; các sản phẩm khác giữ nguyên sau khi tải lại và đối chiếu.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC32",
+    "fr": "FR-15",
+    "tc": "TC32",
+    "name": "Thêm với giá 1 đ",
+    "condition": "Thêm: giá = 1 đ, trên ngưỡng 0.",
+    "input": "Thao tác: Thêm\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 1 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. Ghi nhận số sản phẩm trước khi gửi yêu cầu.",
+    "expected": "Lưu sản phẩm mới với giá 1 đ; các trường còn lại khớp đầu vào.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-15-TC33",
+    "fr": "FR-15",
+    "tc": "TC33",
+    "name": "Sửa với giá 1 đ",
+    "condition": "Sửa: giá = 1 đ, trên ngưỡng 0.",
+    "input": "Thao tác: Sửa\nSản phẩm đích: ID của SP_MUC_TIEU đã chuẩn bị\nTên sản phẩm: \"SP_THU_FR15\"\nGiá: 1 đ (số)\nDanh mục: DM_A (danh mục có sẵn, ID đã xác nhận)\nTrạng thái ban đầu: Admin đã đăng nhập; danh mục thử có sẵn. SP_MUC_TIEU đang tồn tại với dữ liệu hợp lệ; chụp dữ liệu của mọi sản phẩm khác làm đối chứng trước khi sửa.",
+    "expected": "Lưu sản phẩm đích với giá 1 đ; các sản phẩm khác giữ nguyên sau khi tải lại và đối chiếu.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-20-TC01",
+    "fr": "FR-20",
+    "tc": "TC01",
+    "name": "Xem giỏ trống",
+    "condition": "EC1: Xem giỏ hàng; EC12: Giỏ trống, không có dòng sản phẩm; EC26: Có hình minh họa và thông báo giỏ hàng trống rõ ràng",
+    "input": "Thao tác: Mở màn hình Giỏ hàng trên Mobile\nTrạng thái ban đầu: Giỏ trống.",
+    "expected": "Hiển thị hình minh họa và thông báo giỏ hàng trống rõ ràng; không hiển thị dòng sản phẩm giả.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC02",
+    "fr": "FR-20",
+    "tc": "TC02",
+    "name": "Xem giỏ có hai sản phẩm",
+    "condition": "EC1: Xem giỏ hàng; EC13: Giỏ có ít nhất một dòng sản phẩm; EC17: Hiển thị sản phẩm, đơn giá, số lượng, thành tiền và thao tác; có nút +/-; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Mở màn hình Giỏ hàng trên Mobile\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1.",
+    "expected": "Hiển thị đúng hai sản phẩm, đơn giá, số lượng, thành tiền, thao tác và nút +/-; thành tiền A = 200.000 đ, B = 50.000 đ; Tổng cộng = 250.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC03",
+    "fr": "FR-20",
+    "tc": "TC03",
+    "name": "Thêm sản phẩm chưa có, số lượng 1",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC6: Sản phẩm chưa có trong giỏ trước khi thêm; EC8: Số nguyên dương q >= 1; EC27: Tạo một dòng mới với đúng sản phẩm và số lượng, có phản hồi trực quan; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập số lượng rồi bấm Thêm vào giỏ; mở giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: 1\nTrạng thái ban đầu: Chỉ có SP_B số lượng 2.",
+    "expected": "Có thêm đúng một dòng SP_A số lượng 1, thành tiền 100.000 đ; SP_B vẫn số lượng 2, thành tiền 100.000 đ; Tổng cộng = 200.000 đ. Có phản hồi trực quan khi thêm.",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-20-TC04",
+    "fr": "FR-20",
+    "tc": "TC04",
+    "name": "Thêm lại cùng sản phẩm",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC7: Sản phẩm đã có trong giỏ trước khi thêm; EC8: Số nguyên dương q >= 1; EC18: Giữ một dòng cho cùng sản phẩm, cộng đúng số lượng thêm và có phản hồi trực quan; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập số lượng rồi bấm Thêm vào giỏ; mở giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: 3\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1.",
+    "expected": "SP_A chỉ có một dòng, số lượng 5, thành tiền 500.000 đ; SP_B giữ số lượng 1, thành tiền 50.000 đ; Tổng cộng = 550.000 đ. Có phản hồi trực quan khi thêm.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC05",
+    "fr": "FR-20",
+    "tc": "TC05",
+    "name": "Điều chỉnh bằng nút tăng và giảm",
+    "condition": "EC3: Điều chỉnh số lượng trong giỏ; EC16: Tăng/giảm một đơn vị, số lượng kết quả vẫn >= 1; EC19: Chỉ dòng đích đổi đúng số lượng; các dòng khác giữ nguyên; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Bấm + một lần ở SP_A, quan sát; sau đó bấm - một lần ở SP_A, quan sát\nSản phẩm đích: \"SP_A\"\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1.",
+    "expected": "Sau +: A số lượng 3, thành tiền 300.000 đ, Tổng cộng = 350.000 đ. Sau -: A số lượng 2, thành tiền 200.000 đ, Tổng cộng = 250.000 đ. B luôn giữ số lượng 1 và thành tiền 50.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC06",
+    "fr": "FR-20",
+    "tc": "TC06",
+    "name": "Hủy xác nhận xóa",
+    "condition": "EC4: Xóa sản phẩm khỏi giỏ; EC15: Hủy thao tác trong hộp thoại; EC22: Hiện xác nhận trước khi thay đổi giỏ; EC24: Giữ nguyên sản phẩm, số lượng và tổng tiền",
+    "input": "Thao tác: Bấm Xóa SP_A; quan sát trước khi chọn; chọn Hủy\nSản phẩm đích: \"SP_A\"\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1.",
+    "expected": "Có hộp thoại xác nhận; trước khi chọn và sau khi Hủy, A vẫn số lượng 2, B vẫn số lượng 1; Tổng cộng = 250.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC07",
+    "fr": "FR-20",
+    "tc": "TC07",
+    "name": "Đồng ý xóa một trong hai sản phẩm",
+    "condition": "EC4: Xóa sản phẩm khỏi giỏ; EC14: Đồng ý xóa trong hộp thoại; EC22: Hiện xác nhận trước khi thay đổi giỏ; EC23: Bỏ đúng sản phẩm đích, giữ các sản phẩm khác; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Bấm Xóa SP_A; quan sát trước khi chọn; chọn Đồng ý\nSản phẩm đích: \"SP_A\"\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1.",
+    "expected": "Có xác nhận và giỏ chưa đổi trước khi đồng ý. Sau khi đồng ý, chỉ A bị xóa; B vẫn số lượng 1, thành tiền 50.000 đ; Tổng cộng = 50.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC08",
+    "fr": "FR-20",
+    "tc": "TC08",
+    "name": "Xóa sản phẩm cuối cùng",
+    "condition": "EC4: Xóa sản phẩm khỏi giỏ; EC14: Đồng ý xóa trong hộp thoại; EC22: Hiện xác nhận trước khi thay đổi giỏ; EC23: Bỏ đúng sản phẩm đích, giữ các sản phẩm khác; EC26: Có hình minh họa và thông báo giỏ hàng trống rõ ràng; EC28: Chỉ còn sản phẩm đích; xóa được xác nhận sẽ làm giỏ trống",
+    "input": "Thao tác: Bấm Xóa SP_A; quan sát trước khi chọn; chọn Đồng ý\nSản phẩm đích: \"SP_A\"\nTrạng thái ban đầu: Chỉ có SP_A số lượng 1.",
+    "expected": "Có xác nhận trước khi xóa; sau khi đồng ý, không còn dòng SP_A; hiển thị hình minh họa và thông báo giỏ trống rõ ràng.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC09",
+    "fr": "FR-20",
+    "tc": "TC09",
+    "name": "Tiếp tục mua sắm",
+    "condition": "EC5: Tiếp tục mua sắm; EC25: Quay về trang chủ; giỏ giữ nguyên khi quay lại trong cùng phiên, không thêm/xóa hàng",
+    "input": "Thao tác: Ghi nhận giỏ; bấm Tiếp tục mua sắm; không thêm/xóa hoặc sửa hàng; mở lại Giỏ hàng trong cùng phiên\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1; Tổng cộng = 250.000 đ.",
+    "expected": "Chuyển về trang chủ, hiển thị danh sách sản phẩm. Khi quay lại giỏ, vẫn đúng hai sản phẩm: A số lượng 2, thành tiền 200.000 đ; B số lượng 1, thành tiền 50.000 đ; Tổng cộng = 250.000 đ.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC10",
+    "fr": "FR-20",
+    "tc": "TC10",
+    "name": "Số lượng thêm bằng 0",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC6: Sản phẩm chưa có trong giỏ trước khi thêm; EC9: Số nguyên q <= 0; EC21: Không chấp nhận giá trị số lượng ngoài miền số nguyên dương",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập giá trị thử và bấm Thêm vào giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: 0\nTrạng thái ban đầu: Chỉ có SP_B số lượng 1.",
+    "expected": "Không đưa số lượng không hợp lệ 0 vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12).",
+    "techniques": [
+      "Domain Testing",
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-20-TC11",
+    "fr": "FR-20",
+    "tc": "TC11",
+    "name": "Số lượng thêm không nguyên",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC6: Sản phẩm chưa có trong giỏ trước khi thêm; EC10: Giá trị số không nguyên; EC21: Không chấp nhận giá trị số lượng ngoài miền số nguyên dương",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập giá trị thử và bấm Thêm vào giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: 1.5\nTrạng thái ban đầu: Chỉ có SP_B số lượng 1.",
+    "expected": "Không đưa số lượng không hợp lệ 1.5 vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12).",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC12",
+    "fr": "FR-20",
+    "tc": "TC12",
+    "name": "Số lượng thêm không phải số",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC6: Sản phẩm chưa có trong giỏ trước khi thêm; EC11: Chuỗi không biểu diễn số; EC21: Không chấp nhận giá trị số lượng ngoài miền số nguyên dương",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập giá trị thử và bấm Thêm vào giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: \"abc\"\nTrạng thái ban đầu: Chỉ có SP_B số lượng 1.",
+    "expected": "Không đưa số lượng không hợp lệ \"abc\" vào giỏ. SP_B giữ nguyên số lượng 1 và thành tiền 50.000 đ. Việc tự chuyển thành 1 rồi thêm SP_A cần xác nhận quy tắc trước khi kết luận toàn bộ TC (xem ghi chú TC10–TC12).",
+    "techniques": [
+      "Domain Testing"
+    ]
+  },
+  {
+    "id": "FR-20-TC13",
+    "fr": "FR-20",
+    "tc": "TC13",
+    "name": "Số lượng thêm bằng 2, ngay trên biên dưới",
+    "condition": "EC2: Thêm sản phẩm vào giỏ; EC6: Sản phẩm chưa có trong giỏ trước khi thêm; EC8: Số nguyên dương q >= 1; EC27: Tạo một dòng mới với đúng sản phẩm và số lượng, có phản hồi trực quan; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Mở chi tiết SP_A, nhập số lượng rồi bấm Thêm vào giỏ; mở giỏ\nSản phẩm: \"SP_A\"\nSố lượng thêm: 2\nTrạng thái ban đầu: Chỉ có SP_B số lượng 2.",
+    "expected": "Có đúng một dòng SP_A số lượng 2, thành tiền 200.000 đ; SP_B vẫn số lượng 2, thành tiền 100.000 đ; Tổng cộng = 300.000 đ. Có phản hồi trực quan khi thêm.",
+    "techniques": [
+      "BVA"
+    ]
+  },
+  {
+    "id": "FR-20-TC14",
+    "fr": "FR-20",
+    "tc": "TC14",
+    "name": "Nhập tay số lượng trong giỏ",
+    "condition": "EC3: Điều chỉnh số lượng trong giỏ; EC29: Nhập trực tiếp một số nguyên dương vào ô số lượng của sản phẩm trong giỏ; EC19: Chỉ dòng đích đổi đúng số lượng; các dòng khác giữ nguyên; EC20: Thành tiền = đơn giá x số lượng; tổng = tổng thành tiền; nhãn \"Tổng cộng\"",
+    "input": "Thao tác: Chọn ô số lượng của SP_A trong giỏ, thay toàn bộ nội dung bằng \"3\"; kết thúc chỉnh sửa theo UI và quan sát giỏ\nSản phẩm đích: \"SP_A\"\nSố lượng nhập: \"3\"\nTrạng thái ban đầu: SP_A số lượng 2; SP_B số lượng 1; Tổng cộng = 250.000 đ.",
+    "expected": "SP_A có đúng số lượng 3, thành tiền 300.000 đ; SP_B vẫn số lượng 1, thành tiền 50.000 đ; Tổng cộng = 350.000 đ. Không tạo thêm dòng SP_A.",
+    "techniques": [
+      "Domain Testing"
+    ]
+  }
+]

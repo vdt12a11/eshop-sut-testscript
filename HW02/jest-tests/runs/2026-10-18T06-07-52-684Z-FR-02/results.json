@@ -1,0 +1,260 @@
+{
+  "run_id": "2026-10-18T06-07-52-684Z-FR-02",
+  "cases": [
+    {
+      "id": "FR-02-TC01",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:08:11 UTC+07:00",
+      "started_at": "2026-10-18T06:08:02.952Z",
+      "actual": "PASS Login HTTP: 200\nPASS JWT returned: \"string\"\nPASS Client stores returned JWT: true\nPASS Client sends same JWT in Authorization: true\nPASS JWT accepted by backend: 200\nPASS JWT identifies correct account: \"test@eshop.com\"",
+      "checks": [
+        {
+          "label": "Login HTTP",
+          "actual": 200,
+          "expected": 200,
+          "pass": true
+        },
+        {
+          "label": "JWT returned",
+          "actual": "string",
+          "expected": "string",
+          "pass": true
+        },
+        {
+          "label": "Client stores returned JWT",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Client sends same JWT in Authorization",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "JWT accepted by backend",
+          "actual": 200,
+          "expected": 200,
+          "pass": true
+        },
+        {
+          "label": "JWT identifies correct account",
+          "actual": "test@eshop.com",
+          "expected": "test@eshop.com",
+          "pass": true
+        }
+      ],
+      "observations": {},
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC01.png"
+    },
+    {
+      "id": "FR-02-TC02",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:08:23 UTC+07:00",
+      "started_at": "2026-10-18T06:08:15.899Z",
+      "actual": "PASS Rejected; no JWT issued: true\nFAIL Counter after wrong login: 2 (expected 1)\nPASS Account lock activated: false\nPASS Generic UI error displayed: true",
+      "checks": [
+        {
+          "label": "Rejected; no JWT issued",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Counter after wrong login",
+          "actual": 2,
+          "expected": 1,
+          "pass": false
+        },
+        {
+          "label": "Account lock activated",
+          "actual": false,
+          "expected": false,
+          "pass": true
+        },
+        {
+          "label": "Generic UI error displayed",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": 0,
+        "state": {
+          "id": 2,
+          "email": "test@eshop.com",
+          "login_attempts": 2,
+          "locked_until": null
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC02.png"
+    },
+    {
+      "id": "FR-02-TC03",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:08:35 UTC+07:00",
+      "started_at": "2026-10-18T06:08:28.031Z",
+      "actual": "PASS Rejected; no JWT issued: true\nFAIL Counter after wrong login: 3 (expected 2)\nFAIL Account lock activated: true (expected false)\nPASS Generic UI error displayed: true",
+      "checks": [
+        {
+          "label": "Rejected; no JWT issued",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Counter after wrong login",
+          "actual": 3,
+          "expected": 2,
+          "pass": false
+        },
+        {
+          "label": "Account lock activated",
+          "actual": true,
+          "expected": false,
+          "pass": false
+        },
+        {
+          "label": "Generic UI error displayed",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": 1,
+        "state": {
+          "id": 2,
+          "email": "test@eshop.com",
+          "login_attempts": 3,
+          "locked_until": "2026-10-18T06:11:32.074Z"
+        }
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC03.png"
+    },
+    {
+      "id": "FR-02-TC04",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:08:48 UTC+07:00",
+      "started_at": "2026-10-18T06:08:40.222Z",
+      "actual": "PASS Rejected; no JWT issued: true\nFAIL Counter after wrong login: 4 (expected 3)\nPASS Account lock activated: true\nFAIL Lock duration is 30 seconds: false (expected true)\nPASS Generic UI error displayed: true",
+      "checks": [
+        {
+          "label": "Rejected; no JWT issued",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Counter after wrong login",
+          "actual": 4,
+          "expected": 3,
+          "pass": false
+        },
+        {
+          "label": "Account lock activated",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Lock duration is 30 seconds",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        },
+        {
+          "label": "Generic UI error displayed",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "before": 2,
+        "state": {
+          "id": 2,
+          "email": "test@eshop.com",
+          "login_attempts": 4,
+          "locked_until": "2026-10-18T06:11:44.150Z"
+        },
+        "lock_ms_from_request_start": 180003,
+        "request_duration_ms": 7
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC04.png"
+    },
+    {
+      "id": "FR-02-TC07",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:08:59 UTC+07:00",
+      "started_at": "2026-10-18T06:08:52.344Z",
+      "actual": "FAIL Email input type: \"text\" (expected \"email\")\nFAIL HTML5 validity blocks invalid email: true (expected false)\nFAIL No login request sent: false (expected true)",
+      "checks": [
+        {
+          "label": "Email input type",
+          "actual": "text",
+          "expected": "email",
+          "pass": false
+        },
+        {
+          "label": "HTML5 validity blocks invalid email",
+          "actual": true,
+          "expected": false,
+          "pass": false
+        },
+        {
+          "label": "No login request sent",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "login_http": 401,
+        "login_requests": 1
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC07.png"
+    },
+    {
+      "id": "FR-02-TC14",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:09:47 UTC+07:00",
+      "started_at": "2026-10-18T06:09:03.559Z",
+      "actual": "FAIL Successful login after lock expiry: 403 (expected 200)\nFAIL JWT issued after expiry: \"undefined\" (expected \"string\")",
+      "checks": [
+        {
+          "label": "Successful login after lock expiry",
+          "actual": 403,
+          "expected": 200,
+          "pass": false
+        },
+        {
+          "label": "JWT issued after expiry",
+          "actual": "undefined",
+          "expected": "string",
+          "pass": false
+        }
+      ],
+      "observations": {
+        "activated_state": {
+          "id": 2,
+          "email": "test@eshop.com",
+          "login_attempts": 4,
+          "locked_until": "2026-10-18T06:12:12.750Z"
+        },
+        "activation_interval": [
+          1792303752750,
+          1792303752754
+        ],
+        "elapsed_since_activation_ms": [
+          31017,
+          31021
+        ]
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-07-52-684Z-FR-02/FR-02-TC14.png"
+    }
+  ],
+  "video": "videos/FR-02-demo-slow.webm"
+}

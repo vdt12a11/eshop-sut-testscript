@@ -1,0 +1,20 @@
+[
+  {
+    "time": 1792303747456,
+    "url": "http://localhost:3000/api/login",
+    "method": "POST",
+    "bearer": false
+  },
+  {
+    "time": 1792303752750,
+    "url": "http://localhost:3000/api/login",
+    "method": "POST",
+    "bearer": false
+  },
+  {
+    "time": 1792303783771,
+    "url": "http://localhost:3000/api/login",
+    "method": "POST",
+    "bearer": false
+  }
+]

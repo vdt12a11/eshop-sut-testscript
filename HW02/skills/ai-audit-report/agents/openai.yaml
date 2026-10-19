@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Audit Report"
+  short_description: "Record HW02 prompts and outputs after each turn"
+  default_prompt: "Use $ai-audit-report to save this HW02 interaction using the AI-02 template."

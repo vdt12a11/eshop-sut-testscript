@@ -1,0 +1,4 @@
+Error: ADB command timeout: shell settings put global http_proxy 127.0.0.1:3080
+    at adb (D:\vscode\Software testing\HW02\jest-tests\scripts\run-mobile.cjs:9:150)
+    at D:\vscode\Software testing\HW02\jest-tests\scripts\run-mobile.cjs:50:76
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

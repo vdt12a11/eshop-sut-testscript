@@ -1,0 +1,302 @@
+{
+  "run_id": "2026-10-18T06-19-03-842Z-FR-09",
+  "cases": [
+    {
+      "id": "FR-09-TC01",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:19:23 UTC+07:00",
+      "started_at": "2026-10-18T06:19:15.088Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nPASS Mã được áp dụng: true\nFAIL Số tiền giảm (đ): -3600000 (expected 40000)\nFAIL Tổng tiền sau giảm (đ): 4000000 (expected 360000)",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 400000,
+          "expected": 400000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Số tiền giảm (đ)",
+          "actual": -3600000,
+          "expected": 40000,
+          "pass": false
+        },
+        {
+          "label": "Tổng tiền sau giảm (đ)",
+          "actual": 4000000,
+          "expected": 360000,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "response": {
+          "success": true,
+          "coupon_id": 1,
+          "discount_amount": -3600000,
+          "final_amount": 4000000,
+          "message": "Áp dụng thành công! Giảm 10%"
+        },
+        "payload": {
+          "code": "SAVE10",
+          "total_amount": 400000,
+          "user_id": 3
+        },
+        "authorization_present": true,
+        "total": 400000,
+        "coupon": "SAVE10",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC01 x 1 — 400.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\n✅ Áp dụng thành công! Giảm 10%\n\nTiết kiệm: -3.600.000 ₫\n\nThành tiền: 4.000.000 ₫\n\nTổng thanh toán: 4.000.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC01.png"
+    },
+    {
+      "id": "FR-09-TC02",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:19:35 UTC+07:00",
+      "started_at": "2026-10-18T06:19:27.610Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 600000\nPASS Mã được áp dụng: true\nPASS Số tiền giảm (đ): 50000\nPASS Tổng tiền sau giảm (đ): 550000",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 600000,
+          "expected": 600000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Số tiền giảm (đ)",
+          "actual": 50000,
+          "expected": 50000,
+          "pass": true
+        },
+        {
+          "label": "Tổng tiền sau giảm (đ)",
+          "actual": 550000,
+          "expected": 550000,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "response": {
+          "success": true,
+          "coupon_id": 2,
+          "discount_amount": 50000,
+          "final_amount": 550000,
+          "message": "Áp dụng thành công! Giảm 50,000 ₫"
+        },
+        "payload": {
+          "code": "BIGBUY",
+          "total_amount": 600000,
+          "user_id": 4
+        },
+        "authorization_present": true,
+        "total": 600000,
+        "coupon": "BIGBUY",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC02 x 1 — 600.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\n✅ Áp dụng thành công! Giảm 50,000 ₫\n\nTiết kiệm: 50.000 ₫\n\nThành tiền: 550.000 ₫\n\nTổng thanh toán: 550.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC02.png"
+    },
+    {
+      "id": "FR-09-TC05",
+      "status": "Pass",
+      "tested_at": "2026-10-18 13:19:48 UTC+07:00",
+      "started_at": "2026-10-18T06:19:40.039Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nPASS Mã được áp dụng: false\nPASS Có phản hồi lỗi từ chối áp dụng: true",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 400000,
+          "expected": 400000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": false,
+          "expected": false,
+          "pass": true
+        },
+        {
+          "label": "Có phản hồi lỗi từ chối áp dụng",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      ],
+      "observations": {
+        "http": 404,
+        "response": {
+          "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+        },
+        "payload": {
+          "code": "SAVE10",
+          "total_amount": 400000,
+          "user_id": 5
+        },
+        "authorization_present": true,
+        "total": 400000,
+        "coupon": "SAVE10",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC05 x 1 — 400.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\nMã giảm giá không tồn tại hoặc đã bị vô hiệu hóa\n\nTổng thanh toán: 400.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC05.png"
+    },
+    {
+      "id": "FR-09-TC09",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:20:00 UTC+07:00",
+      "started_at": "2026-10-18T06:19:52.534Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nFAIL Mã được áp dụng: true (expected false)\nPASS Request không có JWT: true\nFAIL Có phản hồi lỗi từ chối áp dụng: false (expected true)",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 400000,
+          "expected": 400000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": true,
+          "expected": false,
+          "pass": false
+        },
+        {
+          "label": "Request không có JWT",
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        {
+          "label": "Có phản hồi lỗi từ chối áp dụng",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 200,
+        "response": {
+          "success": true,
+          "coupon_id": 1,
+          "discount_amount": -3600000,
+          "final_amount": 4000000,
+          "message": "Áp dụng thành công! Giảm 10%"
+        },
+        "payload": {
+          "code": "SAVE10",
+          "total_amount": 400000,
+          "user_id": null
+        },
+        "authorization_present": false,
+        "total": 400000,
+        "coupon": "SAVE10",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC09 x 1 — 400.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\n✅ Áp dụng thành công! Giảm 10%\n\nTiết kiệm: -3.600.000 ₫\n\nThành tiền: 4.000.000 ₫\n\nTổng thanh toán: 4.000.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC09.png"
+    },
+    {
+      "id": "FR-09-TC14",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:20:12 UTC+07:00",
+      "started_at": "2026-10-18T06:20:04.942Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 300000\nFAIL Mã được áp dụng: false (expected true)\nFAIL Số tiền giảm (đ): undefined (expected 100000)\nFAIL Tổng tiền sau giảm (đ): undefined (expected 200000)",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 300000,
+          "expected": 300000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        },
+        {
+          "label": "Số tiền giảm (đ)",
+          "expected": 100000,
+          "pass": false
+        },
+        {
+          "label": "Tổng tiền sau giảm (đ)",
+          "expected": 200000,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 400,
+        "response": {
+          "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+        },
+        "payload": {
+          "code": "VIP100",
+          "total_amount": 300000,
+          "user_id": 7
+        },
+        "authorization_present": true,
+        "total": 300000,
+        "coupon": "VIP100",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC14 x 1 — 300.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\nĐơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\n\nTổng thanh toán: 300.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC14.png"
+    },
+    {
+      "id": "FR-09-TC17",
+      "status": "Fail",
+      "tested_at": "2026-10-18 13:20:25 UTC+07:00",
+      "started_at": "2026-10-18T06:20:17.318Z",
+      "actual": "PASS Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 500000\nFAIL Mã được áp dụng: false (expected true)\nFAIL Số tiền giảm (đ): undefined (expected 50000)\nFAIL Tổng tiền sau giảm (đ): undefined (expected 450000)",
+      "checks": [
+        {
+          "label": "Tổng giỏ hiển thị khớp dữ liệu chuẩn bị",
+          "actual": 500000,
+          "expected": 500000,
+          "pass": true
+        },
+        {
+          "label": "Mã được áp dụng",
+          "actual": false,
+          "expected": true,
+          "pass": false
+        },
+        {
+          "label": "Số tiền giảm (đ)",
+          "expected": 50000,
+          "pass": false
+        },
+        {
+          "label": "Tổng tiền sau giảm (đ)",
+          "expected": 450000,
+          "pass": false
+        }
+      ],
+      "observations": {
+        "http": 400,
+        "response": {
+          "error": "Đơn hàng chưa đủ giá trị tối thiểu 500,000 ₫ để áp dụng mã này"
+        },
+        "payload": {
+          "code": "BIGBUY",
+          "total_amount": 500000,
+          "user_id": 8
+        },
+        "authorization_present": true,
+        "total": 500000,
+        "coupon": "BIGBUY",
+        "ui": "Xác Nhận Đơn Hàng\nSản phẩm:\nGiỏ thử TC17 x 1 — 500.000 ₫\nTổng tiền thanh toán (VND):\nMã Giảm Giá\nÁp dụng\n\nĐơn hàng chưa đủ giá trị tối thiểu 500,000 ₫ để áp dụng mã này\n\nTổng thanh toán: 500.000 ₫\nXác Nhận Thanh Toán"
+      },
+      "evidence": "jest-tests/runs/2026-10-18T06-19-03-842Z-FR-09/FR-09-TC17.png"
+    }
+  ],
+  "video": "videos/FR-09-demo.webm"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "hw02-jest-ui-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node scripts/run.cjs",
+    "demo:fr02": "node scripts/run.cjs --fr FR-02 --demo",
+    "demo:fr20": "node scripts/run.cjs --fr FR-20 --demo"
+  },
+  "devDependencies": {
+    "jest": "30.5.2",
+    "playwright": "1.62.1",
+    "sqlite3": "6.0.1",
+    "jsonwebtoken": "9.0.3"
+  }
+}

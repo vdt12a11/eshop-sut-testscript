@@ -1,0 +1,51 @@
+[
+  {
+    "time": 1792304413038,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304413039,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304413130,
+    "url": "http://localhost:3000/api/products/10035",
+    "method": "GET",
+    "bearer": false,
+    "body": null
+  },
+  {
+    "time": 1792304413132,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304413132,
+    "url": "http://localhost:3000/api/products/10035",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304413132,
+    "url": "http://localhost:3000/api/users/me",
+    "method": "GET",
+    "bearer": true,
+    "body": null
+  },
+  {
+    "time": 1792304421396,
+    "url": "http://localhost:3000/api/apply-coupon",
+    "method": "POST",
+    "bearer": true,
+    "body": "{\"code\":\"BIGBUY\",\"total_amount\":500000,\"user_id\":8}"
+  }
+]

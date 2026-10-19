@@ -1,0 +1,8 @@
+
+  VITE v8.0.12  ready in 277 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+1:24:42 PM [vite] (client) [console.error] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+1:24:43 PM [vite] (client) [console.error] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+1:25:37 PM [vite] (client) [console.error] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+1:25:53 PM [vite] (client) [console.error] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Domain Testing"
+  short_description: "Design Input/Output ECs and coverage tables"
+  default_prompt: "Use $domain-testing for the selected feature using the provided specification and course materials."

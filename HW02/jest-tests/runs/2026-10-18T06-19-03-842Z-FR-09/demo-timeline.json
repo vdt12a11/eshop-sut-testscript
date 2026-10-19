@@ -1,0 +1,132 @@
+[
+  {
+    "at": "2026-10-18T06:19:09.053Z",
+    "title": "FR-09 — Mã giảm giá",
+    "detail": "Các TC tiêu biểu được thực hiện trên giao diện thật.\nChú thích kiểm thử do runner hiển thị; không phải UI gốc EShop."
+  },
+  {
+    "at": "2026-10-18T06:19:11.075Z",
+    "title": "FR-09-TC01 | SAVE10 giảm 10%",
+    "detail": "MỤC TIÊU: Áp dụng mã; giảm 40.000 đ; tổng sau giảm 360.000 đ.\nGiỏ hàng 400.000 đ; đã đăng nhập, mã còn hạn; chưa dùng lượt."
+  },
+  {
+    "at": "2026-10-18T06:19:15.107Z",
+    "title": "FR-09-TC01 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:19:17.119Z",
+    "title": "FR-09-TC01 | Trước khi gửi",
+    "detail": "Áp dụng mã SAVE10 cho giỏ hàng 400.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:19:19.566Z",
+    "title": "FR-09-TC01 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nĐẠT — Mã được áp dụng: có / đúng\nLỖI — Số tiền giảm (đ): -3600000 | Mong đợi: 40000\nLỖI — Tổng tiền sau giảm (đ): 4000000 | Mong đợi: 360000"
+  },
+  {
+    "at": "2026-10-18T06:19:23.592Z",
+    "title": "FR-09-TC02 | BIGBUY giảm cố định",
+    "detail": "MỤC TIÊU: Áp dụng mã; giảm 50.000 đ; tổng sau giảm 550.000 đ.\nGiỏ hàng 600.000 đ; đã đăng nhập, mã còn hạn; chưa dùng lượt."
+  },
+  {
+    "at": "2026-10-18T06:19:27.629Z",
+    "title": "FR-09-TC02 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:19:29.637Z",
+    "title": "FR-09-TC02 | Trước khi gửi",
+    "detail": "Áp dụng mã BIGBUY cho giỏ hàng 600.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:19:32.082Z",
+    "title": "FR-09-TC02 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 600000\nĐẠT — Mã được áp dụng: có / đúng\nĐẠT — Số tiền giảm (đ): 50000\nĐẠT — Tổng tiền sau giảm (đ): 550000"
+  },
+  {
+    "at": "2026-10-18T06:19:36.033Z",
+    "title": "FR-09-TC05 | Mã không hoạt động",
+    "detail": "MỤC TIÊU: Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.\nGiỏ hàng 400.000 đ; mã đang bị vô hiệu hóa."
+  },
+  {
+    "at": "2026-10-18T06:19:40.054Z",
+    "title": "FR-09-TC05 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:19:42.048Z",
+    "title": "FR-09-TC05 | Trước khi gửi",
+    "detail": "Áp dụng mã SAVE10 cho giỏ hàng 400.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:19:44.478Z",
+    "title": "FR-09-TC05 — Pass",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nĐẠT — Mã được áp dụng: không / sai\nĐẠT — Có phản hồi lỗi từ chối áp dụng: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:19:48.523Z",
+    "title": "FR-09-TC09 | Không có JWT",
+    "detail": "MỤC TIÊU: Không áp dụng giảm giá; phản hồi lỗi phù hợp với điều kiện không đạt.\nGiỏ hàng 400.000 đ; chưa đăng nhập."
+  },
+  {
+    "at": "2026-10-18T06:19:52.550Z",
+    "title": "FR-09-TC09 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:19:54.558Z",
+    "title": "FR-09-TC09 | Trước khi gửi",
+    "detail": "Áp dụng mã SAVE10 cho giỏ hàng 400.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:19:56.983Z",
+    "title": "FR-09-TC09 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 400000\nLỖI — Mã được áp dụng: có / đúng | Mong đợi: không / sai\nĐẠT — Request không có JWT: có / đúng\nLỖI — Có phản hồi lỗi từ chối áp dụng: không / sai | Mong đợi: có / đúng"
+  },
+  {
+    "at": "2026-10-18T06:20:00.924Z",
+    "title": "FR-09-TC14 | VIP100 tổng 300.000 đ",
+    "detail": "MỤC TIÊU: Áp dụng mã; giảm 100.000 đ; tổng sau giảm 200.000 đ.\nGiỏ hàng 300.000 đ; đã đăng nhập, mã còn hạn; đã dùng 1/2 lượt."
+  },
+  {
+    "at": "2026-10-18T06:20:04.959Z",
+    "title": "FR-09-TC14 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:20:06.937Z",
+    "title": "FR-09-TC14 | Trước khi gửi",
+    "detail": "Áp dụng mã VIP100 cho giỏ hàng 300.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:20:09.371Z",
+    "title": "FR-09-TC14 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 300000\nLỖI — Mã được áp dụng: không / sai | Mong đợi: có / đúng\nLỖI — Số tiền giảm (đ): undefined | Mong đợi: 100000\nLỖI — Tổng tiền sau giảm (đ): undefined | Mong đợi: 200000"
+  },
+  {
+    "at": "2026-10-18T06:20:13.310Z",
+    "title": "FR-09-TC17 | BIGBUY tổng 500.000 đ",
+    "detail": "MỤC TIÊU: Áp dụng mã; giảm 50.000 đ; tổng sau giảm 450.000 đ.\nGiỏ hàng 500.000 đ; đã đăng nhập, mã còn hạn; chưa dùng lượt."
+  },
+  {
+    "at": "2026-10-18T06:20:17.333Z",
+    "title": "FR-09-TC17 | Nhập mã giảm giá",
+    "detail": "Điền mã giảm giá. Dừng 1,5 giây sau khi nhập xong."
+  },
+  {
+    "at": "2026-10-18T06:20:19.353Z",
+    "title": "FR-09-TC17 | Trước khi gửi",
+    "detail": "Áp dụng mã BIGBUY cho giỏ hàng 500.000 đ.\nDừng 2 giây trước khi thực hiện."
+  },
+  {
+    "at": "2026-10-18T06:20:21.767Z",
+    "title": "FR-09-TC17 — Fail",
+    "detail": "Bước 4: ĐỐI CHIẾU KẾT QUẢ\nĐẠT — Tổng giỏ hiển thị khớp dữ liệu chuẩn bị: 500000\nLỖI — Mã được áp dụng: không / sai | Mong đợi: có / đúng\nLỖI — Số tiền giảm (đ): undefined | Mong đợi: 50000\nLỖI — Tổng tiền sau giảm (đ): undefined | Mong đợi: 450000"
+  },
+  {
+    "at": "2026-10-18T06:20:25.321Z",
+    "title": "FR-09 — Tổng kết video",
+    "detail": "6 TC minh họa | Pass: 2 | Fail: 4\nCác kết quả được lưu vào README và hồ sơ chạy test.\nĐã hoàn tất các TC minh họa của chức năng này."
+  }
+]
