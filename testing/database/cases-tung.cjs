@@ -22,4 +22,5 @@ module.exports = [
   {"id":"TC_FUNC_03","suite":"functional","title":"User không huỷ đơn shipping","expected":"HTTP 403, DB giữ shipping"},
   {"id":"TC_FUNC_04","suite":"functional","title":"Admin huỷ đơn shipping","expected":"HTTP 2xx, DB đổi canceled"},
   {"id":"TC_FUNC_05","suite":"functional","title":"Không nhảy pending thẳng sang delivered","expected":"HTTP 4xx, DB giữ pending"},
+  {"id":"TC_FUNC_06","suite":"functional","title":"User không tạo coupon admin","expected":"HTTP 401/403, không thêm coupon và tổng số coupon không đổi"},
 ];
