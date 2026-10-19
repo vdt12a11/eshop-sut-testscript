@@ -18,4 +18,5 @@ module.exports = [
   {"id":"TC_STRUCT_06","suite":"structural","title":"Khả năng ghi của kết nối","expected":"CREATE và DROP được bảng trên DB test"},
   {"id":"TC_STRUCT_07","suite":"structural","title":"DEFAULT trạng thái đơn hàng","expected":"INSERT bỏ cột status: đơn hàng được lưu với status pending","note":"Thay case cấu hình foreign_keys theo yêu cầu Tùng ngày 14/10/2026; không còn kiểm tra bật FK."},
   {"id":"TC_FUNC_01","suite":"functional","title":"Không đổi trạng thái delivered","expected":"Admin chuyển sang canceled hoặc shipping: HTTP 4xx, DB giữ delivered"},
+  {"id":"TC_FUNC_02","suite":"functional","title":"Không đổi canceled về pending/confirmed","expected":"HTTP 4xx, DB giữ canceled","note":"Catalog chỉ nêu pending/confirmed; không suy rộng kết quả sang mọi trạng thái khác."},
 ];
