@@ -1,0 +1,810 @@
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+Connected to database
+(node:42324) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+FAIL database/functional/TC_FUNC_03.test.js (5.747 s)
+  ● [TC_FUNC_03] User bị từ chối huỷ đơn shipping và DB giữ nguyên
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "after": "shipping",
+    -   "httpStatus": 403,
+    +   "after": "canceled",
+    +   "httpStatus": 200,
+      }
+
+      24 |   observe(context, { method: 'PUT', route: `/api/orders/${order.id}/cancel`, before: 'shipping', httpStatus: response.status, body: response.body, after: stored.status, expected: { httpStatus: 403, after: 'shipping' } });
+      25 |   // Gom HTTP và trạng thái DB vào một object; toEqual kiểm tra nội dung cả hai trường.
+    > 26 |   expect({ httpStatus: response.status, after: stored.status }).toEqual({ httpStatus: 403, after: 'shipping' });
+         |                                                                 ^
+      27 | });
+      28 |
+
+      at Object.toEqual (database/functional/TC_FUNC_03.test.js:26:65)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+FAIL database/functional/TC_FUNC_06.test.js
+  ● [TC_FUNC_06] User không tạo được coupon qua API admin
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Object {
+    -   "insertedRows": 0,
+    -   "rejected": true,
+    -   "totalRows": 5,
+    +   "insertedRows": 1,
+    +   "rejected": false,
+    +   "totalRows": 6,
+      }
+
+      25 |   observe(context, { method: 'POST', route: '/api/admin/coupons', role: 'user', payload, httpStatus: response.status, body: response.body, beforeCount: before.count, afterCount: after.count, insertedRows: inserted.count });
+      26 |   // includes kiểm tra mã 401/403; toEqual đối chiếu kết quả với các điều kiện mong đợi.
+    > 27 |   expect({ rejected: [401, 403].includes(response.status), insertedRows: inserted.count, totalRows: after.count }).toEqual({ rejected: true, insertedRows: 0, totalRows: before.count });
+         |                                                                                                                    ^
+      28 | });
+      29 |
+
+      at Object.toEqual (database/functional/TC_FUNC_06.test.js:27:116)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+FAIL database/functional/TC_FUNC_04.test.js
+  ● [TC_FUNC_04] Admin huỷ được đơn shipping và DB lưu canceled
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "after": "canceled",
+    -   "successful": true,
+    +   "after": "shipping",
+    +   "successful": false,
+      }
+
+      24 |   observe(context, { method: 'PUT', route: `/api/admin/orders/${order.id}/status`, before: 'shipping', httpStatus: response.status, body: response.body, after: stored.status, expected: { successful: true, after: 'canceled' } });
+      25 |   // >= 200 && < 300 dùng && (VÀ) kiểm tra mã HTTP thuộc nhóm 2xx, trả boolean true/false.
+    > 26 |   expect({ successful: response.status >= 200 && response.status < 300, after: stored.status }).toEqual({ successful: true, after: 'canceled' });
+         |                                                                                                 ^
+      27 | });
+      28 |
+
+      at Object.toEqual (database/functional/TC_FUNC_04.test.js:26:97)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:323:33)
+
+  console.log
+    🎉 SEED DỮ LIỆU THÀNH CÔNG VỚI CHATGPT-ASSISTED FAKER.JS!
+
+      at Statement.log (database/fixtures/seed-faker.js:324:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:325:33)
+
+  console.log
+    📌 Seed Key        : 42 (Đảm bảo 100% Deterministic)
+
+      at Statement.log (database/fixtures/seed-faker.js:326:33)
+
+  console.log
+    📦 Categories      : 5 danh mục
+
+      at Statement.log (database/fixtures/seed-faker.js:327:33)
+
+  console.log
+    👤 Users           : 20 tài khoản (Admin, Test User, Lockout User...)
+
+      at Statement.log (database/fixtures/seed-faker.js:328:33)
+
+  console.log
+    📱 Products        : 50 sản phẩm (Giá nguyên INTEGER > 0)
+
+      at Statement.log (database/fixtures/seed-faker.js:329:33)
+
+  console.log
+    🎟️ Coupons         : 5 mã (SAVE10, BIGBUY, VIP100, EXPIRED, DISABLED50)
+
+      at Statement.log (database/fixtures/seed-faker.js:330:33)
+
+  console.log
+    📊 Coupon Usage    : 3 lượt dùng kiểm thử C5
+
+      at Statement.log (database/fixtures/seed-faker.js:331:33)
+
+  console.log
+    🛒 Orders          : 30 đơn hàng (Bao phủ đủ 5 trạng thái State Machine)
+
+      at Statement.log (database/fixtures/seed-faker.js:332:33)
+
+  console.log
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      at Statement.log (database/fixtures/seed-faker.js:333:33)
+
+Test Suites: 3 failed, 10 passed, 13 total
+Tests:       3 failed, 10 passed, 13 total
+Snapshots:   0 total
+Time:        77.024 s
+Ran all test suites within paths "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_01.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_02.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_03.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_04.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_05.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_06.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\structural\TC_STRUCT_07.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_01.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_02.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_03.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_04.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_05.test.js", "D:\vscode\Software testing\eshop-sut-testscript\testing\database\functional\TC_FUNC_06.test.js".
+Test results written to: ..\evidence\tung\2026-10-19T15-02-06-622Z-30876\jest-results.json

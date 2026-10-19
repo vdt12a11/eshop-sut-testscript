@@ -1,0 +1,40 @@
+{
+  "caseId": "TC_FUNC_03",
+  "observedAt": "2026-10-19T15:02:32.433Z",
+  "databasePath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_FUNC_03-edyokY\\database.sqlite",
+  "initializerSha256": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+  "serverSha256": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+  "sourceForeignKeys": 0,
+  "connectionOrigin": "backend/database.js; sandbox path; initDatabase() invocation replaced by Flyway/Faker",
+  "flyway": {
+    "version": "13.10.0",
+    "logPath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_FUNC_03-edyokY\\flyway.log"
+  },
+  "fixture": {
+    "seed": 42,
+    "referenceDate": "2026-03-31T00:00:00.000Z",
+    "counts": {
+      "categories": 5,
+      "users": 20,
+      "products": 50,
+      "coupons": 5,
+      "coupon_usage": 3,
+      "orders": 30
+    },
+    "originalForeignKeys": 0
+  },
+  "observations": {
+    "method": "PUT",
+    "route": "/api/orders/3/cancel",
+    "before": "shipping",
+    "httpStatus": 200,
+    "body": {
+      "message": "Order canceled successfully"
+    },
+    "after": "canceled",
+    "expected": {
+      "httpStatus": 403,
+      "after": "shipping"
+    }
+  }
+}

@@ -105,3 +105,17 @@ PRAGMA table_info('users');  -- Cấu trúc các cột
 ```
 
 Phân biệt khai báo và thực thi: foreign_key_list cho biết bảng khai báo quan hệ nào; foreign_keys cho biết kết nối có bật kiểm tra các quan hệ đó không. Bật foreign_keys không tự tạo ràng buộc còn thiếu và không tự bật cho các kết nối khác.
+
+## Kiểm tra lỗi bất đồng bộ bằng rejects.toThrow
+
+```js
+await expect(operationPromise).rejects.toThrow('Thông báo lỗi mong đợi');
+```
+
+- `.rejects` yêu cầu Promise bị reject. Nếu Promise resolve thành công, assertion thất bại.
+- `.toThrow('...')` kiểm tra lỗi có message chứa chuỗi mong đợi; không yêu cầu toàn bộ message giống hệt chuỗi đó.
+- `await` giúp Jest chờ assertion bất đồng bộ hoàn tất. Có thể trả về Promise assertion bằng `return` thay cho `await`.
+
+Cách này dùng khi yêu cầu là thao tác phải thất bại đúng lỗi dự kiến. Nó khác việc dùng `toBe` hoặc `toEqual` để kiểm tra giá trị trả về thành công.
+
+Lỗi dự kiến được assertion xác nhận đúng sẽ làm test PASS. Không phải cứ thao tác gây lỗi thì test phải FAIL. Nếu thao tác thành công ngoài mong đợi hoặc thông báo lỗi không khớp, assertion sẽ FAIL.

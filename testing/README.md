@@ -1,18 +1,37 @@
-# Script kiểm thử seminar — Tùng
+# Database testing seminar
 
-Nhánh Tùng lưu các case đã học và duyệt. Mỗi case có commit riêng.
-
-## Cài và chạy trên Windows
+Node >=24.11.1. Cài và chạy từ thư mục eshop-sut:
 
 ```powershell
 npm --prefix testing ci
-powershell -ExecutionPolicy Bypass -File flyway/install.ps1
-npm --prefix testing test -- --case TC_STRUCT_01
-node testing/scripts/show-tables.cjs TC_STRUCT_01
+npm --prefix testing run check:fixtures
+npm test
+npm test -- --case TC_STRUCT_02
+npm run test:structural
+npm run test:functional
 ```
 
-Node >=24.11.1. Test tự tạo DB riêng, chạy Flyway và seed Faker. Binary Flyway, node_modules và DB tạm không đưa vào Git. Script Jest ở testing/database/structural. Ghi chú ở docs/tung/knowledge.md.
+## Đặt file đúng thư mục
 
-backend/database.js và backend/server.js là bản source tối thiểu từ ttbhanh/eshop-sut, commit 85af3ba875c88283615e22cb108f13e2fccaf0e9. Các file này phục vụ đối chiếu schema và adapter test, không phải toàn bộ ứng dụng để triển khai. Backend gốc không bị sửa. V1 giữ nguyên cấu trúc backend; bảng lịch sử được Flyway quản lý.
+- database/structural/TC_STRUCT_01.test.js đến TC_STRUCT_07.test.js: script Jest structural của Tùng.
+- database/functional/TC_FUNC_01.test.js đến TC_FUNC_06.test.js: script Jest functional của Tùng.
+- database/fixtures/seed-faker.js: file Faker chung, nguyên nội dung.
+- database/helpers/: wrapper SQL, fixture và adapter backend.
+- scripts/: runner và kiểm tra seed; không đặt các test case ở đây.
+- jest.config.cjs: cấu hình Jest dùng chung.
+- ../docs/tung/: ghi chép Jest, catalog, báo cáo kết quả và lỗi.
+- ../evidence/tung/: log và JSON mỗi lần chạy. .tmp/: database cô lập, không đưa vào Git.
 
-Bằng chứng trong evidence/tung là các lần chạy trên máy Tùng trước khi xuất bản; đường dẫn tuyệt đối trong log thuộc môi trường đó. Máy khác dùng lệnh trên để tạo bằng chứng của mình.
+Runner chỉ chọn 13 case của Tùng. Các thành viên khác có thể thêm case vào structural/functional và mở rộng runner riêng. Helpers tạo SQLite bằng Flyway V1 tương đương DDL backend; functional dùng routes thật qua Supertest. Không cần bật backend, không ghi vào database gốc. Mỗi case có database riêng.
+
+Helper reset Faker seed 42, ngày tham chiếu 2026-03-31 và tuần tự hoá SQL quanh file seed chung. check:fixtures kiểm tra dữ liệu lặp lại thực sự. PRAGMA foreign_keys được trả về cấu hình SUT sau seed để test không pass giả.
+
+Lần chạy đủ 13 case gần nhất: 10 passed, 3 failed (TC_FUNC_03, TC_FUNC_04, TC_FUNC_06). Các lỗi này là assertion actual khác expected; exit code 1 phản ánh test phát hiện hành vi cần xem xét. Xem ../docs/tung/Test_Summary.md và Test_Results.json để biết chi tiết.
+
+Để chẩn đoán file seed gốc khi chạy trực tiếp: npm --prefix testing run seed:smoke. Xem Seed_Smoke_README.md; lệnh này yêu cầu DB gốc đã có schema và có thể báo lỗi do seed gốc không ổn định khi thiếu wrapper. Nó là kiểm tra riêng, không thay thế bộ Jest.
+
+## Cập nhật Flyway 2026-10-13
+
+Đã cài CLI 13.10.0; helper hiện chạy migration V1 thay bước tạo schema bằng initializer. Máy khác chạy powershell -ExecutionPolicy Bypass -File flyway/install.ps1 trước khi test. Xem flyway/README.md. STRUCT 01 đã PASS sau thiết lập. Các mô tả thiếu Flyway ở trên là kết quả trước tích hợp.
+
+

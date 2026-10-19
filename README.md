@@ -1,13 +1,19 @@
 # Script kiểm thử seminar — Tùng
 
-Nhánh Tùng lưu các case đã học và duyệt. Mỗi case có commit riêng.
+Nhánh Tùng có 13 script kiểm thử: TC_STRUCT_01–07 và TC_FUNC_01–06. Có script trong nhánh không đồng nghĩa mọi case đã được người học xem xét. Mỗi case được thêm bằng một commit riêng.
 
 ## Cài và chạy trên Windows
 
 ```powershell
 npm --prefix testing ci
 powershell -ExecutionPolicy Bypass -File flyway/install.ps1
-npm --prefix testing test -- --case TC_STRUCT_01
+npm test -- --case TC_STRUCT_01
+```
+
+Chạy một case khác, thay ID trong lệnh trên, ví dụ:
+
+```powershell
+npm test -- --case TC_FUNC_06
 node testing/scripts/show-tables.cjs TC_STRUCT_01
 ```
 
@@ -17,10 +23,10 @@ backend/database.js và backend/server.js là bản source tối thiểu từ tt
 
 Bằng chứng trong evidence/tung là các lần chạy trên máy Tùng trước khi xuất bản; đường dẫn tuyệt đối trong log thuộc môi trường đó. Máy khác dùng lệnh trên để tạo bằng chứng của mình.
 
-## Case đã hoàn thành
+## Các script có trong nhánh
 
-- TC_STRUCT_01: đúng danh sách 7 bảng sau migration — PASS.
-- TC_STRUCT_02: có các cột thiết yếu của users — PASS. Chạy: npm --prefix testing test -- --case TC_STRUCT_02.
+- Structural: TC_STRUCT_01–07.
+- Functional: TC_FUNC_01–06.
 
-Chạy npm --prefix testing test để kiểm tra cả hai case đã duyệt. Các case khác chưa được xuất bản trên nhánh này.
+Runner in kết quả mong đợi, kết quả thực tế, trạng thái PASS/FAIL, số suite/test, snapshot và thời gian chạy. Mỗi lần chạy tạo bằng chứng riêng trong `evidence/tung/`.
 

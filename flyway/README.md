@@ -24,3 +24,9 @@ FROM flyway_schema_history;
 Cần thấy V1, script V1__create_eshop_schema.sql và success = 1. Không chỉnh tay bảng lịch sử. V1 đã áp dụng phải giữ nguyên; thay đổi schema tiếp theo viết V2. Migration đổi/rollback theo seminar là công việc tiếp theo, chưa được thực hiện ở bước cài này.
 
 Nguồn: [Flyway CLI](https://documentation.red-gate.com/flyway/reference/usage/command-line), [SQLite](https://documentation.red-gate.com/flyway/reference/database-driver-reference/sqlite).
+
+## Cập nhật adapter kết nối backend — 13/10/2026
+
+Helper hiện thực thi module backend/database.js với __dirname trỏ tới DB test riêng, giữ constructor, callback mở DB và cấu hình kết nối của backend. Chỉ lời gọi initDatabase() được thay bằng bước Flyway/Faker, tránh DROP/CREATE lại schema. Các mô tả trước về kết nối mới dùng mặc định đã được thay thế bởi adapter này. Backend gốc không sửa.
+
+TC07 đã chạy lại: expected 1, actual 0, FAIL. Kết quả đo trên kết nối tạo bằng code backend, không phải kết nối DB Browser. Nếu backend thêm cấu hình ở constructor/callback hoặc ngoài hàm initDatabase, adapter sẽ thực thi cấu hình đó. Nếu source đổi cách khởi tạo hoặc đưa cấu hình vào hàm initDatabase, cần review adapter thay vì giả định test vẫn tương đương.

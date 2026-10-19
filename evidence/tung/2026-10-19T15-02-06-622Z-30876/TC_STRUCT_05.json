@@ -1,0 +1,35 @@
+{
+  "caseId": "TC_STRUCT_05",
+  "observedAt": "2026-10-19T15:02:37.541Z",
+  "databasePath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_STRUCT_05-ySG4rD\\database.sqlite",
+  "initializerSha256": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+  "sourceForeignKeys": 0,
+  "connectionOrigin": "backend/database.js; sandbox path; initDatabase() invocation replaced by Flyway/Faker",
+  "flyway": {
+    "version": "13.10.0",
+    "logPath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_STRUCT_05-ySG4rD\\flyway.log"
+  },
+  "fixture": {
+    "seed": 42,
+    "referenceDate": "2026-03-31T00:00:00.000Z",
+    "counts": {
+      "categories": 5,
+      "users": 20,
+      "products": 50,
+      "coupons": 5,
+      "coupon_usage": 3,
+      "orders": 30
+    },
+    "originalForeignKeys": 0
+  },
+  "observations": {
+    "expected": {
+      "type": "percent",
+      "min_order_amount": 0
+    },
+    "actual": {
+      "type": "percent",
+      "min_order_amount": 0
+    }
+  }
+}

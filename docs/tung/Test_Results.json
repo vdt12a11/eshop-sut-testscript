@@ -1,0 +1,424 @@
+{
+  "runId": "2026-10-19T15-02-06-622Z-30876",
+  "node": "v24.11.1",
+  "evidence": "D:\\vscode\\Software testing\\eshop-sut-testscript\\evidence\\tung\\2026-10-19T15-02-06-622Z-30876",
+  "sourceHashes": {
+    "initializer": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+    "server": "e2263811a1690a63a7dbb4446c3fd33fb87f50d073d9f8cdfab7083a52f5e8ed",
+    "seeder": "3794cee9e585d2c745b04eda1d2185179d040648656e4149ac71a02cbb0e5100",
+    "packageLock": "6c22fb108694d86a80843b39c2f77243d03e36c3b151e5ffe95fb63e7b9dbcd1",
+    "originalDatabaseBefore": null,
+    "originalDatabaseAfter": null
+  },
+  "originalDatabaseUnchanged": true,
+  "rawJest": {
+    "passedSuites": 10,
+    "failedSuites": 3,
+    "pendingSuites": 0,
+    "totalSuites": 13,
+    "passed": 10,
+    "failed": 3,
+    "pending": 0,
+    "total": 13,
+    "snapshots": 0,
+    "durationSeconds": 77.621
+  },
+  "cases": [
+    {
+      "id": "TC_STRUCT_01",
+      "suite": "structural",
+      "title": "Danh sách bảng, gồm flyway_schema_history",
+      "expected": "Đúng 7 bảng nghiệp vụ/metadata; bỏ qua bảng nội bộ sqlite_*",
+      "note": "Theo catalog sau khi Flyway được thiết lập. Thiếu flyway_schema_history là thiếu tiền điều kiện, không phải lỗi schema nghiệp vụ đã xác nhận.",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "expected": [
+          "categories",
+          "coupon_usage",
+          "coupons",
+          "flyway_schema_history",
+          "orders",
+          "products",
+          "users"
+        ],
+        "actual": [
+          "categories",
+          "coupon_usage",
+          "coupons",
+          "flyway_schema_history",
+          "orders",
+          "products",
+          "users"
+        ],
+        "missing": [],
+        "extra": []
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_02",
+      "suite": "structural",
+      "title": "Các cột thiết yếu trong users",
+      "expected": "Có id, email, role và locked_until",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "requiredColumns": [
+          "id",
+          "email",
+          "role",
+          "locked_until"
+        ],
+        "actual": [
+          "id",
+          "name",
+          "email",
+          "password",
+          "role",
+          "login_attempts",
+          "locked_until",
+          "reset_token",
+          "shipping_address",
+          "phone"
+        ],
+        "columns": [
+          {
+            "cid": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 1
+          },
+          {
+            "cid": 1,
+            "name": "name",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 2,
+            "name": "email",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 3,
+            "name": "password",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 4,
+            "name": "role",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": "'user'",
+            "pk": 0
+          },
+          {
+            "cid": 5,
+            "name": "login_attempts",
+            "type": "INTEGER",
+            "notnull": 0,
+            "dflt_value": "0",
+            "pk": 0
+          },
+          {
+            "cid": 6,
+            "name": "locked_until",
+            "type": "DATETIME",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 7,
+            "name": "reset_token",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 8,
+            "name": "shipping_address",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          },
+          {
+            "cid": 9,
+            "name": "phone",
+            "type": "TEXT",
+            "notnull": 0,
+            "dflt_value": null,
+            "pk": 0
+          }
+        ]
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_03",
+      "suite": "structural",
+      "title": "Kiểu khai báo products.price",
+      "expected": "Kiểu khai báo INTEGER",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "expectedType": "INTEGER",
+        "priceColumn": {
+          "cid": 2,
+          "name": "price",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_04",
+      "suite": "structural",
+      "title": "UNIQUE của coupons.code",
+      "expected": "INSERT code trùng bị từ chối; còn đúng 1 dòng",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "duplicateCode": "TEST_UNIQUE",
+        "error": {
+          "code": "SQLITE_CONSTRAINT",
+          "message": "SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code"
+        },
+        "storedRows": 1
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_05",
+      "suite": "structural",
+      "title": "DEFAULT của coupon",
+      "expected": "Bỏ cột type/min_order_amount khi INSERT: percent/0",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "expected": {
+          "type": "percent",
+          "min_order_amount": 0
+        },
+        "actual": {
+          "type": "percent",
+          "min_order_amount": 0
+        }
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_06",
+      "suite": "structural",
+      "title": "Khả năng ghi của kết nối",
+      "expected": "CREATE và DROP được bảng trên DB test",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "afterCreate": {
+          "name": "temp_table"
+        },
+        "afterDrop": null
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_STRUCT_07",
+      "suite": "structural",
+      "title": "DEFAULT trạng thái đơn hàng",
+      "expected": "INSERT bỏ cột status: đơn hàng được lưu với status pending",
+      "note": "Thay case cấu hình foreign_keys theo yêu cầu Tùng ngày 14/10/2026; không còn kiểm tra bật FK.",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "expected": {
+          "status": "pending"
+        },
+        "actual": {
+          "status": "pending"
+        },
+        "insertedOrderId": 31
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_FUNC_01",
+      "suite": "functional",
+      "title": "Không đổi trạng thái delivered",
+      "expected": "Admin chuyển sang canceled hoặc shipping: HTTP 4xx, DB giữ delivered",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "originalOrderId": 4,
+        "before": "delivered",
+        "attempts": [
+          {
+            "requestedStatus": "canceled",
+            "httpStatus": 400,
+            "body": {
+              "error": "Invalid state transition from delivered to canceled"
+            },
+            "storedStatus": "delivered"
+          },
+          {
+            "requestedStatus": "shipping",
+            "httpStatus": 400,
+            "body": {
+              "error": "Invalid state transition from delivered to shipping"
+            },
+            "storedStatus": "delivered"
+          }
+        ]
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_FUNC_02",
+      "suite": "functional",
+      "title": "Không đổi canceled về pending/confirmed",
+      "expected": "HTTP 4xx, DB giữ canceled",
+      "note": "Catalog chỉ nêu pending/confirmed; không suy rộng kết quả sang mọi trạng thái khác.",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "originalOrderId": 5,
+        "before": "canceled",
+        "attempts": [
+          {
+            "requestedStatus": "pending",
+            "httpStatus": 400,
+            "body": {
+              "error": "Invalid state transition from canceled to pending"
+            },
+            "storedStatus": "canceled"
+          },
+          {
+            "requestedStatus": "confirmed",
+            "httpStatus": 400,
+            "body": {
+              "error": "Invalid state transition from canceled to confirmed"
+            },
+            "storedStatus": "canceled"
+          }
+        ]
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_FUNC_03",
+      "suite": "functional",
+      "title": "User không huỷ đơn shipping",
+      "expected": "HTTP 403, DB giữ shipping",
+      "status": "FAIL",
+      "jestStatus": "failed",
+      "observations": {
+        "method": "PUT",
+        "route": "/api/orders/3/cancel",
+        "before": "shipping",
+        "httpStatus": 200,
+        "body": {
+          "message": "Order canceled successfully"
+        },
+        "after": "canceled",
+        "expected": {
+          "httpStatus": 403,
+          "after": "shipping"
+        }
+      },
+      "failure": [
+        "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 2\n+ Received  + 2\n\n  Object {\n-   \"after\": \"shipping\",\n-   \"httpStatus\": 403,\n+   \"after\": \"canceled\",\n+   \"httpStatus\": 200,\n  }\n    at Object.toEqual (D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\database\\functional\\TC_FUNC_03.test.js:26:65)"
+      ]
+    },
+    {
+      "id": "TC_FUNC_04",
+      "suite": "functional",
+      "title": "Admin huỷ đơn shipping",
+      "expected": "HTTP 2xx, DB đổi canceled",
+      "status": "FAIL",
+      "jestStatus": "failed",
+      "observations": {
+        "method": "PUT",
+        "route": "/api/admin/orders/3/status",
+        "before": "shipping",
+        "httpStatus": 400,
+        "body": {
+          "error": "Invalid state transition from shipping to canceled"
+        },
+        "after": "shipping",
+        "expected": {
+          "successful": true,
+          "after": "canceled"
+        }
+      },
+      "failure": [
+        "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 2\n+ Received  + 2\n\n  Object {\n-   \"after\": \"canceled\",\n-   \"successful\": true,\n+   \"after\": \"shipping\",\n+   \"successful\": false,\n  }\n    at Object.toEqual (D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\database\\functional\\TC_FUNC_04.test.js:26:97)"
+      ]
+    },
+    {
+      "id": "TC_FUNC_05",
+      "suite": "functional",
+      "title": "Không nhảy pending thẳng sang delivered",
+      "expected": "HTTP 4xx, DB giữ pending",
+      "status": "PASS",
+      "jestStatus": "passed",
+      "observations": {
+        "before": "pending",
+        "requested": "delivered",
+        "httpStatus": 400,
+        "body": {
+          "error": "Invalid state transition from pending to delivered"
+        },
+        "after": "pending"
+      },
+      "failure": []
+    },
+    {
+      "id": "TC_FUNC_06",
+      "suite": "functional",
+      "title": "User không tạo coupon admin",
+      "expected": "HTTP 401/403, không thêm coupon và tổng số coupon không đổi",
+      "status": "FAIL",
+      "jestStatus": "failed",
+      "observations": {
+        "method": "POST",
+        "route": "/api/admin/coupons",
+        "role": "user",
+        "payload": {
+          "code": "TC_FUNC_06_UNAUTHORIZED",
+          "type": "percent",
+          "discount_value": 10,
+          "min_order_amount": 0,
+          "expired_at": "2099-12-31 23:59:59",
+          "max_uses_per_user": 1
+        },
+        "httpStatus": 200,
+        "body": {
+          "message": "Coupon created",
+          "id": 6
+        },
+        "beforeCount": 5,
+        "afterCount": 6,
+        "insertedRows": 1
+      },
+      "failure": [
+        "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 3\n+ Received  + 3\n\n  Object {\n-   \"insertedRows\": 0,\n-   \"rejected\": true,\n-   \"totalRows\": 5,\n+   \"insertedRows\": 1,\n+   \"rejected\": false,\n+   \"totalRows\": 6,\n  }\n    at Object.toEqual (D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\database\\functional\\TC_FUNC_06.test.js:27:116)"
+      ]
+    }
+  ]
+}

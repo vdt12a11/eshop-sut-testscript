@@ -1,0 +1,127 @@
+{
+  "caseId": "TC_STRUCT_02",
+  "observedAt": "2026-10-19T15:02:52.158Z",
+  "databasePath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_STRUCT_02-RKebxw\\database.sqlite",
+  "initializerSha256": "50012f35c2cf0776dd837482d76adf701f0ee40cdcb9d80143278fccde034717",
+  "sourceForeignKeys": 0,
+  "connectionOrigin": "backend/database.js; sandbox path; initDatabase() invocation replaced by Flyway/Faker",
+  "flyway": {
+    "version": "13.10.0",
+    "logPath": "D:\\vscode\\Software testing\\eshop-sut-testscript\\testing\\.tmp\\tung\\TC_STRUCT_02-RKebxw\\flyway.log"
+  },
+  "fixture": {
+    "seed": 42,
+    "referenceDate": "2026-03-31T00:00:00.000Z",
+    "counts": {
+      "categories": 5,
+      "users": 20,
+      "products": 50,
+      "coupons": 5,
+      "coupon_usage": 3,
+      "orders": 30
+    },
+    "originalForeignKeys": 0
+  },
+  "observations": {
+    "requiredColumns": [
+      "id",
+      "email",
+      "role",
+      "locked_until"
+    ],
+    "actual": [
+      "id",
+      "name",
+      "email",
+      "password",
+      "role",
+      "login_attempts",
+      "locked_until",
+      "reset_token",
+      "shipping_address",
+      "phone"
+    ],
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "email",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "password",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "role",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": "'user'",
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "login_attempts",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": "0",
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "locked_until",
+        "type": "DATETIME",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "reset_token",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "shipping_address",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "phone",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ]
+  }
+}
