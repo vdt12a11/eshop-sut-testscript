@@ -14,4 +14,5 @@ module.exports = [
   }
   {"id":"TC_STRUCT_03","suite":"structural","title":"Kiểu khai báo products.price","expected":"Kiểu khai báo INTEGER"},
   {"id":"TC_STRUCT_04","suite":"structural","title":"UNIQUE của coupons.code","expected":"INSERT code trùng bị từ chối; còn đúng 1 dòng"},
+  {"id":"TC_STRUCT_05","suite":"structural","title":"DEFAULT của coupon","expected":"Bỏ cột type/min_order_amount khi INSERT: percent/0"},
 ];
