@@ -12,4 +12,5 @@ module.exports = [
     "title": "Các cột thiết yếu trong users",
     "expected": "Có id, email, role và locked_until"
   }
+  {"id":"TC_STRUCT_03","suite":"structural","title":"Kiểu khai báo products.price","expected":"Kiểu khai báo INTEGER"},
 ];
