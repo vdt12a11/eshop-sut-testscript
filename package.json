@@ -1,0 +1,16 @@
+{
+  "name": "eshop-sut-test-runner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node testing/scripts/run-tung.cjs",
+    "test:tung": "node testing/scripts/run-tung.cjs",
+    "test:structural": "node testing/scripts/run-tung.cjs --suite structural",
+    "test:functional": "node testing/scripts/run-tung.cjs --suite functional",
+    "check:fixtures": "node testing/scripts/check-fixtures.cjs"
+  },
+  "engines": {
+    "node": ">=24.11.1"
+  }
+}

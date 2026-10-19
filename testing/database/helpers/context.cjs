@@ -11,6 +11,29 @@ const sutRoot = path.resolve(testingRoot, '..');
 const nativeRequire = Module.createRequire(path.join(testingRoot, 'package.json'));
 const sha256 = text => crypto.createHash('sha256').update(text).digest('hex');
 
+function openBackendConnection(source, directory) {
+  // Execute the backend module itself, including its constructor, open
+  // callback and connection configuration. __dirname targets the sandbox.
+  // Flyway and Faker replace only the destructive schema/seed invocation.
+  const initializerCall = /^initDatabase\(\);\s*$/gm;
+  if ([...source.matchAll(initializerCall)].length !== 1) {
+    throw new Error('Backend DB adapter: expected exactly one standalone initDatabase() call; review source');
+  }
+  const adapted = source.replace(initializerCall, '// Schema initialized by Flyway; fixture initialized by Faker.');
+  const filename = path.join(directory, 'database.js');
+  fs.writeFileSync(filename, adapted);
+  const backendModule = new Module(filename, module);
+  backendModule.filename = filename;
+  backendModule.paths = Module._nodeModulePaths(directory);
+  backendModule.require = dependency => nativeRequire(dependency);
+  backendModule._compile(adapted, filename);
+  const db = backendModule.exports;
+  if (!db || typeof db.get !== 'function' || typeof db.close !== 'function') {
+    throw new Error('Backend DB adapter: module must export a SQLite connection');
+  }
+  return db;
+}
+
 function loadApp(db) {
   const sourcePath = path.join(sutRoot, 'backend/server.js');
   const original = fs.readFileSync(sourcePath, 'utf8');
@@ -39,14 +62,13 @@ async function createContext(caseId, { api = false } = {}) {
   const migration = fs.readFileSync(path.join(sutRoot, 'flyway/sql/V1__create_eshop_schema.sql'), 'utf8');
   const migrationStatements = [...migration.matchAll(/CREATE TABLE[\s\S]*?\);/g)].map(match => match[0].slice(0, -1).replace(/\s+/g, ' ').trim());
   if (statements.length !== 6 || JSON.stringify(statements) !== JSON.stringify(migrationStatements)) throw new Error('Flyway V1 does not match SUT schema: review schema drift');
-  if (/PRAGMA\s+foreign_keys/i.test(source)) throw new Error('SUT connection configuration changed: review Flyway test connection');
   const databasePath = path.join(directory, 'database.sqlite');
   const flyway = migrate(databasePath);
-  const sqlite3 = nativeRequire('sqlite3');
-  const db = new sqlite3.Database(databasePath);
+  const db = openBackendConnection(source, directory);
   db.serialize();
   const context = {
     caseId, db, directory, flyway,
+    connectionOrigin: 'backend/database.js; sandbox path; initDatabase() invocation replaced by Flyway/Faker',
     databasePath: path.join(directory, 'database.sqlite'),
     initializerSha256: sha256(fs.readFileSync(initializerPath)),
   };
@@ -64,6 +86,11 @@ async function createContext(caseId, { api = false } = {}) {
 }
 
 function observe(context, observations) {
+  // The runner prints the saved observations in a compact format. Direct
+  // Jest runs print here because they do not use that runner.
+  if (!process.env.TUNG_EVIDENCE_DIR) {
+    console.log(`[${context.caseId}] Observations:\n${JSON.stringify(observations, null, 2)}`);
+  }
   const outputDirectory = process.env.TUNG_EVIDENCE_DIR || path.join(testingRoot, '.tmp', 'tung-observations');
   fs.mkdirSync(outputDirectory, { recursive: true });
   fs.writeFileSync(path.join(outputDirectory, `${context.caseId}.json`), JSON.stringify({
@@ -73,6 +100,7 @@ function observe(context, observations) {
     initializerSha256: context.initializerSha256,
     serverSha256: context.serverSha256,
     sourceForeignKeys: context.sourceForeignKeys,
+    connectionOrigin: context.connectionOrigin,
     flyway: context.flyway,
     fixture: context.fixture,
     observations,
